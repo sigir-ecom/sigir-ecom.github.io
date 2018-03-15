@@ -83,11 +83,11 @@ header.masthead .masthead-content .masthead-subheading {
   }
   header.masthead .masthead-content .masthead-heading {
     font-size: 3.5rem;
-    color: #FFCB05;
+    color: #FFCB05 !important;
   }
   header.masthead .masthead-content .masthead-subheading {
     font-size: 1.5rem;
-    color: #FFCB05;
+    color: #FFCB05 !important;
   }
 }
 
