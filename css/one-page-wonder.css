@@ -13,7 +13,6 @@ h6 {
 }
 
 .btn-xl {
-  text-transform: uppercase;
   padding: 1.5rem 3rem;
   font-size: 0.9rem;
   font-weight: 700;
@@ -96,17 +95,17 @@ header.masthead .masthead-content .masthead-subheading {
 }
 
 .btn-primary {
-  background-color: #ee0979;
-  border-color: #ee0979;
+  background-color: #FFCB05;
+  border-color: #FFCB05;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #bd0760 !important;
-  border-color: #bd0760 !important;
+  background-color: #FFCB05 !important;
+  border-color: #FFCB05 !important;
 }
 
 .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+  box-shadow: 0 0 0 0rem rgba(238, 9, 121, 0.5);
 }
 
 .btn-secondary {
