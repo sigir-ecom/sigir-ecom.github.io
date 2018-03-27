@@ -102,7 +102,7 @@
               <font size="5"><b>Participation and Data</b></font>
               <br>
               <br>
-              As part of this challenge, Rakuten will be releasing around 1M product listings, including train and test set, consisting of product titles and their corresponding category ID paths. The followings are some examples from the training set,
+              As part of this challenge, Rakuten will be releasing 1M product listings in tsv format, including the train (0.8M) and test set (0.2M), consisting of product titles and their corresponding category ID paths. The followings are some examples from the training set,
 
               <table style="width:80%">
               <tr>
@@ -110,26 +110,36 @@
                 <th>CeategoryIdPath</th> 
               </tr>
               <tr>
-                <td>Black 15FT USB 2.0 Cable for HP LaserJet P1505n Laser Printer (USBP338324)</td>
-                <td>1 > 89 > 134 > 146 > 150</td> 
+                <td>Replacement Viewsonic VG710 LCD Monitor 48Watt AC Adapter 12V 4A</td>
+                <td>3292>114>1231</td> 
               </tr>
               <tr>
-                <td>7.5 MFD 370 Volt Oval Motor Run Capacitor Replacement for ICP HL25H3TR01</td>
-                <td>695 > 865 > 866 > 868</td> 
+                <td>Ka-Bar Desert MULE Serrated Folding Knife</td>
+                <td>4238>321>753>3121</td> 
               </tr>
               <tr>
-                <td>SPS Brand 12V 7 Ah Replacement Battery  for PowerWare PW5115-750VA UPS (1 PACK)</td>
-                <td>1 > 2 > 5</td> 
+                <td>5.11 TACTICAL 74280 Taclite TDU Pants, R/M, Dark Navy</td>
+                <td>4015>3285>1443>20</td> 
+              </tr>
+              <tr>
+                <td>Skechers 4lb S Grip Jogging Weight set of 2- Black</td>
+                <td>2075>945>2183>3863</td> 
               </tr>
               </table>
               <br>
               The test set will contain only the title field and the goal is to predict the CeategoryIdPath for each title. Please sign up the form for participation (<a href='https://docs.google.com/forms/d/e/1FAIpQLSdho-e_mpde6-j4CJPW7xhNbr_K98N7Y9sAXxPZULJwRK6tOg/viewform?c=0&w=1' target="_blank">sign up here</a>). Accepted contributions will be presented during the eCom Workshop in SIGIR 2018.               
                 <br>
-                <br> 
+                <br>
+              <font size="5"><b>Submission</b></font>
+              <br>
+              <br>
+              Please submit your prediction file in the same tsv format as the training file where the first column is the product title from the test set and the second column is your predicted CeategoryIdPath. Please <b>DO NOT</b> change the order of the test titles in your submission file. Submission link will be available soon!
+              <br>
+              <br>
               <font size="5"><b>Evalutation</b></font>
               <br>
               <br>
-              The final evaluation metrics will be micro-Precision, micro-Recall, and micro-F1 on the test set of exact category path match.
+              The final evaluation metrics will be micro-Precision, micro-Recall, and micro-F1 on the test set of <b>EXACT</b> CeategoryIdPath match. Please note that partial path match does not count as a correct match.
               <br>
               <br>
               <font size="5"><b>Timeline</b></font>
