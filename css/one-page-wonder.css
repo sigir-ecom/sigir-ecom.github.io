@@ -121,3 +121,14 @@ header.masthead .masthead-content .masthead-subheading {
 .btn-secondary:focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
 }
+
+.alert {
+    padding: 15px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.alert.info {background-color: #194B7;}
