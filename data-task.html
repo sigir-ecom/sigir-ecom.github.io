@@ -139,12 +139,12 @@
               Please submit your prediction file in the same tsv format as the training file where the first column is the product title from the test set and the second column is your predicted CeategoryIdPath. Please <b>DO NOT</b> change the order of the test titles in your submission file. Submission link will be available soon!
               <br>
               <br>
-              <font size="5"><b>Evalutation</b></font>
+              <font size="5"><b>Evaluation</b></font> <font size="5", color="red">(Updated!)</font>
+
               <br>
               <br>
-              The final evaluation metrics will be micro-Precision, micro-Recall, and micro-F1 on the test set of <b>EXACT</b> CategoryIdPath match. Please note that partial path match does not count as a correct match.
-              <br>
-              <br>
+              The final evaluation metrics will be <b>weighted-{precision, recall, F1}</b> (<a href='http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html' target="_blank">reference</a>) on the test set of <b>EXACT</b> CeategoryIdPath match. Since the product distribution over the taxonomy tree is highly imbalanced, weighted-{precision, recall, F1} make much more sense than macro- or micro- {precision, recall, F1} do. Please note that partial path match does not count as a correct prediction. Evaluation script is provided <a href='https://github.com/sigir-ecom/dataChallenge' target="_blank">here</a> and the usage is shown below. Both PREDCITION_FILE and GOLD_FILE must be in the same tsv format as the training file where the first column is product title and the second column is CeategoryIdPath. The title order must be the same in both files.
+              <xmp>$ python eval.py -pred $PREDCITION_FILE -gold $GOLD_FILE</xmp>
               <font size="5"><b>Timeline</b></font>
               <br>
               <br>
@@ -154,7 +154,7 @@
                 <th>What  ?</th> 
               </tr>
               <tr>
-                <td>Mar   31</td>
+                <td>Apr   06</td>
                 <td>Live Leader board</td> 
               </tr>
               <tr>
