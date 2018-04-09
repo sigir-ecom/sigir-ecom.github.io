@@ -99,7 +99,7 @@
               <font size="5"><b>About</b></font>
               <br>
               <br>
-              The SIGIR eCom Data Challenge will be organized by <a href="https://rit.rakuten.co.jp/" target="_blank">Rakuten Institute of Technology</a> Boston (RIT-Boston), a dedicated R&ampD organization for the <a href="http://rakuten.com/" target="_blank">Rakuten</a> group. This challenge focuses on the topic of <b>large-scale taxonomy classification</b> where the goal is to predict each product’s category as defined in the taxonomy tree given product's title. The cataloging of product listings through taxonomy categorization is a fundamental problem for any e-commerce marketplace, with applications ranging from personalized search recommendations to query understanding. For example, in the Rakuten.com catalog, “<i>Dr. Martens Air Wair 1460 Mens Leather Ankle Boots</i>” is categorized under the “<i>Clothing, Shoes & Accessories -> Shoes -> Men -> Boots</i>” leaf. However, manual and rule based approaches to categorization are not scalable since commercial product taxonomies are organized in tree structures with three to ten levels of depth and thousands of leaf nodes. Advances in this area of research have been limited due to the lack of real data from actual commercial catalogs. The challenge presents several interesting research aspects due to the intrinsic noisy nature of the product labels, the size of modern eCommerce catalogs, and the typical unbalanced data distribution.
+              The SIGIR eCom Data Challenge is organized by <a href="https://rit.rakuten.co.jp/" target="_blank">Rakuten Institute of Technology</a> Boston (RIT-Boston), a dedicated R&ampD organization for the <a href="http://rakuten.com/" target="_blank">Rakuten</a> group. This challenge focuses on the topic of <b>large-scale taxonomy classification</b> where the goal is to predict each product’s category as defined in the taxonomy tree given product's title. The cataloging of product listings through taxonomy categorization is a fundamental problem for any e-commerce marketplace, with applications ranging from personalized search recommendations to query understanding. For example, in the Rakuten.com catalog, “<i>Dr. Martens Air Wair 1460 Mens Leather Ankle Boots</i>” is categorized under the “<i>Clothing, Shoes & Accessories -> Shoes -> Men -> Boots</i>” leaf. However, manual and rule based approaches to categorization are not scalable since commercial product taxonomies are organized in tree structures with three to ten levels of depth and thousands of leaf nodes. Advances in this area of research have been limited due to the lack of real data from actual commercial catalogs. The challenge presents several interesting research aspects due to the intrinsic noisy nature of the product labels, the size of modern eCommerce catalogs, and the typical unbalanced data distribution.
               <br>
               <br>
               <font size="5"><b>Participation and Data</b></font>
@@ -130,21 +130,30 @@
               </tr>
               </table>
               <br>
-              The test set will contain only the title field and the goal is to predict the CeategoryIdPath for each title. Please sign up the form for participation (<a href='https://docs.google.com/forms/d/e/1FAIpQLSdho-e_mpde6-j4CJPW7xhNbr_K98N7Y9sAXxPZULJwRK6tOg/viewform?c=0&w=1' target="_blank">sign up here</a>). Accepted contributions will be presented during the eCom Workshop in SIGIR 2018.               
+              The test set contains only the title field and the goal is to predict the CeategoryIdPath for each title. Please sign up the form for participation (<a href='https://docs.google.com/forms/d/e/1FAIpQLSdho-e_mpde6-j4CJPW7xhNbr_K98N7Y9sAXxPZULJwRK6tOg/viewform?c=0&w=1' target="_blank">sign up here</a>). Accepted contributions will be presented during the eCom Workshop in SIGIR 2018.               
                 <br>
                 <br>
-              <font size="5"><b>Submission</b></font>
+              <font size="5"><b>Submission</b></font> <font size="5", color="red">(Updated!)</font>
               <br>
               <br>
-              Please submit your prediction file in the same tsv format as the training file where the first column is the product title from the test set and the second column is your predicted CeategoryIdPath. Please <b>DO NOT</b> change the order of the test titles in your submission file. Submission link will be available soon!
+              The submission is team-based, so only team leader can submit the prediction file. We will send you the detail about file submission after we receive your sign-up. There is no limit on maximum team size. The prediction file has to be the same tsv format as the training file where the first column is the product title from the test set and the second column is your predicted CeategoryIdPath. Please <b>DO NOT</b> change the order of the test titles in your submission file.
               <br>
               <br>
               <font size="5"><b>Evaluation</b></font> <font size="5", color="red">(Updated!)</font>
-
               <br>
               <br>
-              The final evaluation metrics will be <b>weighted-{precision, recall, F1}</b> (<a href='http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html' target="_blank">reference</a>) on the test set of <b>EXACT</b> CeategoryIdPath match. Since the product distribution over the taxonomy tree is highly imbalanced, weighted-{precision, recall, F1} make much more sense than macro- or micro- {precision, recall, F1} do. Please note that partial path match does not count as a correct prediction. Evaluation script is provided <a href='https://github.com/sigir-ecom/dataChallenge' target="_blank">here</a> and the usage is shown below. Both PREDCITION_FILE and GOLD_FILE must be in the same tsv format as the training file where the first column is product title and the second column is CeategoryIdPath. The title order must be the same in both files.
+              The evaluation metrics will be <b>weighted-{precision, recall, F1}</b> (<a href='http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html' target="_blank">reference</a>) on the test set of <b>EXACT</b> CeategoryIdPath match. Since the product distribution over the taxonomy tree is highly imbalanced, weighted-{precision, recall, F1} make much more sense than macro- or micro- {precision, recall, F1} do. Please note that partial path match does not count as a correct prediction. Evaluation script is provided <a href='https://github.com/sigir-ecom/dataChallenge' target="_blank">here</a> and the usage is shown below. Both PREDCITION_FILE and GOLD_FILE must be in the same tsv format as the training file where the first column is product title and the second column is CeategoryIdPath. The title order must be the same in both files.
               <xmp>$ python eval.py -pred $PREDCITION_FILE -gold $GOLD_FILE</xmp>
+              <font size="3"><b>Stage 1 - Model Building</b></font>
+              <br>
+              Participants build and test models on the training data. The leaderboard only shows the model performance on a subset of the test set.
+              <br>
+              <br>
+              <font size="3"><b>Stage 2 - Model Evaluation</b></font>
+              <br>
+              The final leaderboard shows the model performance on the entire test set.
+              <br>
+              <br>
               <font size="5"><b>Timeline</b></font>
               <br>
               <br>
@@ -154,24 +163,28 @@
                 <th>What  ?</th> 
               </tr>
               <tr>
-                <td>Apr   06</td>
-                <td>Live Leader board</td> 
+                <td>April   09</td>
+                <td>Evaluation Stage 1 Starts!</td> 
               </tr>
               <tr>
-                <td>Jun   01</td>
+                <td>May   15</td>
+                <td>Data Challenge Registration Deadline</td> 
+              </tr>
+              <tr>
+                <td>June   01</td>
                 <td>System Description Paper Submission (4-page)</td> 
               </tr>
               <tr>
-                <td>Jun   15</td>
+                <td>June   15</td>
                 <td>Paper Acceptance Notification</td> 
               </tr>
               <tr>
-                <td>Jun   30</td>
+                <td>June   30</td>
                 <td>Camera Ready Version of Papers Due</td> 
               </tr>
               <tr>
                 <td></td>
-                <td>Final Leaderboard</td> 
+                <td>Evaluation Stage 2 (Final Leaderboard)</td> 
               </tr>
               <tr>
                 <td>July   12</td>
