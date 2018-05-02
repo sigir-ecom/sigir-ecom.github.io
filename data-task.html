@@ -133,7 +133,7 @@
               <table style="width:80%">
               <tr>
                 <th>Title</th>
-                <th>CeategoryIdPath</th> 
+                <th>CategoryIdPath</th> 
               </tr>
               <tr>
                 <td>Replacement Viewsonic VG710 LCD Monitor 48Watt AC Adapter 12V 4A</td>
@@ -153,19 +153,19 @@
               </tr>
               </table>
               <br>
-              The test set contains only the title field and the goal is to predict the CeategoryIdPath for each title. Please sign up the form for participation (<a href='https://docs.google.com/forms/d/e/1FAIpQLSdho-e_mpde6-j4CJPW7xhNbr_K98N7Y9sAXxPZULJwRK6tOg/viewform?c=0&w=1' target="_blank">sign up here</a>). Accepted contributions will be presented during the eCom Workshop in SIGIR 2018.               
+              The test set contains only the title field and the goal is to predict the CategoryIdPath for each title. Please sign up the form for participation (<a href='https://docs.google.com/forms/d/e/1FAIpQLSdho-e_mpde6-j4CJPW7xhNbr_K98N7Y9sAXxPZULJwRK6tOg/viewform?c=0&w=1' target="_blank">sign up here</a>). Accepted contributions will be presented during the eCom Workshop in SIGIR 2018.               
                 <br>
                 <br>
               <font size="5"><b>Submission</b></font> <font size="5", color="red">(Updated!)</font>
               <br>
               <br>
-              The submission is team-based, so only team leader can submit the prediction file. We will send you the detail about file submission after we receive your sign-up. There is no limit on maximum team size. The prediction file has to be the same tsv format as the training file where the first column is the product title from the test set and the second column is your predicted CeategoryIdPath. Please <b>DO NOT</b> change the order of the test titles in your submission file.
+              The submission is team-based, so only team leader can submit the prediction file. We will send you the detail about file submission after we receive your sign-up. There is no limit on maximum team size. The prediction file has to be the same tsv format as the training file where the first column is the product title from the test set and the second column is your predicted CategoryIdPath. Please <b>DO NOT</b> change the order of the test titles in your submission file.
               <br>
               <br>
               <font size="5"><b>Evaluation</b></font> <font size="5", color="red">(Updated!)</font>
               <br>
               <br>
-              The evaluation metrics will be <b>weighted-{precision, recall, F1}</b> (<a href='http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html' target="_blank">reference</a>) on the test set of <b>EXACT</b> CeategoryIdPath match. Since the product distribution over the taxonomy tree is highly imbalanced, weighted-{precision, recall, F1} make much more sense than macro- or micro- {precision, recall, F1} do. Please note that partial path match does not count as a correct prediction. Evaluation script is provided <a href='https://github.com/sigir-ecom/dataChallenge' target="_blank">here</a> and the usage is shown below. Both PREDCITION_FILE and GOLD_FILE must be in the same tsv format as the training file where the first column is product title and the second column is CeategoryIdPath. The title order must be the same in both files.
+              The evaluation metrics will be <b>weighted-{precision, recall, F1}</b> (<a href='http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html' target="_blank">reference</a>) on the test set of <b>EXACT</b> CategoryIdPath match. Since the product distribution over the taxonomy tree is highly imbalanced, weighted-{precision, recall, F1} make much more sense than macro- or micro- {precision, recall, F1} do. Please note that partial path match does not count as a correct prediction. Evaluation script is provided <a href='https://github.com/sigir-ecom/dataChallenge' target="_blank">here</a> and the usage is shown below. Both PREDCITION_FILE and GOLD_FILE must be in the same tsv format as the training file where the first column is product title and the second column is CategoryIdPath. The title order must be the same in both files.
               <xmp>$ python eval.py -pred $PREDCITION_FILE -gold $GOLD_FILE</xmp>
               <font size="3"><b>Stage 1 - Model Building</b></font>
               <br>
@@ -177,7 +177,7 @@
               The final leaderboard shows the model performance on the entire test set.
               <br>
               <br>
-              <font size="5"><b>Timeline</b></font>
+              <font size="5"><b>Timeline</b></font> <font size="5", color="red">(Updated!)</font>
               <br>
               <br>
               <table class="table table-condensed" style="width:80%">
