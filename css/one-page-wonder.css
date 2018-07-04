@@ -132,3 +132,53 @@ header.masthead .masthead-content .masthead-subheading {
 }
 
 .alert.info {background-color: #194B7;}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 520px;
+}
+
+.tg .tg-odj0 {
+    font-weight: bold;
+    background-color: #FFCB05;
+    vertical-align: top;
+}
+
+.tg .tg-lqy6 {
+    text-align: left;
+    vertical-align: top;
+    width: 100px;
+}
+
+.tg .tg-l2oz {
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tg .tg-9hbo {
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.tg .tg-yw4l {
+    vertical-align: top;
+}
+
+.tg .tg-xr8r {
+    background-color: #ffffc7;
+    text-align: left;
+    vertical-align: top;
+    width: 100px;
+}
+
+.tg .tg-kjho {
+    background-color: #ffffc7;
+    vertical-align: top;
+}
