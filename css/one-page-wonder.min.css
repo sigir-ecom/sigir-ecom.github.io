@@ -144,6 +144,7 @@ header.masthead .masthead-content .masthead-subheading {
     width: 520px;
 }
 
+
 .tg .tg-odj0 {
     font-weight: bold;
     background-color: #FFCB05;
@@ -182,3 +183,53 @@ header.masthead .masthead-content .masthead-subheading {
     background-color: #ffffc7;
     vertical-align: top;
 }
+
+.tg1 {
+    font-family: 'Lato';
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 1040px;
+}
+
+
+.tg1 .tg1-odj0 {
+    font-size: 18px
+    font-weight: bold;
+    background-color: #FFCB05;
+    vertical-align: top;
+    text-align: left;
+}
+
+.tg1 .tg1-lqy6 {
+    text-align: left;
+    vertical-align: top;
+    width: 150px;
+}
+
+.tg1 .tg1-l2oz {
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tg1 .tg1-9hbo {
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.tg1 .tg1-yw4l {
+    vertical-align: top;
+}
+
+.tg1 .tg1-xr8r {
+    background-color: #ffffc7;
+    text-align: left;
+    vertical-align: top;
+    width: 150px;
+}
+
+.tg1 .tg1-kjho {
+    background-color: #ffffc7;
+    vertical-align: top;
+}
+
