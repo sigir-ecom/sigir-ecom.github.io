@@ -6,7 +6,12 @@ body {
 h1,
 h2,
 h3,
-h4,
+{
+  font-family: 'Catamaran';
+  font-weight: 600 !important;
+}
+
+h4, 
 h5,
 h6 {
   font-family: 'Catamaran';
@@ -59,7 +64,7 @@ header.masthead {
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
-  background-image: url('../img/take5.png');
+  background-image: url('../img/take6.png');
 }
 
 header.masthead .masthead-content {
