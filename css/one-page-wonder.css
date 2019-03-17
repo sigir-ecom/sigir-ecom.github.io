@@ -128,12 +128,12 @@ header.masthead .masthead-content .masthead-subheading {
 }
 
 .alert {
-    padding: 15px;
-    background-color: #f44336;
-    color: white;
+    padding: 0px;
+    background-color: #ffbb33;
+    color: orange;
     opacity: 1;
     transition: opacity 0.6s;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
 .alert.info {background-color: #194B7;}
