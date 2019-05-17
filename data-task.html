@@ -103,175 +103,87 @@
       </div>
     </section>
     
-    <!-- <section>
-      <br>
-      <div class="container">
-        <div class="row align-items-center">
-                 <div class="alert info">
-                  <ul>
-                    <li><a href='https://docs.google.com/forms/d/e/1FAIpQLSdho-e_mpde6-j4CJPW7xhNbr_K98N7Y9sAXxPZULJwRK6tOg/viewform?c=0&w=1' target="_blank"><b><font color='white'>Registration now open!</font> <font color=#FFCB05>Sign up for the Data Challenge &#x1F517</font></b></a>
-                    </li>
-                  </ul>
-            </div>
-        </div>
-      </div>
-    </section> 
+    <div class="fs-16">
+  <p>The eBay SIGIR 2019 eCommerce Search Challenge: High Accuracy Recall Task is organized by eBay Search group. The
+    challenge targets a common problem in eCommerce search: Identifying the items to show when using non-relevance
+    sorts. Users of eCommerce search applications often sort by dimensions other than relevance. Popularity, review
+    score, price, distance, recency, etc. This is a notable difference from traditional information oriented search,
+    including web search, where documents are surfaced in relevance order.</p>
 
-    <section>
-      <div class="container" align="left">
-            <div class="p-0">
-               <iframe src = "https://sigir-ecom-leaderboard.github.io/" align="middle" width = "1000" height = "800" frameBorder="0" > </iframe>
-              </div>
-      </div>
-    </section>
+  <p>Relevance ordering obviates the need for explicit relevant-or-not decisions on individual documents. Many well
+    studied search methodologies take advantage of this. Non-relevance sorts orders are less well studied, but raise a
+    number of interesting research topics. Evaluation metrics, ranking formulas, performance optimization, user
+    experience, and more. These topics are discussed in the <cite><a class="blue-text" target="_blank"
+        href="https://sigir-ecom.github.io/ecom18Papers/paper21.pdf"><i>High Accuracy Recall Task</i></a></cite> paper,
+    published at the SIGIR 2018 Workshop on eCommerce.</p>
 
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-            <div class="p-0">
-              <br>
-              <h2 class="display-4">About</h2>
-              <p><br>
-              The SIGIR eCom Data Challenge is organized by <a href="https://rit.rakuten.co.jp/" target="_blank">Rakuten Institute of Technology</a> Boston (RIT-Boston), a dedicated R&ampD organization for the <a href="http://rakuten.com/" target="_blank">Rakuten</a> group. This challenge focuses on the topic of <b>large-scale taxonomy classification</b> where the goal is to predict each product’s category as defined in the taxonomy tree given product's title. The cataloging of product listings through taxonomy categorization is a fundamental problem for any e-commerce marketplace, with applications ranging from personalized search recommendations to query understanding. For example, in the Rakuten.com catalog, “<i>Dr. Martens Air Wair 1460 Mens Leather Ankle Boots</i>” is categorized under the “<i>Clothing, Shoes & Accessories -> Shoes -> Men -> Boots</i>” leaf. However, manual and rule based approaches to categorization are not scalable since commercial product taxonomies are organized in tree structures with three to ten levels of depth and thousands of leaf nodes. Advances in this area of research have been limited due to the lack of real data from actual commercial catalogs. The challenge presents several interesting research aspects due to the intrinsic noisy nature of the product labels, the size of modern eCommerce catalogs, and the typical unbalanced data distribution.
-              <br>
-              </p>
-            </div>
-        </div>
-      </div>
-    </section>
+  <p>This search challenge focuses on the most basic aspect of this problem: identifying the items to include in the
+    recall set when using non-relevance sorts. This is already a difficult problem, and includes typical search
+    challenges like ambiguity, multiple query intents, etc.</p>
 
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-            <div class="p-0">
-              <h2 class="display-4"></h2>
+  <p>The challenge data consists of a set of popular search queries and a fair size set of candidate documents.
+    Challenge participants make a boolean relevant-or-not decision for each query-document pair. Human judgments are
+    used to create labeled training and evaluation data for a subset of the query-document pairs. Evaluation of
+    submissions will be based on the traditional F1 metric, incorporating components of both recall and precision.</p>
 
-              <font size="5"><b>Participation and Data</b></font>
-              <br>
-              <br>
-              As part of this challenge, Rakuten will be releasing 1M product listings in tsv format, including the train (0.8M) and test set (0.2M), consisting of product titles and their corresponding category ID paths. The followings are some examples from the training set,
+  <p>The challenge task and the evaluation basis are only a first step. The hope is to have a challenge interesting and
+    useful by itself, while at the same time fostering additional insight into the problem space. Participants are
+    encouraged to provide their learning's in the form of system description papers submitted to the 2019 SIGIR Workshop
+    on eCommerce. Alternative evaluation metrics (other than F1) are an obvious area to pursue, one the challenge
+    organizers hope to examine during the challenge. Item price is included in dataset enabling exploration of sort-type
+    specific evaluation metrics.</p>
+  The challenge dataset consists of selected fields from approximately 900K listings from eBay's Collectibles
+  categories, plus 150 popular search queries relevant to collectibles listings. Information provided for each listing
+  includes the Title, Price, Category Breadcrumb, and an image URL. For example, a listing for a pinball machine would
+  have fields like
+  <ol>
+    <li>Title: Bally Twilight Zone Pinball Machine</li>
+    <li>Price: 3995.00</li>
+    <li>Category: Collectibles > Arcade, Jukeboxes & Pinball > Pinball > Machines
+    </li>
+  </ol>
+  plus an image URL. Queries are simply the text of the query, for example, "bally pinball machine". Query-document
+  pairs selected for human judgment include a wide mix of both relevant and non-relevant pairs.
+  <br>
+  <br>
+  <span class="fs-16"><strong>Phases</strong></span>
+  <p>First phase of the challenge (Unsupervised phase) will start on May 17, 2019. Participants will be able to access
+    the data and can start working on the given task. However, submissions will open on May 27, 2019. Starting May 27,
+    2019, participants will be able to submit their predictions and a leaderboard will be generated. More details about
+    the phases of the challenge is given below:</p>
+  <span class="fs-16"><strong>Unsupervised Phase</strong></span>
+  <p>This is the first phase of the challenge and it will be fully unsupervised. No training data will be released and
+    participants are expected to predict relevance of all query-item pairs. Each submission will be judged using a held
+    out evaluation set and a leaderboard will be generated.</p>
+  <span class="fs-16"><strong>Supervised Phase</strong></span>
+  <p>In the second phase of the challenge, we will release some training data that can be used to train a model to
+    predict relevance or lack thereof. Similar to the first phase we will judge the submissions using a held out
+    evaluation set and the leaderboard will be updated.</p>
+  <span class="fs-16"><strong>Final Phase</strong></span>
+  <p>This phase will start in the final week of the challenge and a separate evaluation set will be used to generate a
+    second and the final leaderboard. No additional training data will be released. Only different held out set will be
+    used to generate the final and separate leaderboard.</p>
+  <span class="fs-16"><strong>Important Dates</strong></span>
+  <ol>
+    <li>Challenge Starts (Unsupervised Phase): May 17, 2019</li>
+    <li>Submissions Open on EvalAI: May 27, 2019</li>
+    <li>Unsupervised Phase Ends: June 02, 2019 (EOD)</li>
+    <li>Supervised Phase Starts: June 03, 2019</li>
+    <li>Supervised Phase Ends: July 10, 2019 (EOD)</li>
+    <li>Final Phase Starts: July 11, 2019</li>
+    <li>Challenge Ends: July 18, 2019 (EOD)</li>
+    <li>Workshop Day: July 25, 2019</li>
+  </ol>
+  All the deadlines above are based on Pacific Daylight Time (PDT).
+  <span class="fs-16"><strong>Data Access</strong></span>
+  To participate in this Data Challenge, please email <b>DL-eBay-SigIR-Ecom2019-Data-Challenge@ebay.com</b> for further
+  instructions. The Data Challenge is governed by the rules and announcements on this web site and a Data Challenge
+  Agreement that is sent for each team to review and sign before participation.
+  <span class="fs-16"><strong>Data Challenge Papers</strong></span>
+  Participants are encouraged to submit papers about their approach, architecture and findings to the workshop. More
+  information about the data challenge papers will be provided shortly.
+</div>
 
-              <table style="width:80%">
-              <tr>
-                <th>Title</th>
-                <th>CategoryIdPath</th> 
-              </tr>
-              <tr>
-                <td>Replacement Viewsonic VG710 LCD Monitor 48Watt AC Adapter 12V 4A</td>
-                <td>3292>114>1231</td> 
-              </tr>
-              <tr>
-                <td>Ka-Bar Desert MULE Serrated Folding Knife</td>
-                <td>4238>321>753>3121</td> 
-              </tr>
-              <tr>
-                <td>5.11 TACTICAL 74280 Taclite TDU Pants, R/M, Dark Navy</td>
-                <td>4015>3285>1443>20</td> 
-              </tr>
-              <tr>
-                <td>Skechers 4lb S Grip Jogging Weight set of 2- Black</td>
-                <td>2075>945>2183>3863</td> 
-              </tr>
-              </table>
-              <br>
-              The test set contains only the title field and the goal is to predict the CategoryIdPath for each title. Please sign up the form for participation (<a href='https://docs.google.com/forms/d/e/1FAIpQLSdho-e_mpde6-j4CJPW7xhNbr_K98N7Y9sAXxPZULJwRK6tOg/viewform?c=0&w=1' target="_blank">sign up here</a>). Accepted contributions will be presented during the eCom Workshop in SIGIR 2018.               
-                <br>
-                <br>
-              <font size="5"><b>Submission</b></font>
-              <br>
-              <br>
-              The submission is team-based, so only team leader can submit the prediction file. We will send you the detail about file submission after we receive your sign-up. There is no limit on maximum team size. The prediction file has to be the same tsv format as the training file where the first column is the product title from the test set and the second column is your predicted CategoryIdPath. Please <b>DO NOT</b> change the order of the test titles in your submission file.
-              <br>
-              <br>
-              <font size="5"><b>Evaluation</b></font> <font size="5", color="red">(Updated!)</font>
-              <br>
-              <br>
-              The evaluation metrics will be <b>weighted-{precision, recall, F1}</b> (<a href='http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html' target="_blank">reference</a>) on the test set of <b>EXACT</b> CategoryIdPath match. Since the product distribution over the taxonomy tree is highly imbalanced, weighted-{precision, recall, F1} make much more sense than macro- or micro- {precision, recall, F1} do. Please note that partial path match does not count as a correct prediction. Evaluation script is provided <a href='https://github.com/sigir-ecom/dataChallenge' target="_blank">here</a> and the usage is shown below. Both PREDCITION_FILE and GOLD_FILE must be in the same tsv format as the training file where the first column is product title and the second column is CategoryIdPath. The title order must be the same in both files.
-              <xmp>$ python eval.py -pred $PREDCITION_FILE -gold $GOLD_FILE</xmp>
-              <font size="3"><b>Stage 1 - Model Building (April 9 - June 23)</b></font>
-              <br>
-              Participants build and test models on the training data. The leaderboard only shows the model performance on a <b>SUBSET</b> of the test set according to your <b>LATEST</b> submission. Each team can submit at most 3 times per day (UTC time) in this stage and the leader board will update every 15 minutes.
-              <br>
-              <br>
-              <font size="3"><b>Stage 2 - Model Evaluation (June 24)</b></font>
-              <br>
-              The final leaderboard will freeze on June 24 and show the model performance on the <b>ENTIRE</b> test set according to your <b>LATEST</b> submission.
-              <br>
-              <br>
-              <font size="5"><b>System Description Paper</b></font> <font size="5", color="red">(New!)</font>
-              <br>
-              <br>
-              System description papers will be peer reviewed (single-blind) by the program committee. All submissions must be formatted according to the <b>latest ACM SIG proceedings template</b> available at <a href='http://www.acm.org/publications/proceedings-template' target="_blank">http://www.acm.org/publications/proceedings-template</a> (LaTeX users use sample-sigconf.tex as a template). There will be no specific constraint on the content but it should cover the implementation details, such as data preprocessing, including token normalization and feature extraction, additional data used from external sources; model descriptions, including specific implementations, parameter tuning, etc. and error analysis, if any.
-              <br>
-              <br>
-              Submissions of system description paper should be made at <a href='https://easychair.org/conferences/?conf=ecom18dc' target="_blank">https://easychair.org/conferences/?conf=ecom18dc</a>. The deadline for paper submission is <b>June 8, 2018</b></font> (11: 59 P.M. UTC).</b>
-              <br>
-              <br>
-              <font size="5"><b>Timeline</b></font> <font size="5", color="red">(Updated!)</font>
-              <br>
-              <br>
-              <table class="table table-condensed" style="width:80%">
-              <tr>
-                <th>When  ?</th>
-                <th>What  ?</th> 
-              </tr>
-              <tr>
-                <td><b>April   09</b></td>
-                <td><b>Evaluation Stage 1 Starts!</b></td> 
-              </tr>
-              <tr>
-                <td>May   15</td>
-                <td>Data Challenge Registration Deadline</td> 
-              </tr>
-              <tr>
-                <td><b>June   08</b></td>
-                <td><b>System Description Paper Submission (Suggested paper length 4-8 pages)</b></td> 
-              </tr>
-              <tr>
-                <td>June   15</td>
-                <td>Paper Acceptance Notification</td> 
-              </tr>
-              <tr>
-                <td><b>June 24</b></td>
-                <td><b>Evaluation Stage 2 (Final Leaderboard)</b></td> 
-              </tr>
-              <tr>
-                <td>July   06</td>
-                <td>Camera Ready Version of Papers Due</td> 
-              </tr>
-              <tr>
-                <td><b>July   12</b></td>
-                <td><b>eCom Full Day Workshop</b></td> 
-              </tr>
-              <tr>
-              </tr>
-              </table>
-              Note: The timeline is subject to slight modifications.
-              <br>
-              If you have any question, please contact Yiu-Chang Lin (yiuchang.lin@rakuten.com).
-              <br>
-              </p>
-              <section id='checklist'>
-                <div class="alert info">
-      <h2>Data Challenge Checklist </h2>
-      <li>Register for the data challenge: <a href='https://docs.google.com/forms/d/e/1FAIpQLSdho-e_mpde6-j4CJPW7xhNbr_K98N7Y9sAXxPZULJwRK6tOg/viewform?c=0&w=1' target="_blank"><b><font color=#FFCB05>Registration now open!</font></b></a></li>
-      <br>
-      <li>Get download links for the dataset - 1 link each for training and testing data (You will receive an email with these links within 24 of hrs registration)</li>
-      <br>
-      <li>Send team details to Yiu-Chang Lin - yiuchang.lin@rakuten.com (this is necessary to receive a team specific submission link)</li>
-      <li>Receive Test set submission link for your team (You will receive an email with the link within 24 hrs of sending team details)</li>
-      <br>
-      <li>Join the data challenge slack channel (email with details will be sent after you register)</li>
-    </div>
-    </section>
-    <br>
-              
-            </div>
-        </div>
-      </div>
-    </section>-->
-
-    
 
 
      <!-- Footer -->
