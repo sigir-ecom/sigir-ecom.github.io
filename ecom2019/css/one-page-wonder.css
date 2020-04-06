@@ -1,6 +1,5 @@
 body {
   font-family: 'Lato';
-  font-size: 14px
 }
 
 h1,
@@ -64,7 +63,7 @@ header.masthead {
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
-  background-image: url('../img/take7.png');
+  background-image: url('../img/take6.png');
 }
 
 header.masthead .masthead-content {
@@ -74,13 +73,10 @@ header.masthead .masthead-content {
 
 header.masthead .masthead-content .masthead-heading {
   font-size: 2rem;
-  background: rgba(255,255,255,0.5);
 }
 
 header.masthead .masthead-content .masthead-subheading {
-  font-size: 2rem;
-  background: rgba(255,255,255,0.5);
-  padding:1em 0 0.5em 0;
+  font-size: 1rem;
 }
 
 
@@ -114,7 +110,7 @@ header.masthead .masthead-content .masthead-subheading {
 }
 
 .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+  box-shadow: 0 0 0 0rem rgba(238, 9, 121, 0.5);
 }
 
 .btn-secondary {
@@ -134,13 +130,13 @@ header.masthead .masthead-content .masthead-subheading {
 .alert {
     padding: 0px;
     background-color: #ffbb33;
-    color: black;
+    color: orange;
     opacity: 1;
     transition: opacity 0.6s;
     margin-bottom: 0px;
 }
 
-.alert.info {background-color: #194B7A;}
+.alert.info {background-color: #194B7;}
 
 .row {
     margin-right: -15px;
@@ -152,7 +148,6 @@ header.masthead .masthead-content .masthead-subheading {
     border-spacing: 0;
     width: 520px;
 }
-
 
 .tg .tg-odj0 {
     font-weight: bold;
@@ -192,59 +187,3 @@ header.masthead .masthead-content .masthead-subheading {
     background-color: #ffffc7;
     vertical-align: top;
 }
-
-.tg1 {
-    font-family: 'Lato';
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 1040px;
-}
-
-
-.tg1 .tg1-odj0 {
-    font-size: 18px
-    font-weight: bold;
-    background-color: #FFCB05;
-    vertical-align: top;
-    text-align: left;
-}
-
-.tg1 .tg1-lqy6 {
-    text-align: left;
-    vertical-align: top;
-    width: 150px;
-}
-
-.tg1 .tg1-l2oz {
-    font-weight: bold;
-    text-align: left;
-    vertical-align: top;
-}
-
-.tg1 .tg1-9hbo {
-    font-weight: bold;
-    vertical-align: top;
-}
-
-.tg1 .tg1-yw4l {
-    vertical-align: top;
-}
-
-.tg1 .tg1-xr8r {
-    background-color: #ffffc7;
-    text-align: left;
-    vertical-align: top;
-    width: 150px;
-}
-
-.tg1 .tg1-kjho {
-    background-color: #ffffc7;
-    vertical-align: top;
-}
-.caption {        font-size: 100%;
-                  font-family: Lato;
-                  text-align: center;
-                  font-weight: bold;
-                  color: #ee0979;
-                }
-
