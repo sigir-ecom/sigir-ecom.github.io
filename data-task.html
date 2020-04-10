@@ -106,11 +106,11 @@
       <br>
       <font size="5"><b>About</b></font>
       <p><b>Rakuten France Multi-modal Product Data Classification</b> challenge is organized by <a href="https://rit.rakuten.co.jp/">Rakuten Institute of Technology</a>, the research and innovation department of Rakuten group. This challenge focuses on the topic of large-scale multi-modal (text and image) classification, where the goal is to predict each product’s <tt>type code</tt> as defined in the catalog of Rakuten France.</p>
-      <p>The cataloging of product listings through some type of text or image categorization methods is a fundamental problem for any e-commerce marketplace, with applications ranging from personalized search and recommendations to query understanding. Manual and rule-based approaches to categorization are not scalable since commercial products are organized in many and sometimes thousands of classes. When actual users categorize product data, it has often been observed that not only the text of the title and description of the product is useful but also its associated images.</p>
+      <p>The cataloging of product listings through some type of text or image categorization method is a fundamental problem for any e-commerce marketplace, with applications ranging from personalized search and recommendations to query understanding. Manual and rule-based approaches to categorization are not scalable since commercial products are organized in many and sometimes thousands of classes. When actual users categorize product data, it has often been observed that not only the text of the title and description of the product is useful but also its associated images.</p>
       
       <font size="5"><b>Challenges</b></font>
-      <p>In the taxonomy of Rakuten France, products sharing the same product <tt>type code</tt> share the same exact array of attributes fields and possible values. Product <tt>type codes</tt> are numbers that match a generic product name, such as 1500 is <tt>Watches</tt>, 120 is <tt>Laptops</tt>, and so on. In that sense, the <tt>type code</tt> of a product is its category label.</p>
-      <p>In the product catalog of Rakuten France, a product with a French title <it>Klarstein Présentoir 2 Montres Optique Fibre</it> is associated with an image and sometimes with an additional description. This product is categorized with a product type code of <tt>1500</tt>, signifying watches. There are other products with different titles, images and with possible descriptions, which are under the same product type code.</p>
+      <p>In the taxonomy of Rakuten France, products sharing the same product type code share the same exact array of attributes fields and possible values. Product type codes are numbers that match a generic product name, such as 1500 is <tt>Watches</tt>, 120 is <tt>Laptops</tt>, and so on. In that sense, the type code of a product is its category label.</p>
+      <p>In the product catalog of Rakuten France, a product with a French title <em>Klarstein Présentoir 2 Montres Optique Fibre</em> is associated with an image and sometimes with an additional description. This product is categorized with a product type code of <tt>1500</tt>, signifying watches. There are other products with different titles, images and with possible descriptions, which are under the same product type code.</p>
       <p>Given these information on the products, like the example above, this challenge proposes participating teams build and submit systems that classify previously unseen products into their corresponding product type codes.</p>
       
       <p>The main tasks for this task are as follows:</p>
@@ -121,13 +121,12 @@
       <br>
       
       <font size="5"><b>Data</b></font>
-      <p>For this challenge, <b>Rakuten France</b> has released approximately 99K product listings in <tt>tsv</tt> format, including a training (84,916) and test set (13,812). The dataset consists of product titles, product descriptions, product images and their corresponding product type codes.</p>
-      
-      <p>The test set will be released towards the end of the data challenge. Furthermore, one can assume the test set has been generated from the same data distribution as the training set.</p>
+      <p>For this challenge, <b>Rakuten France</b> has released approximately 99K product listings in <tt>tsv</tt> format, including a training (84,916) and test set (13,812). The dataset consists of product titles, product descriptions, product images and their corresponding product type codes. The test set will be released towards the end of the data challenge. Furthermore, one can assume the test set has been generated from the same data distribution as the training set.</p>
+      <p>A detailed description of the data is included in the pdf file supplied with the data.</p>
       
       <font size="5"><b>Participation and Submission</b></font>
       <p>Please <a href="https://rakutendatachallenge.net/register.html">register in this link</a> for participation. The submission is team-based, so only team leader can submit the prediction file. Also the same person cannot be team leader of multiple teams. There is no limit on maximum team size. We will send you the details about downloading the data file after we receive your sign-up.</p>
-      <p>The prediction file has to be the same tsv format as the training file where the first column is the product title from the test set and the second column is your predicted CategoryIdPath. Please DO NOT change the order of the test titles in your submission file.</p>
+      <p>Participants need to provide a test output file in the same format as the training output file (associating each <tt>Integer_id</tt>, <tt>Image_id</tt> and <tt>Product_id</tt> tuple with the predicted <tt>Prdtypecode</tt>. The first line of this test output file should contain the header. Please DO NOT change the order of the test titles in your submission file. <p>A detailed instruction of the format of the submissions is included in the pdf file supplied with the data.</p>
       
       <p>Accepted contributions will be presented during the eCom Workshop in SIGIR 2020.</p>
       
@@ -173,8 +172,12 @@
               <td>Paper Acceptance Notification</td>
           </tr>
           <tr>
+              <td>July 14</td>
+              <td>Evaluation Stage 2 Starts</td>
+          </tr>
+          <tr>
               <td>July 15</td>
-              <td>Evaluation Stage 2 (Final Leaderboard)</td>
+              <td>Evaluation Stage 2 Closes (Final Leaderboard)</td>
           </tr>
           <tr>
               <td>July 22</td>
@@ -184,10 +187,8 @@
               <td>July 30</td>
               <td>eCom Full Day Workshop</td>
           </tr>
-          <tr>
-          </tr>
       </table>
-      <p>Note: The timeline is subject to slight modifications.</p>
+      <p>Note: The timeline is subject to slight modifications. The deadline is 23:59 GMT for all the above mentioned dates.</p>
       <p>If you have any question, please contact Hesam Amoualian (hesam.amoualian@rakuten.com) or Parantapa Goswami (parantapa.goswami@rakuten.com).</p>
     
     </div>
