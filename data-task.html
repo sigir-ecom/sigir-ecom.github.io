@@ -125,8 +125,8 @@
       <p>A detailed description of the data is included in the pdf file supplied with the data.</p>
       
       <font size="5"><b>Participation and Submission</b></font>
-      <p>Please <a href="https://rakutendatachallenge.net/register.html">register in this link</a> for participation. The submission is team-based, so only team leader can submit the prediction file. Also the same person cannot be team leader of multiple teams. There is no limit on maximum team size. We will send you the details about downloading the data file after we receive your sign-up.</p>
-      <p>Participants need to provide a test output file in the same format as the training output file (associating each <tt>Integer_id</tt>, <tt>Image_id</tt> and <tt>Product_id</tt> tuple with the predicted <tt>Prdtypecode</tt>. The first line of this test output file should contain the header. Please DO NOT change the order of the test titles in your submission file. <p>A detailed instruction of the format of the submissions is included in the pdf file supplied with the data.</p>
+      <p>Please <a href="https://rakutendatachallenge.net/register.html">register in this link</a> for participation. The submission is team-based, only team leader can submit the prediction file. Also the same person cannot be team leader of multiple teams. There is no limit on maximum team size. We will send you the details about downloading the data file after we receive your sign-up.</p>
+      <p>Participants need to provide a prediction output file in the same format as the training output file (associating each <tt>Integer_id</tt>, <tt>Image_id</tt> and <tt>Product_id</tt> tuple with the predicted <tt>Prdtypecode</tt>). The first line of this test output file should contain the header. Please DO NOT change the order of the test titles in your submission file. <p>A detailed instruction of the format of the submissions is included in the pdf file supplied with the data.</p>
       
       <p>Accepted contributions will be presented during the eCom Workshop in SIGIR 2020.</p>
       
@@ -134,15 +134,15 @@
       <p>Since in this challenge, we are dealing with many classes with highly asymmetric  number of samples, an item weighted metric used to rank the participants will not reveal the deficiencies of the classification algorithms. The evaluation script is included in the downloadable data file.</p>
       
       <ul style="list-style-type:none;">
-      <li>Task 1: We will use the <b>macro-F1 score</b> to evaluate product type code classification on held out test samples. The score is understood as the arithmetic average of per product type code F1 score.</li>
-      <li>Task 2: For the cross-modal retrieval task, the systems will be evaluated on <b>recall at 1 (R@1)</b> on held out test samples. The score is understood to be the average of the per-sample scoring of 1 if the image returned matches the title and 0 otherwise.</li>
+      <li><b>Task 1</b>: We will use the <b>macro-F1 score</b> to evaluate product type code classification on held out test samples. The score is understood as the arithmetic average of per product type code F1 score.</li>
+      <li><b>Task 2</b>: For the cross-modal retrieval task, the systems will be evaluated on <b>recall at 1 (R@1)</b> on held out test samples. The score is understood to be the average of the per-sample scoring of 1 if the image returned matches the title and 0 otherwise.</li>
       </ul>
       
       <font size="3"><b>Stage 1 - Model Building (April 14 - June 08)</b></font>
-      <p>Participants build and test models on the training data. The leaderboard only shows the model performance on a SUBSET of the test set according to your LATEST submission. Each team can submit at most 4 times per day (UTC time) in this stage and the leader board will update every 15 minutes.</p>
+      <p>Participants build and test models on the training data. The leaderboard only shows the model performance on a SUBSET of the test set according to your LATEST submission. Each team can submit at most 4 times per day (UTC time) in this stage.</p>
       
-      <font size="3"><b>Stage 2 - Model Evaluation (July 15)</b></font>
-      <p>The final leaderboard will freeze on July 15 and show the model performance on the ENTIRE test set according to your LATEST submission.</p>
+      <font size="3"><b>Stage 2 - Model Evaluation (July 14)</b></font>
+      <p>The final leaderboard will freeze on July 15 and show the model performance on the ENTIRE test set according to your LATEST submission. In this stage also each team can submit at most 4 times during the 24 hours the evaluation is open.</p>
 
       <font size="5"><b>System Description Paper</b></font>
       <p>System description papers will be peer reviewed (single-blind) by the program committee. All submissions must be formatted according to the latest <a href="http://www.acm.org/publications/proceedings-template">ACM SIG proceedings template</a>. There will be no specific constraint on the content but it should cover the implementation details, such as data preprocessing, including token normalization and feature extraction, additional data used from external sources; model descriptions, including specific implementations, parameter tuning, etc. and error analysis, if any.</p>
