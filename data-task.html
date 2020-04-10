@@ -90,25 +90,109 @@
         </div>
       </div>
     </header>
-    <section>
-      <div class="container">
-        
-      
+
+<section>
+    <div class="container" align="left">
+        <div class="p-0">
+            <iframe src = "https://rakutendatachallenge.net/scoreboard.html" align="middle" height="800" style="width:110%" frameBorder="0" > </iframe>
+        </div>
+    </div>
+</section>
+
+<section>
+<div class="container">
     
     <div class="p-0">
       <br>
       <font size="5"><b>About</b></font>
-      <p><br>
-      The SIGIR eCom Data Challenge is organized by <a href="https://rit.rakuten.co.jp/" target="_blank">Rakuten Institute of Technology</a> - France, a dedicated R&ampD organization for the <a href="http://rakuten.com/" target="_blank">Rakuten</a> group. This challenge focuses on the topic of <b>Large-scale Multimodal Product Classification and Retrieval</b> where the goal is to predict each product’s category as defined in the taxonomy tree given product's title, description, and image. The cataloging of product listings through taxonomy categorization is a fundamental problem for any e-commerce marketplace, with applications ranging from personalized search recommendations to query understanding. 
-      <br>
-      <br>
-      More details of the Data Challenge will be out soon. Please provide <a href="https://docs.google.com/forms/d/e/1FAIpQLSft7BnjphRs0jc9PjzarGq7tZ9Wi8zU7sXtkW_ycDo1I4pDeg/viewform?usp=pp_url" target="_blank">contact details</a> to keep you posted. 
+      <p><b>Rakuten France Multi-modal Product Data Classification</b> challenge is organized by <a href="https://rit.rakuten.co.jp/">Rakuten Institute of Technology</a>, the research and innovation department of Rakuten group. This challenge focuses on the topic of large-scale multi-modal (text and image) classification, where the goal is to predict each product’s <tt>type code</tt> as defined in the catalog of Rakuten France.</p>
+      <p>The cataloging of product listings through some type of text or image categorization methods is a fundamental problem for any e-commerce marketplace, with applications ranging from personalized search and recommendations to query understanding. Manual and rule-based approaches to categorization are not scalable since commercial products are organized in many and sometimes thousands of classes. When actual users categorize product data, it has often been observed that not only the text of the title and description of the product is useful but also its associated images.</p>
       
+      <font size="5"><b>Challenges</b></font>
+      <p>In the taxonomy of Rakuten France, products sharing the same product <tt>type code</tt> share the same exact array of attributes fields and possible values. Product <tt>type codes</tt> are numbers that match a generic product name, such as 1500 is <tt>Watches</tt>, 120 is <tt>Laptops</tt>, and so on. In that sense, the <tt>type code</tt> of a product is its category label.</p>
+      <p>In the product catalog of Rakuten France, a product with a French title <it>Klarstein Présentoir 2 Montres Optique Fibre</it> is associated with an image and sometimes with an additional description. This product is categorized with a product type code of <tt>1500</tt>, signifying watches. There are other products with different titles, images and with possible descriptions, which are under the same product type code.</p>
+      <p>Given these information on the products, like the example above, this challenge proposes participating teams build and submit systems that classify previously unseen products into their corresponding product type codes.</p>
+      
+      <p>The main tasks for this task are as follows:</p>
+      <ol>
+      <li><b>Multi-modal classification</b>. Given a training set of products and their product type codes, predict the corresponding product type codes for an unseen held out test set of products. The systems are free to use the available textual titles and/or descriptions whenever available and additionally the images to allow for true multi-modal learning.</li>
+      <li><b>Cross-modal retrieval</b>. Given an held-out test set of product items with their titles and (possibly empty) descriptions, predict the best image from among a set of test images that correspond to the products in the test set.</li>
+      </ol>
+      <br>
+      
+      <font size="5"><b>Data</b></font>
+      <p>For this challenge, <b>Rakuten France</b> has released approximately 99K product listings in <tt>tsv</tt> format, including a training (84,916) and test set (13,812). The dataset consists of product titles, product descriptions, product images and their corresponding product type codes.</p>
+      
+      <p>The test set will be released towards the end of the data challenge. Furthermore, one can assume the test set has been generated from the same data distribution as the training set.</p>
+      
+      <font size="5"><b>Participation and Submission</b></font>
+      <p>Please <a href="https://rakutendatachallenge.net/register.html">register in this link</a> for participation. The submission is team-based, so only team leader can submit the prediction file. Also the same person cannot be team leader of multiple teams. There is no limit on maximum team size. We will send you the details about downloading the data file after we receive your sign-up.</p>
+      <p>The prediction file has to be the same tsv format as the training file where the first column is the product title from the test set and the second column is your predicted CategoryIdPath. Please DO NOT change the order of the test titles in your submission file.</p>
+      
+      <p>Accepted contributions will be presented during the eCom Workshop in SIGIR 2020.</p>
+      
+      <font size="5"><b>Evaluation Metric</b></font>
+      <p>Since in this challenge, we are dealing with many classes with highly asymmetric  number of samples, an item weighted metric used to rank the participants will not reveal the deficiencies of the classification algorithms. The evaluation script is included in the downloadable data file.</p>
+      
+      <ul style="list-style-type:none;">
+      <li>Task 1: We will use the <b>macro-F1 score</b> to evaluate product type code classification on held out test samples. The score is understood as the arithmetic average of per product type code F1 score.</li>
+      <li>Task 2: For the cross-modal retrieval task, the systems will be evaluated on <b>recall at 1 (R@1)</b> on held out test samples. The score is understood to be the average of the per-sample scoring of 1 if the image returned matches the title and 0 otherwise.</li>
+      </ul>
+      
+      <font size="3"><b>Stage 1 - Model Building (April 14 - June 08)</b></font>
+      <p>Participants build and test models on the training data. The leaderboard only shows the model performance on a SUBSET of the test set according to your LATEST submission. Each team can submit at most 4 times per day (UTC time) in this stage and the leader board will update every 15 minutes.</p>
+      
+      <font size="3"><b>Stage 2 - Model Evaluation (July 15)</b></font>
+      <p>The final leaderboard will freeze on July 15 and show the model performance on the ENTIRE test set according to your LATEST submission.</p>
 
-      </div>
-<br>
-        </div>
-    </section>
+      <font size="5"><b>System Description Paper</b></font>
+      <p>System description papers will be peer reviewed (single-blind) by the program committee. All submissions must be formatted according to the latest <a href="http://www.acm.org/publications/proceedings-template">ACM SIG proceedings template</a>. There will be no specific constraint on the content but it should cover the implementation details, such as data preprocessing, including token normalization and feature extraction, additional data used from external sources; model descriptions, including specific implementations, parameter tuning, etc. and error analysis, if any.</p>
+      
+      <p>Instructions to submit the system description paper should be available soon. The deadline for paper submission is June 8, 2020 (11: 59 P.M. UTC).</p>
+      
+      <font size="5"><b>Timeline</b></font>
+      <table class="table table-condensed" style="width:90%">
+          <tr>
+              <td>April 14</td>
+              <td>Registration Opens, Evaluation Stage 1 Starts!</td>
+          </tr>
+          <tr>
+              <td>June 08</td>
+              <td>Data Challenge Registration Deadline</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>Leaderboard for Stage 1 Closes</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>System Description Paper Submission (Suggested paper length 4-8 pages)</td>
+          </tr>
+          <tr>
+              <td>June 15</td>
+              <td>Paper Acceptance Notification</td>
+          </tr>
+          <tr>
+              <td>July 15</td>
+              <td>Evaluation Stage 2 (Final Leaderboard)</td>
+          </tr>
+          <tr>
+              <td>July 22</td>
+              <td>Camera Ready Version of Papers Due</td>
+          </tr>
+          <tr>
+              <td>July 30</td>
+              <td>eCom Full Day Workshop</td>
+          </tr>
+          <tr>
+          </tr>
+      </table>
+      <p>Note: The timeline is subject to slight modifications.</p>
+      <p>If you have any question, please contact Hesam Amoualian (hesam.amoualian@rakuten.com) or Parantapa Goswami (parantapa.goswami@rakuten.com).</p>
+    
+    </div>
+    </div>
+</section>
 
      <!-- Footer -->
     <footer class="py-5 bg-black">
