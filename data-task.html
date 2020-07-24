@@ -148,7 +148,8 @@
       <p>Participants build and test models on the training data. The leaderboard only shows the model performance on a SUBSET of the test set according to your LATEST submission. Each team can submit at most 4 times per day in this stage. The leaderboard freezes on July 15 at 5 PM PDT i.e. UTC 00:00:00 the next day.</p>
       
       <font size="3"><b>Stage 2 - Model Evaluation (July 15 - July 23)</b></font>
-      <p>The final leaderboard will freeze on July 23 at 5 PM PDT i.e. UTC 00:00:00 the next day, and show the model performance on the remaining held out test set according to your LATEST submission. In this stage each team can submit at most 7 times during the time period that the evaluation is open, and there must be a period of 24 hours between two submissions.</p>
+      <p>The final leaderboard will freeze on July 23 at 5 PM PDT i.e. UTC 00:00:00 the next day, and show the model performance on the remaining held out test set according to your LATEST submission. In this stage each team can submit at most 8
+      times during the time period that the evaluation is open, and there must be a period of 24 hours between two submissions.</p>
 
       <font size="5"><b>System Description Paper</b></font>
       <p>System description papers will be peer reviewed (single-blind) by the program committee. All submissions must be formatted according to the latest <a href="http://www.acm.org/publications/proceedings-template">ACM SIG proceedings template</a>. There will be no specific constraint on the content but it should cover the implementation details, such as data preprocessing, including token normalization and feature extraction, additional data used from external sources; model descriptions, including specific implementations, parameter tuning, etc. and error analysis, if any. Suggested paper length is 2-4 pages, and parameter tuning settings or similar information can be moved to an Appendix section.</p>
@@ -199,20 +200,358 @@
       </table>
       <p>If you have any question, please contact Hesam Amoualian (hesam.amoualian@rakuten.com) or Parantapa Goswami (parantapa.goswami@rakuten.com).</p>
     
-      <a name="scoreboard"><font size="5"><b>Phase 2 Scoreboard</b></font></a><br>
-      <div class="container" align="left">
-          <div class="p-0">
-              <iframe src = "https://rakutendatachallenge.net/scoreboard_plain.html" align="middle" style="width:97%" height = "750" frameBorder="0"> </iframe>
-          </div>
-      </div>
-      <br>
+    
+      <!------ Table Style ------>
+      <style>
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+      
+        th {
+            background-color: #808080;
+        }
+        
+      </style>
+      
+      <div class="row">
+      <div class="column">
       <a name="scoreboard"><font size="5"><b>Phase 1 Scoreboard</b></font></a><br>
-      <div class="container" align="left">
-          <div class="p-0">
-              <iframe src = "https://rakutendatachallenge.net/scoreboard_plain_phase1.html" align="middle" style="width:97%" height = "1000" frameBorder="0"> </iframe>
-          </div>
+      <font size="3"><b>Task 1: Multimodal Classification </b></font><br>
+        <table class=class="table table-condensed", style="width:90%">
+        <tbody>
+        <tr>
+            <th>Rank</th>
+            <th> Team Name </th>
+            <th> Last Submission</th>
+            <th> Macro-F1 score </th>
+        </tr>
+      
+        <tr>
+            <td> 1 </td>
+            <td>Transformers </td>
+            <td> 2020 Jul 13 06:53:43 </td>
+            <td> 91.94 </td>
+        </tr>
+      
+        <tr>
+            <td> 2 </td>
+            <td> zenit84 </td>
+            <td> 2020 Jun 27 17:33:34 </td>
+            <td> 91.63 </td>
+        </tr>
+      
+        <tr>
+            <td> 3 </td>
+            <td> Alto </td>
+            <td> 2020 Jul 14 15:40:57 </td>
+            <td> 91.63 </td>
+        </tr>
+      
+        <tr>
+            <td> 4 </td>
+            <td> Beantown </td>
+            <td> 2020 Jul 15 23:47:03 </td>
+            <td> 90.89 </td>
+        </tr>
+      
+        <tr>
+            <td> 5 </td>
+            <td> Synerise AI </td>
+            <td> 2020 Jul 07 13:45:38 </td>
+            <td> 89.72 </td>
+        </tr>
+      
+        <tr>
+            <td> 6 </td>
+            <td> pa_curis </td>
+            <td> 2020 Jul 15 17:38:26 </td>
+            <td> 89.65 </td>
+        </tr>
+      
+        <tr>
+            <td> 7 </td>
+            <td> RIT-Paris Baseline </td>
+            <td> 2020 Jul 15 10:48:14 </td>
+            <td> 87.05 </td>
+        </tr>
+      
+        <tr>
+            <td> 8 </td>
+            <td> tester </td>
+            <td> 2020 Jun 24 17:53:50 </td>
+            <td> 86.94 </td>
+        </tr>
+      
+        <tr>
+            <td> 9 </td>
+            <td> testers </td>
+            <td> 2020 Jul 08 16:19:24 </td>
+            <td> 85.87 </td>
+        </tr>
+      
+        <tr>
+            <td> 10 </td>
+            <td> MMG_AI_TEAM </td>
+            <td> 2020 Jul 15 11:27:08 </td>
+            <td> 84.81 </td>
+        </tr>
+      
+        <tr>
+            <td> 11 </td>
+            <td> DeepData </td>
+            <td> 2020 Jun 18 09:11:58 </td>
+            <td> 84.32 </td>
+        </tr>
+      
+        <tr>
+            <td> 12 </td>
+            <td> overfiTTers </td>
+            <td> 2020 Jul 12 12:57:20 </td>
+            <td> 81.9 </td>
+        </tr>
+      
+        <tr>
+            <td> 13 </td>
+            <td> Team MLG </td>
+            <td> 2020 Jul 15 05:01:11 </td>
+            <td> 65.8 </td>
+        </tr>
+      
+        <tr>
+            <td> 14 </td>
+            <td> qrudraksh </td>
+            <td> 2020 May 27 20:03:26 </td>
+            <td> 58.0 </td>
+        </tr>
+      
+        <tr>
+            <td> 15 </td>
+            <td> 7ate9 </td>
+            <td> 2020 Jun 10 04:39:36 </td>
+            <td> 53.29 </td>
+        </tr>
+      
+      </tbody></table>
       </div>
-      <br>
+      
+      <div class="column"
+      <a name="scoreboard"><font size="5"><b>Phase 2 Scoreboard</b></font></a><br>
+      <font size="3"><b>Task 1: Multimodal Classification </b></font><br>
+      <table class=class="table table-condensed", style="width:90%">
+      <tbody>
+        <tr>
+            <th>Rank</th>
+            <th> Team Name </th>
+            <th> Last Submission</th>
+            <th> Macro-F1 score </th>
+        </tr>
+      
+        <tr>
+            <td> 1 </td>
+            <td> pa_curis </td>
+            <td> 2020 Jul 21 10:25:24 </td>
+            <td> 91.44 </td>
+        </tr>
+      
+        <tr>
+            <td> 2 </td>
+            <td> Alto </td>
+            <td> 2020 Jul 23 21:35:59 </td>
+            <td> 90.87 </td>
+        </tr>
+      
+        <tr>
+            <td> 3 </td>
+            <td> Transformers </td>
+            <td> 2020 Jul 23 16:23:52 </td>
+            <td> 90.53 </td>
+        </tr>
+      
+        <tr>
+            <td> 4 </td>
+            <td> zenit84 </td>
+            <td> 2020 Jul 23 22:22:36 </td>
+            <td> 90.39 </td>
+        </tr>
+      
+        <tr>
+            <td> 5 </td>
+            <td> Beantown </td>
+            <td> 2020 Jul 22 03:58:44 </td>
+            <td> 90.22 </td>
+        </tr>
+      
+        <tr>
+            <td> 6 </td>
+            <td> Synerise AI </td>
+            <td> 2020 Jul 17 04:42:21 </td>
+            <td> 89.78 </td>
+        </tr>
+      
+        <tr>
+            <td> 7 </td>
+            <td> MMG_AI_TEAM </td>
+            <td> 2020 Jul 22 13:22:00 </td>
+            <td> 86.94 </td>
+        </tr>
+      
+        <tr>
+            <td> 8 </td>
+            <td> RIT-Paris Baseline </td>
+            <td> 2020 Jul 18 09:19:53 </td>
+            <td> 85.36 </td>
+        </tr>
+      
+        <tr>
+            <td> 9 </td>
+            <td> Team MLG </td>
+            <td> 2020 Jul 17 01:22:23 </td>
+            <td> 64.48 </td>
+        </tr>
+      
+      </tbody></table>
+      
+      </div>
+      </div>
+      
+      <div class="row">
+      <div class="column">
+      <a name="scoreboard"><font size="3"><b>Task 2: Cross-modal Retrieval</b></font></a><br>
+      <table class=class="table table-condensed", style="width:90%">
+      <tbody>
+      <tr>
+      <th>Rank</th>
+      <th> Team Name </th>
+      <th> Last Submission</th>
+      <th> Recall@1 score </th>
+      </tr>
+      
+      <tr>
+      <td> 1 </td>
+      <td> Synerise AI </td>
+      <td> 2020 Jul 01 12:30:48 </td>
+      <td> 50.23 </td>
+      </tr>
+      
+      <tr>
+      <td> 2 </td>
+      <td> changer </td>
+      <td> 2020 Jul 12 11:14:59 </td>
+      <td> 46.85 </td>
+      </tr>
+      
+      <tr>
+      <td> 3 </td>
+      <td> pa_curis </td>
+      <td> 2020 May 27 09:34:52 </td>
+      <td> 41.89 </td>
+      </tr>
+      
+      <tr>
+      <td> 4 </td>
+      <td> Beantown </td>
+      <td> 2020 Jul 15 20:38:29 </td>
+      <td> 38.96 </td>
+      </tr>
+      
+      <tr>
+      <td> 5 </td>
+      <td> Alto </td>
+      <td> 2020 Jul 03 01:49:35 </td>
+      <td> 38.29 </td>
+      </tr>
+      
+      <tr>
+      <td> 6 </td>
+      <td> MMG_AI_TEAM </td>
+      <td> 2020 Jul 15 11:29:07 </td>
+      <td> 27.25 </td>
+      </tr>
+      
+      <tr>
+      <td> 7 </td>
+      <td> kenneth </td>
+      <td> 2020 Jun 16 20:12:10 </td>
+      <td> 1.35 </td>
+      </tr>
+      
+      </tbody></table>
+      </div>
+      <div class="column">
+      <a name="scoreboard"><font size="3"><b>Task 2: Cross-modal Retrieval</b></font></a><br>
+      <table class=class="table table-condensed", style="width:90%">
+      <tbody>
+        <tr>
+            <th>Rank</th>
+            <th> Team Name </th>
+            <th> Last Submission</th>
+            <th> Recall@1 score </th>
+        </tr>
+      
+        <tr>
+            <td> 1 </td>
+            <td> Synerise AI </td>
+            <td> 2020 Jul 17 19:04:22 </td>
+            <td> 34.28 </td>
+        </tr>
+      
+        <tr>
+            <td> 2 </td>
+            <td> changer </td>
+            <td> 2020 Jul 21 16:59:52 </td>
+            <td> 31.93 </td>
+        </tr>
+      
+        <tr>
+            <td> 3 </td>
+            <td> Beantown </td>
+            <td> 2020 Jul 22 17:05:28 </td>
+            <td> 23.3 </td>
+        </tr>
+      
+        <tr>
+            <td> 4 </td>
+            <td> Alto </td>
+            <td> 2020 Jul 20 23:40:02 </td>
+            <td> 19.99 </td>
+        </tr>
+      
+        <tr>
+            <td> 5 </td>
+            <td> pa_curis </td>
+            <td> 2020 Jul 23 13:19:58 </td>
+            <td> 19.74 </td>
+        </tr>
+      
+        <tr>
+            <td> 6 </td>
+            <td> MMG_AI_TEAM </td>
+            <td> 2020 Jul 20 12:39:02 </td>
+            <td> 15.77 </td>
+        </tr>
+      
+      </tbody></table>
+      </div>
+      </div>
+      
       <a name="scoreboard"><font size="5"><b>Data Challenge Organizers</b></font></a><br>
       <div class="container">
           <h2 class="wsite-content-title" style="text-align:left;"><font size="3">
