@@ -1,0 +1,582 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+  <head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115771746-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115771746-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SIGIR eCom</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">SIGIR eCom'20</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive" data-target=".navbar-collapse" data-toggle="collapse">
+          <ul class="navbar-nav ml-auto" >
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./program.html">Program</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="./accepted-papers.html">Accepted Papers</font></a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="./data-task.html"><font color=#FFCB05>Data Challenge</font></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="./organizers.html">Organizers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cfp.html">CFP</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="http://sigir-ecom.weebly.com/" target="_blank"><font color=#ff3377>eCom'17</font></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../ecom2018/index.html" target="_blank"><font color=#3377ff>eCom'18</font></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../ecom2019/index.html" target="_blank"><font color=#FFCB05>eCom'19</font></a>
+            </li>
+
+            <li>
+                      <a href="https://twitter.com/SIGIReCom" target="_blank">
+                      <img src="./img/Twitter_Social_Icon_Circle_White.png" style="width:25px;height:25px;" > </a>
+                    </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h2 class="masthead-heading mb-0"><font color=black>Rakuten Data Challenge</font></h2>
+          <br>
+          <h4 class="masthead-subheading mb-0"><font face="Zapfino" color=black><b>Multimodal Product Classification and Retrieval</b></font></h4>
+          <!--a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a-->
+
+        </div>
+      </div>
+    </header>
+
+<section>
+<div class="container">
+    <div class="alert" color=de2910ff>
+      <h2><b>Data Challenge Checklist</b></h2>
+      <li><b>Registration is now closed!</b></li>
+      <li><b>Join the data challenge slack channel: <a href="https://join.slack.com/t/ecom-ir/shared_invite/zt-4ifyh2rk-y6ZCUJi_rymJxmwiuKMtkw" target="_blank">DC Slack</a></b></li>
+    </div>
+</div>
+<div class="container">
+    <div class="p-0">
+      <br>
+      <a href="#scoreboard"><font size="3"><b>Click here for the final Scoreboards</b></font></a><br><br>
+      <font size="5"><b>About</b></font>
+      <p><b>Rakuten Multi-modal Product Data Classification and Retrieval</b> challenge is organized by <a href="https://rit.rakuten.co.jp/">Rakuten Institute of Technology</a>, the research and innovation department of Rakuten group. This challenge focuses on two topics, namely large-scale multi-modal (text and image) classification and cross-modal retrieval. The goal of the multi-modal classification task is to predict each product’s <tt>'type code'</tt> as defined in the catalog of <b>Rakuten France</b>. In the cross-modal retrieval task, presented with the text of the products, the goal is to retrieve the images corresponding to the products.</p>
+    
+      <p>The cataloging of product listings through some type of text or image categorization method is a fundamental problem for any e-commerce marketplace, with applications ranging from personalized search and recommendations to query understanding. Manual and rule-based approaches to categorization are not scalable since commercial products are organized in many and sometimes thousands of classes. When actual users categorize product data, it has often been observed that not only the text of the title and description of the product is useful but also its associated images.</p>
+      
+      <font size="5"><b>Challenges</b></font>
+      <p>In the taxonomy of Rakuten France, products sharing the same product type code share the same exact array of attributes fields and possible values. Product type codes are numbers that match a generic product name, such as 1500 is <tt>Watches</tt>, 120 is <tt>Laptops</tt>, and so on. In that sense, the type code of a product is its category label.</p>
+      <p>In the product catalog of Rakuten France, a product with a French title <em>Klarstein Présentoir 2 Montres Optique Fibre</em> is associated with an image and sometimes with an additional description. This product is categorized with a product type code of <tt>1500</tt>, signifying watches. There are other products with different titles, images and with possible descriptions, which are under the same product type code.</p>
+      <p>Given these information on the products, like the example above, this challenge proposes participating teams build and submit systems that classify previously unseen products into their corresponding product type codes.</p>
+      
+      <p>The main tasks for this challenge are as follows:</p>
+      <ol>
+      <li><b>Multi-modal classification</b>. Given a training set of products and their product type codes, predict the corresponding product type codes for an unseen held out test set of products. The systems are free to use the available textual titles and/or descriptions whenever available and additionally the images to allow for true multi-modal learning.</li>
+      <li><b>Cross-modal retrieval</b>. Given an held-out test set of product items with their titles and (possibly empty) descriptions, predict the best image from among a set of test images that correspond to the products in the test set.</li>
+      </ol>
+      <br>
+      
+      <font size="5"><b>Data</b></font>
+      <p>For this challenge, <b>Rakuten France</b> has released approximately 99K product listings in <tt>tsv</tt> format, including a training (84,916) and test set (13,812). The dataset consists of product titles, product descriptions, product images and their corresponding product type codes. The test set will be released towards the end of the data challenge. Furthermore, one can assume the test set has been generated from the same data distribution as the training set.</p>
+      <p>A detailed description of the data is included in <a href="files/Rakuten_Data_Challenge.pdf">this pdf file</a>.</p>
+      
+      <font size="5"><b>Participation and Submission</b></font>
+      <p><strike>Please register in this link for participation.</strike> The submission is team-based, only team leader can submit the prediction file. Also the same person cannot be team leader of multiple teams. There is no limit on maximum team size. We will send you the details about downloading the data file after we receive your sign-up.</p>
+      <p>Participants need to provide a prediction output file in the same format as the training output file (associating each <tt>Integer_id</tt>, <tt>Image_id</tt> and <tt>Product_id</tt> tuple with the predicted <tt>Prdtypecode</tt>). The first line of this test output file should contain the header. Please DO NOT change the order of the test titles in your submission file. <p>A detailed instruction of the format of the submissions is included in <a href="files/Rakuten_Data_Challenge.pdf">this pdf file</a>.</p>
+      
+      <p>Accepted contributions will be presented during the eCom Workshop in SIGIR 2020.</p>
+      
+      <font size="5"><b>Evaluation Metric</b></font>
+      <p>Since in this challenge, we are dealing with many classes with highly asymmetric  number of samples, an item weighted metric used to rank the participants will not reveal the deficiencies of the classification algorithms. The evaluation script is included in the downloadable data file.</p>
+      
+      <ul style="list-style-type:none;">
+      <li><b>Task 1</b>: We will use the <b>macro-F1 score</b> to evaluate product type code classification on held out test samples. The score is understood as the arithmetic average of per product type code F1 score.</li>
+      <li><b>Task 2</b>: For the cross-modal retrieval task, the systems will be evaluated on <b>recall at 1 (R@1)</b> on held out test samples. The score is understood to be the average of the per-sample scoring of 1 if the image returned matches the title and 0 otherwise.</li>
+      </ul>
+      
+      <font size="3"><b>Stage 1 - Model Building (April 20 - July 15)</b></font>
+      <p>Participants build and test models on the training data. The leaderboard only shows the model performance on a SUBSET of the test set according to your LATEST submission. Each team can submit at most 4 times per day in this stage. The leaderboard freezes on July 15 at 5 PM PDT i.e. UTC 00:00:00 the next day.</p>
+      
+      <font size="3"><b>Stage 2 - Model Evaluation (July 15 - July 23)</b></font>
+      <p>The final leaderboard will freeze on July 23 at 5 PM PDT i.e. UTC 00:00:00 the next day, and show the model performance on the remaining held out test set according to your LATEST submission. In this stage each team can submit at most 8
+      times during the time period that the evaluation is open, and there must be a period of 24 hours between two submissions.</p>
+
+      <font size="5"><b>System Description Paper</b></font>
+      <p>System description papers will be peer reviewed (single-blind) by the program committee. All submissions must be formatted according to the latest <a href="http://www.acm.org/publications/proceedings-template">ACM SIG proceedings template</a>. There will be no specific constraint on the content but it should cover the implementation details, such as data preprocessing, including token normalization and feature extraction, additional data used from external sources; model descriptions, including specific implementations, parameter tuning, etc. and error analysis, if any. Suggested paper length is 2-4 pages, and parameter tuning settings or similar information can be moved to an Appendix section.</p>
+
+      <br>Submissions to SIGIR eCom should be made at <a href='https://easychair.org/my/conference?conf=sigirecom20dc' target="_blank">https://easychair.org/my/conference?conf=sigirecom20dc</a>
+      <br>
+      
+      <p>Instructions to submit the system description paper should be available soon. The deadline for paper submission is July 17, 2020 (11: 59 P.M. UTC).</p>
+      
+      <font size="5"><b>Timeline</b></font>
+      <table class="table table-condensed" style="width:90%">
+          <tr>
+              <td>April 20</td>
+              <td>Registration Opens, Evaluation Stage 1 Starts!</td>
+          </tr>
+          <tr>
+              <td>July 15</td>
+              <td>Leaderboard for Stage 1 Closes (Registration closes)</td>
+          </tr>
+          <tr>
+              <td>July 15</td>
+              <td>Evaluation Stage 2 Starts</td>
+          </tr>
+          <tr>
+              <td>July 23</td>
+              <td>Evaluation Stage 2 Closes (Final Leaderboard)</td>
+          </tr>
+          <tr>
+              <td>July 30</td>
+              <td>eCom Full Day Workshop</td>
+          </tr>
+      </table>
+<hr>
+      <font size="5"><b>Data Challenge Paper Submission Timeline</b></font>
+      <table class="table table-condensed" style="width:90%">
+          <tr>
+              <td>July 17</td>
+              <td>System Description Paper Submission (Suggested paper length 2-4 pages with separate Appendix)</td>
+          </tr>
+          <tr>
+              <td>July 23</td>
+              <td>Paper Acceptance Notification</td>
+          </tr>
+          <tr>
+              <td>July 27</td>
+              <td>Camera Ready Version of Papers Due (Updated with your final methodology and results)</td>
+          </tr>
+      </table>
+      <p>If you have any question, please contact Hesam Amoualian (hesam.amoualian@rakuten.com) or Parantapa Goswami (parantapa.goswami@rakuten.com).</p>
+    
+    
+      <!------ Table Style ------>
+      <style>
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+      
+        th {
+            background-color: #808080;
+        }
+        
+      </style>
+      
+      <div class="row">
+      <div class="column">
+      <a name="scoreboard"><font size="5"><b>Phase 1 Scoreboard</b></font></a><br>
+      <font size="3"><b>Task 1: Multimodal Classification </b></font><br>
+        <table class=class="table table-condensed", style="width:90%">
+        <tbody>
+        <tr>
+            <th>Rank</th>
+            <th> Team Name </th>
+            <th> Last Submission</th>
+            <th> Macro-F1 score </th>
+        </tr>
+      
+        <tr>
+            <td> 1 </td>
+            <td>Transformers </td>
+            <td> 2020 Jul 13 06:53:43 </td>
+            <td> 91.94 </td>
+        </tr>
+      
+        <tr>
+            <td> 2 </td>
+            <td> zenit84 </td>
+            <td> 2020 Jun 27 17:33:34 </td>
+            <td> 91.63 </td>
+        </tr>
+      
+        <tr>
+            <td> 3 </td>
+            <td> Alto </td>
+            <td> 2020 Jul 14 15:40:57 </td>
+            <td> 91.63 </td>
+        </tr>
+      
+        <tr>
+            <td> 4 </td>
+            <td> Beantown </td>
+            <td> 2020 Jul 15 23:47:03 </td>
+            <td> 90.89 </td>
+        </tr>
+      
+        <tr>
+            <td> 5 </td>
+            <td> Synerise AI </td>
+            <td> 2020 Jul 07 13:45:38 </td>
+            <td> 89.72 </td>
+        </tr>
+      
+        <tr>
+            <td> 6 </td>
+            <td> pa_curis </td>
+            <td> 2020 Jul 15 17:38:26 </td>
+            <td> 89.65 </td>
+        </tr>
+      
+        <tr>
+            <td> 7 </td>
+            <td> RIT-Paris Baseline </td>
+            <td> 2020 Jul 15 10:48:14 </td>
+            <td> 87.05 </td>
+        </tr>
+      
+        <tr>
+            <td> 8 </td>
+            <td> tester </td>
+            <td> 2020 Jun 24 17:53:50 </td>
+            <td> 86.94 </td>
+        </tr>
+      
+        <tr>
+            <td> 9 </td>
+            <td> testers </td>
+            <td> 2020 Jul 08 16:19:24 </td>
+            <td> 85.87 </td>
+        </tr>
+      
+        <tr>
+            <td> 10 </td>
+            <td> MMG_AI_TEAM </td>
+            <td> 2020 Jul 15 11:27:08 </td>
+            <td> 84.81 </td>
+        </tr>
+      
+        <tr>
+            <td> 11 </td>
+            <td> DeepData </td>
+            <td> 2020 Jun 18 09:11:58 </td>
+            <td> 84.32 </td>
+        </tr>
+      
+        <tr>
+            <td> 12 </td>
+            <td> overfiTTers </td>
+            <td> 2020 Jul 12 12:57:20 </td>
+            <td> 81.9 </td>
+        </tr>
+      
+        <tr>
+            <td> 13 </td>
+            <td> Team MLG </td>
+            <td> 2020 Jul 15 05:01:11 </td>
+            <td> 65.8 </td>
+        </tr>
+      
+        <tr>
+            <td> 14 </td>
+            <td> qrudraksh </td>
+            <td> 2020 May 27 20:03:26 </td>
+            <td> 58.0 </td>
+        </tr>
+      
+        <tr>
+            <td> 15 </td>
+            <td> 7ate9 </td>
+            <td> 2020 Jun 10 04:39:36 </td>
+            <td> 53.29 </td>
+        </tr>
+      
+      </tbody></table>
+      </div>
+      
+      <div class="column">
+      <font size="5"><b>Phase 2 Scoreboard</b></font></a><br>
+      <font size="3"><b>Task 1: Multimodal Classification </b></font><br>
+      <table class=class="table table-condensed", style="width:90%">
+      <tbody>
+        <tr>
+            <th>Rank</th>
+            <th> Team Name </th>
+            <th> Last Submission</th>
+            <th> Macro-F1 score </th>
+        </tr>
+      
+        <tr>
+            <td> 1 </td>
+            <td> pa_curis </td>
+            <td> 2020 Jul 21 10:25:24 </td>
+            <td> 91.44 </td>
+        </tr>
+      
+        <tr>
+            <td> 2 </td>
+            <td> Alto </td>
+            <td> 2020 Jul 23 21:35:59 </td>
+            <td> 90.87 </td>
+        </tr>
+      
+        <tr>
+            <td> 3 </td>
+            <td> Transformers </td>
+            <td> 2020 Jul 23 16:23:52 </td>
+            <td> 90.53 </td>
+        </tr>
+      
+        <tr>
+            <td> 4 </td>
+            <td> zenit84 </td>
+            <td> 2020 Jul 23 22:22:36 </td>
+            <td> 90.39 </td>
+        </tr>
+      
+        <tr>
+            <td> 5 </td>
+            <td> Beantown </td>
+            <td> 2020 Jul 22 03:58:44 </td>
+            <td> 90.22 </td>
+        </tr>
+      
+        <tr>
+            <td> 6 </td>
+            <td> Synerise AI </td>
+            <td> 2020 Jul 17 04:42:21 </td>
+            <td> 89.78 </td>
+        </tr>
+      
+        <tr>
+            <td> 7 </td>
+            <td> MMG_AI_TEAM </td>
+            <td> 2020 Jul 22 13:22:00 </td>
+            <td> 86.94 </td>
+        </tr>
+      
+        <tr>
+            <td> 8 </td>
+            <td> RIT-Paris Baseline </td>
+            <td> 2020 Jul 18 09:19:53 </td>
+            <td> 85.36 </td>
+        </tr>
+      
+        <tr>
+            <td> 9 </td>
+            <td> Team MLG </td>
+            <td> 2020 Jul 17 01:22:23 </td>
+            <td> 64.48 </td>
+        </tr>
+      
+      </tbody></table>
+      
+      </div>
+      </div>
+      
+      <div class="row">
+      <div class="column">
+      <font size="3"><b>Task 2: Cross-modal Retrieval</b></font></a><br>
+      <table class=class="table table-condensed", style="width:90%">
+      <tbody>
+      <tr>
+      <th>Rank</th>
+      <th> Team Name </th>
+      <th> Last Submission</th>
+      <th> Recall@1 score </th>
+      </tr>
+      
+      <tr>
+      <td> 1 </td>
+      <td> Synerise AI </td>
+      <td> 2020 Jul 01 12:30:48 </td>
+      <td> 50.23 </td>
+      </tr>
+      
+      <tr>
+      <td> 2 </td>
+      <td> changer </td>
+      <td> 2020 Jul 12 11:14:59 </td>
+      <td> 46.85 </td>
+      </tr>
+      
+      <tr>
+      <td> 3 </td>
+      <td> pa_curis </td>
+      <td> 2020 May 27 09:34:52 </td>
+      <td> 41.89 </td>
+      </tr>
+      
+      <tr>
+      <td> 4 </td>
+      <td> Beantown </td>
+      <td> 2020 Jul 15 20:38:29 </td>
+      <td> 38.96 </td>
+      </tr>
+      
+      <tr>
+      <td> 5 </td>
+      <td> Alto </td>
+      <td> 2020 Jul 03 01:49:35 </td>
+      <td> 38.29 </td>
+      </tr>
+      
+      <tr>
+      <td> 6 </td>
+      <td> MMG_AI_TEAM </td>
+      <td> 2020 Jul 15 11:29:07 </td>
+      <td> 27.25 </td>
+      </tr>
+      
+      <tr>
+      <td> 7 </td>
+      <td> kenneth </td>
+      <td> 2020 Jun 16 20:12:10 </td>
+      <td> 1.35 </td>
+      </tr>
+      
+      </tbody></table>
+      </div>
+      <div class="column">
+      <font size="3"><b>Task 2: Cross-modal Retrieval</b></font></a><br>
+      <table class=class="table table-condensed", style="width:90%">
+      <tbody>
+        <tr>
+            <th>Rank</th>
+            <th> Team Name </th>
+            <th> Last Submission</th>
+            <th> Recall@1 score </th>
+        </tr>
+      
+        <tr>
+            <td> 1 </td>
+            <td> Synerise AI </td>
+            <td> 2020 Jul 17 19:04:22 </td>
+            <td> 34.28 </td>
+        </tr>
+      
+        <tr>
+            <td> 2 </td>
+            <td> changer </td>
+            <td> 2020 Jul 21 16:59:52 </td>
+            <td> 31.93 </td>
+        </tr>
+      
+        <tr>
+            <td> 3 </td>
+            <td> Beantown </td>
+            <td> 2020 Jul 22 17:05:28 </td>
+            <td> 23.3 </td>
+        </tr>
+      
+        <tr>
+            <td> 4 </td>
+            <td> Alto </td>
+            <td> 2020 Jul 20 23:40:02 </td>
+            <td> 19.99 </td>
+        </tr>
+      
+        <tr>
+            <td> 5 </td>
+            <td> pa_curis </td>
+            <td> 2020 Jul 23 13:19:58 </td>
+            <td> 19.74 </td>
+        </tr>
+      
+        <tr>
+            <td> 6 </td>
+            <td> MMG_AI_TEAM </td>
+            <td> 2020 Jul 20 12:39:02 </td>
+            <td> 15.77 </td>
+        </tr>
+      
+      </tbody></table>
+      </div>
+      </div>
+      
+      <a name="scoreboard"><font size="5"><b>Data Challenge Organizers</b></font></a><br>
+      <div class="container">
+          <h2 class="wsite-content-title" style="text-align:left;"><font size="3">
+              <font>Hesam Amoualian</font>&nbsp; &nbsp; <font color="#818181">Rakuten Institute of Technology, Paris</font><br>
+              <font>Parantapa Goswami</font> &nbsp; &nbsp;&nbsp;<font color="#818181">​</font><font color="#818181">Rakuten Institute of Technology, Paris</font><br>
+              <font>Laurent Ach</font> &nbsp; &nbsp;&nbsp;<font color="#818181">​</font><font color="#818181">Rakuten Institute of Technology, Paris</font><br>
+              <font>Pradipto Das</font>&nbsp; &nbsp; <font color="#818181">Rakuten Institute of Technology, Americas</font><br>
+              <font>Pablo Montalvo</font> &nbsp; &nbsp;&nbsp;<font color="#818181">​</font><font color="#818181">Rakuten Institute of Technology, Paris</font><br>
+          </h2>
+      </div>
+    </div>
+    </div>
+</section>
+
+ <!-- Footer -->
+<footer class="py-5 bg-black">
+  <div class="container">
+    <p class="m-0 text-center small"><a href="https://twitter.com/SIGIReCom" target="_blank" class="btn btn-primary btn-sl rounded-pill"><font color=#00274C>Follow us: @SIGIReCom<font></a></p>
+    <p class="m-0 text-center small"><font color=#FFCB05>Please direct all your queries to surya@ksu.edu for help.</font></p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
