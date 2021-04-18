@@ -37,10 +37,10 @@
         var ENDPOINT_URL = 'https://glsipr46be.execute-api.us-west-2.amazonaws.com/dev/leaderboard';
         var TABLE_INFO = [  {'task':'rec_all', 'stage':1, 'tableBodyId':'recAllTableBody', 'tableId':'recAllTable', 'metric_name':'F1'},
                             {'task':'rec_next', 'stage':1, 'tableBodyId':'recNextTableBody','tableId':'recNextTable', 'metric_name':'MRR'},
-                            {'task':'cart', 'stage':1, 'tableBodyId':'cartTableBody', 'tableId':'cartTable', 'metric_name':'Weighted F1'},
+                            {'task':'cart', 'stage':1, 'tableBodyId':'cartTableBody', 'tableId':'cartTable', 'metric_name':'Weighted Micro-F1'},
                             {'task':'rec_all', 'stage':2, 'tableBodyId':'recAllTableBody2', 'tableId':'recAllTable2', 'metric_name':'F1'},
                             {'task':'rec_next', 'stage':2, 'tableBodyId':'recNextTableBody2','tableId':'recNextTable2', 'metric_name':'MRR'},
-                            {'task':'cart', 'stage':2, 'tableBodyId':'cartTableBody2', 'tableId':'cartTable2', 'metric_name':'Weighted F1'}]
+                            {'task':'cart', 'stage':2, 'tableBodyId':'cartTableBody2', 'tableId':'cartTable2', 'metric_name':'Weighted Micro-F1'}]
         var url = new URL(window.location.href)
         var url_params = new URLSearchParams(url.search)
         function initLeaderboardTable(tableInfo){
@@ -234,7 +234,7 @@
         <div class="container">
           <h2 class="masthead-heading mb-0"><font color=black>Coveo Data Challenge</font></h2>
           <br>
-          <h4 class="masthead-subheading mb-0"><font face="Zapfino" color=black><b> - </b></font></h4>
+<!--          <h4 class="masthead-subheading mb-0"><font face="Zapfino" color=black><b> - </b></font></h4>-->
           <!--a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a-->
 
         </div>
