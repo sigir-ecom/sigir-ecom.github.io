@@ -125,6 +125,54 @@
             return true;
         }
     </script>
+
+    <!--  custom internal styles -->
+    <style>
+        input[type=text] {
+          width: 200px;
+          padding: 10px 10px;
+          margin: 5px 0;
+          box-sizing: border-box;
+          border: 2px solid royalblue;
+          border-radius: 5px;
+
+        }
+        .submitBtn {
+            background-color: lightgray;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        #leaderboardContainer, #signupContainer {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        /* Table style: from https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l */
+        .cardTable {
+            font-size: smaller;
+            border-collapse: collapse;
+            margin: 25px 0;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .cardTable thead tr {
+            background-color: royalblue;
+            color: #ffffff;
+            text-align: left;
+        }
+        .cardTable th,  .cardTable td {
+            padding: 12px 15px;
+        }
+        .cardTable tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        .cardTable tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        .cardTable tbody tr:last-of-type {
+            border-bottom: 2px solid royalblue;
+        }
+    </style>
+
   <body>
 
     <!-- Navigation -->
