@@ -35,9 +35,12 @@
     </head>
     <script>
         var ENDPOINT_URL = 'https://glsipr46be.execute-api.us-west-2.amazonaws.com/dev/leaderboard';
-        var TABLE_INFO = [  {'task':'rec_all', 'tableBodyId':'recAllTableBody', 'tableId':'recAllTable', 'metric_name':'F1'},
-                            {'task':'rec_next', 'tableBodyId':'recNextTableBody','tableId':'recNextTable', 'metric_name':'MRR'},
-                            {'task':'cart', 'tableBodyId':'cartTableBody', 'tableId':'cartTable', 'metric_name':'Weighted F1'}  ]
+        var TABLE_INFO = [  {'task':'rec_all', 'stage':1, 'tableBodyId':'recAllTableBody', 'tableId':'recAllTable', 'metric_name':'F1'},
+                            {'task':'rec_next', 'stage':1, 'tableBodyId':'recNextTableBody','tableId':'recNextTable', 'metric_name':'MRR'},
+                            {'task':'cart', 'stage':1, 'tableBodyId':'cartTableBody', 'tableId':'cartTable', 'metric_name':'Weighted F1'},
+                            {'task':'rec_all', 'stage':2, 'tableBodyId':'recAllTableBody2', 'tableId':'recAllTable2', 'metric_name':'F1'},
+                            {'task':'rec_next', 'stage':2, 'tableBodyId':'recNextTableBody2','tableId':'recNextTable2', 'metric_name':'MRR'},
+                            {'task':'cart', 'stage':2, 'tableBodyId':'cartTableBody2', 'tableId':'cartTable2', 'metric_name':'Weighted F1'}]
         var url = new URL(window.location.href)
         var url_params = new URLSearchParams(url.search)
         function initLeaderboardTable(tableInfo){
@@ -98,7 +101,7 @@
             TABLE_INFO.forEach(initLeaderboardTable)
             // put info into tables
             TABLE_INFO.forEach( tableInfo =>
-                $.get(ENDPOINT_URL, {limit: 10, task: tableInfo['task'], stage:1})
+                $.get(ENDPOINT_URL, {limit: 10, task: tableInfo['task'], stage: tableInfo['stage']})
                     // when done
                     .done(function (data) {
                         console.log("Data Loaded: " + JSON.stringify(data));
@@ -142,7 +145,7 @@
             border-radius: 5px;
             padding: 10px;
         }
-        #leaderboardContainer, #signupContainer {
+        #leaderboardContainer,#leaderboardContainer2, #signupContainer {
             margin-top: 20px;
             margin-bottom: 20px;
         }
@@ -255,7 +258,7 @@
             <br>
             <p>
                 Welcome to the Data Challenge leaderboard page
-                for the <a target="_blank" href="https://sigir-ecom.github.io/">2021 SIGIR Workshop on eCommerce</a>!
+                for the 2021 SIGIR Workshop on eCommerce!
                 Training data, evaluation scripts and rules can be found in the
                 <a target="_blank" href="https://github.com/coveooss/SIGIR-ecom-data-challenge">official challenge repository</a>;
                 relevant literature and background information about the challenge and relevant industry use cases can
@@ -263,8 +266,12 @@
             </p>
             <font size="5"><b>How to participate</b></font>
             <p>
-                To participate, you just have to i) sign up (below) and ii) make a submission for one of the two tasks in the
-                challenge (or both). Please note that participation in the challenge implies acceptance of the
+                To participate, you just have to
+                <ol>
+                    <li> Sign up (below)</li>
+                    <li> Make a submission for one of the two tasks in the  challenge (or both) </li>
+                </ol>
+                Please note that participation in the challenge implies acceptance of the
                 <a target="_blank" href="https://github.com/coveooss/SIGIR-ecom-data-challenge">Terms and Conditions</a>.
             </p>
             <font size="5"><b>Contacts</b></font>
@@ -279,9 +286,6 @@
                </a>
                 <a target="_blank" style="text-decoration:none;" href="https://www.coveo.com/en">
                    <img src="https://yt3.ggpht.com/ytc/AAUvwnjihqbA7UO3v8XDdhQ_kIB5iAKGkVe4b0ZtwxKalQ=s900-c-k-c0x00ffffff-no-rj" width="50">
-               </a>
-                 <a target="_blank" style="text-decoration:none;" href="https://sigir-ecom.github.io/">
-                   <img src="https://sigir.org/sigir2021/wp-content/uploads/2021/03/cropped-imageedit_6_5373847278-300x135.png" height="50">
                </a>
                  <a target="_blank" style="text-decoration:none;" href="https://twitter.com/SIGIReCom">
                    <img src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" width="50">
@@ -377,18 +381,35 @@
         </div> <!-- end of system desc section -->
         <br>
         <div id="leaderboardContainer">
+            <font size="5"><b>Stage 1 Leaderboard</b></font>
+            <br><br>
             <div class="taskContainer">
-                <font size="5"><b>Next Item Prediction Leaderboard</b></font>
+                <font size="4"><b>Next Item Prediction Leaderboard</b></font>
                 <div class="boardContainer" id="recNextTable"></div>
                 <br>
-                <font size="5"><b>Subsequent Items Prediction Leaderboard</b></font>
+                <font size="4"><b>Subsequent Items Prediction Leaderboard</b></font>
                 <div class="boardContainer" id="recAllTable"></div>
                 <br>
-                <font size="5"><b>Purchase Intent Prediction Leaderboard</b></font>
+                <font size="4"><b>Purchase Intent Prediction Leaderboard</b></font>
                 <div class="boardContainer" id="cartTable"></div>
                 <br>
             </div> <!-- end of task container -->
-        </div> <!-- end of leaderboards -->
+        </div> <!-- end of stage 1leaderboards -->
+<!--        <div id="leaderboardContainer2">-->
+<!--            <font size="5"><b>Stage 2 Leaderboard</b></font>-->
+<!--            <br><br>-->
+<!--            <div class="taskContainer">-->
+<!--                <font size="4"><b>Next Item Prediction Leaderboard</b></font>-->
+<!--                <div class="boardContainer" id="recNextTable2"></div>-->
+<!--                <br>-->
+<!--                <font size="4"><b>Subsequent Items Prediction Leaderboard</b></font>-->
+<!--                <div class="boardContainer" id="recAllTable2"></div>-->
+<!--                <br>-->
+<!--                <font size="4"><b>Purchase Intent Prediction Leaderboard</b></font>-->
+<!--                <div class="boardContainer" id="cartTable2"></div>-->
+<!--                <br>-->
+<!--            </div> &lt;!&ndash; end of task container &ndash;&gt;-->
+<!--        </div> &lt;!&ndash; end of stage 2 leaderboards &ndash;&gt;-->
 
 
     </div>
