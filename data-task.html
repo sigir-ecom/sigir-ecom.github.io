@@ -83,7 +83,7 @@
             alert("Sign-Up Successful!");
         }
         function sign_up_failure(reason){
-            var reason_str = 'Unknown Error, Please contact data challenge organizers'
+            var reason_str = 'Unknown Error, Please contact Data Challenge organizers'
             if(reason==='email-used'){
                 reason_str = 'The email provided has already been used'
             }
@@ -103,8 +103,8 @@
                 var reason = 'Unknown'
                 if(params.has('reason')){
                     reason = params.get('reason')
-                    sign_up_failure(reason);
                 }
+                sign_up_failure(reason);
 
             }
         }
