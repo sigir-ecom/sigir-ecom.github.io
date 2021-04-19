@@ -83,15 +83,18 @@
             alert("Sign-Up Successful!");
         }
         function sign_up_failure(reason){
-            var reason_str = 'Unknown Error, Please contact Data Challenge organizers'
+            var reason_str = 'Unexpected Error. Please contact Data Challenge organizers.'
             if(reason==='email-used'){
-                reason_str = 'The email provided has already been used'
+                reason_str = 'The email provided has already been used.'
             }
             else if(reason==='nickname-used'){
-                reason_str = 'The nickname provided has already been used'
+                reason_str = 'The nickname provided has already been used.'
+            }
+            else if(reason==='reg-closed'){
+                reason_str = 'Registration for data challenge is now closed.'
             }
             else if(reason==='add-failed'){
-                reason_str = 'Please try again'
+                reason_str = 'Please try again.'
             }
             alert("Sign-Up Unsuccessful! " + reason_str);
         }
