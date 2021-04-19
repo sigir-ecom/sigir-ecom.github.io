@@ -82,15 +82,30 @@
         function sign_up_success(){
             alert("Sign-Up Successful!");
         }
-        function sign_up_failure(){
-            alert("Sign-Up Unsuccessful!");
+        function sign_up_failure(reason){
+            var reason_str = 'Unknown Error, Please contact data challenge organizers'
+            if(reason==='email-used'){
+                reason_str = 'The email provided has already been used'
+            }
+            else if(reason==='nickname-used'){
+                reason_str = 'The nickname provided has already been used'
+            }
+            else if(reason==='add-failed'){
+                reason_str = 'Please try again'
+            }
+            alert("Sign-Up Unsuccessful! " + reason_str);
         }
 
         function check_success(params) {
             if (params.has('success') && params.get('success') === 'True') {
                 sign_up_success();
             } else if (params.has('success') && params.get('success') === 'False') {
-                sign_up_failure();
+                var reason = 'Unknown'
+                if(params.has('reason')){
+                    reason = params.get('reason')
+                    sign_up_failure(reason);
+                }
+
             }
         }
 
