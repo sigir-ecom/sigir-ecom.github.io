@@ -35,9 +35,12 @@
     </head>
     <script>
         var ENDPOINT_URL = 'https://glsipr46be.execute-api.us-west-2.amazonaws.com/dev/leaderboard';
-        var TABLE_INFO = [  {'task':'rec_all', 'tableBodyId':'recAllTableBody', 'tableId':'recAllTable', 'metric_name':'F1'},
-                            {'task':'rec_next', 'tableBodyId':'recNextTableBody','tableId':'recNextTable', 'metric_name':'MRR'},
-                            {'task':'cart', 'tableBodyId':'cartTableBody', 'tableId':'cartTable', 'metric_name':'Weighted F1'}  ]
+        var TABLE_INFO = [  {'task':'rec_all', 'stage':1, 'tableBodyId':'recAllTableBody', 'tableId':'recAllTable', 'metric_name':'F1'},
+                            {'task':'rec_next', 'stage':1, 'tableBodyId':'recNextTableBody','tableId':'recNextTable', 'metric_name':'MRR'},
+                            {'task':'cart', 'stage':1, 'tableBodyId':'cartTableBody', 'tableId':'cartTable', 'metric_name':'Weighted Micro-F1'},
+                            {'task':'rec_all', 'stage':2, 'tableBodyId':'recAllTableBody2', 'tableId':'recAllTable2', 'metric_name':'F1'},
+                            {'task':'rec_next', 'stage':2, 'tableBodyId':'recNextTableBody2','tableId':'recNextTable2', 'metric_name':'MRR'},
+                            {'task':'cart', 'stage':2, 'tableBodyId':'cartTableBody2', 'tableId':'cartTable2', 'metric_name':'Weighted Micro-F1'}]
         var url = new URL(window.location.href)
         var url_params = new URLSearchParams(url.search)
         function initLeaderboardTable(tableInfo){
@@ -46,7 +49,7 @@
                                     <th>  Position </th>\
                                     <th> Nickname </th>\
                                     <th> Score ('+tableInfo['metric_name']+') </th>\
-                                    <th> Timestamp </th>\
+                                    <th> Timestamp (UTC) </th>\
                                 </thead>\
                                 <tbody id='+tableInfo['tableBodyId']+'>\
                                 </tbody>\
@@ -79,15 +82,33 @@
         function sign_up_success(){
             alert("Sign-Up Successful!");
         }
-        function sign_up_failure(){
-            alert("Sign-Up Unsuccessful!");
+        function sign_up_failure(reason){
+            var reason_str = 'Unexpected Error. Please contact Data Challenge organizers.'
+            if(reason==='email-used'){
+                reason_str = 'The email provided has already been used.'
+            }
+            else if(reason==='nickname-used'){
+                reason_str = 'The nickname provided has already been used.'
+            }
+            else if(reason==='reg-closed'){
+                reason_str = 'Registration for data challenge is now closed.'
+            }
+            else if(reason==='add-failed'){
+                reason_str = 'Please try again.'
+            }
+            alert("Sign-Up Unsuccessful! " + reason_str);
         }
 
         function check_success(params) {
             if (params.has('success') && params.get('success') === 'True') {
                 sign_up_success();
             } else if (params.has('success') && params.get('success') === 'False') {
-                sign_up_failure();
+                var reason = 'Unknown'
+                if(params.has('reason')){
+                    reason = params.get('reason')
+                }
+                sign_up_failure(reason);
+
             }
         }
 
@@ -98,7 +119,7 @@
             TABLE_INFO.forEach(initLeaderboardTable)
             // put info into tables
             TABLE_INFO.forEach( tableInfo =>
-                $.get(ENDPOINT_URL, {limit: 10, task: tableInfo['task'], stage:1})
+                $.get(ENDPOINT_URL, {limit: 10, task: tableInfo['task'], stage: tableInfo['stage']})
                     // when done
                     .done(function (data) {
                         console.log("Data Loaded: " + JSON.stringify(data));
@@ -125,6 +146,62 @@
             return true;
         }
     </script>
+
+    <!--  custom internal styles -->
+    <style>
+        input[type=text] {
+          width: 200px;
+          padding: 10px 10px;
+          margin: 5px 0;
+          box-sizing: border-box;
+          border: 2px solid royalblue;
+          border-radius: 5px;
+        }
+        input[type=email] {
+          width: 200px;
+          padding: 10px 10px;
+          margin: 5px 0;
+          box-sizing: border-box;
+          border: 2px solid royalblue;
+          border-radius: 5px;
+
+        }
+        .submitBtn {
+            background-color: lightgray;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        #leaderboardContainer,#leaderboardContainer2, #signupContainer {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        /* Table style: from https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l */
+        .cardTable {
+            font-size: smaller;
+            border-collapse: collapse;
+            margin: 25px 0;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .cardTable thead tr {
+            background-color: royalblue;
+            color: #ffffff;
+            text-align: left;
+        }
+        .cardTable th,  .cardTable td {
+            padding: 12px 15px;
+        }
+        .cardTable tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        .cardTable tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        .cardTable tbody tr:last-of-type {
+            border-bottom: 2px solid royalblue;
+        }
+    </style>
+
   <body>
 
     <!-- Navigation -->
@@ -183,7 +260,7 @@
         <div class="container">
           <h2 class="masthead-heading mb-0"><font color=black>Coveo Data Challenge</font></h2>
           <br>
-          <h4 class="masthead-subheading mb-0"><font face="Zapfino" color=black><b> - </b></font></h4>
+          <h4 class="masthead-subheading mb-0"><font face="Zapfino" color=black><b> In-session prediction for purchase intent and recommendations </b></font></h4>
           <!--a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a-->
 
         </div>
@@ -207,7 +284,7 @@
             <br>
             <p>
                 Welcome to the Data Challenge leaderboard page
-                for the <a target="_blank" href="https://sigir-ecom.github.io/">2021 SIGIR Workshop on eCommerce</a>!
+                for the 2021 SIGIR Workshop on eCommerce!
                 Training data, evaluation scripts and rules can be found in the
                 <a target="_blank" href="https://github.com/coveooss/SIGIR-ecom-data-challenge">official challenge repository</a>;
                 relevant literature and background information about the challenge and relevant industry use cases can
@@ -215,25 +292,27 @@
             </p>
             <font size="5"><b>How to participate</b></font>
             <p>
-                To participate, you just have to i) sign up (below) and ii) make a submission for one of the two tasks in the
-                challenge (or both). Please note that participation in the challenge implies acceptance of the
+                To participate, you just have to
+                <ol>
+                    <li> Sign up (below);</li>
+                    <li> Make a submission for one of the two tasks in the  challenge (or both).</li>
+                </ol>
+                Please note that participation in the challenge implies acceptance of the
                 <a target="_blank" href="https://github.com/coveooss/SIGIR-ecom-data-challenge">Terms and Conditions</a>.
             </p>
             <font size="5"><b>Contacts</b></font>
             <p>
-                If you have problems with the sign-up, questions about your submission or general inquiry about the
-                challenge, please join the Data Challenge Slack or
-                drop us a <a href="mailto:sigirdatachallenge2021@gmail.com">message</a>.
+                If you have problems signing-up, questions about your submission or general inquiries about the
+                challenge, please join the Data Challenge Slack or send us an <a href="mailto:sigirdatachallenge2021@gmail.com">email</a>.
+                For more info about the dataset and Coveo, and to get the latest from the workshop organizers, check the links below regularly:
             </p>
+
             <div align="center">
                <a target="_blank" style="text-decoration:none;" href="https://github.com/coveooss/SIGIR-ecom-data-challenge">
                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50">
                </a>
                 <a target="_blank" style="text-decoration:none;" href="https://www.coveo.com/en">
                    <img src="https://yt3.ggpht.com/ytc/AAUvwnjihqbA7UO3v8XDdhQ_kIB5iAKGkVe4b0ZtwxKalQ=s900-c-k-c0x00ffffff-no-rj" width="50">
-               </a>
-                 <a target="_blank" style="text-decoration:none;" href="https://sigir-ecom.github.io/">
-                   <img src="https://sigir.org/sigir2021/wp-content/uploads/2021/03/cropped-imageedit_6_5373847278-300x135.png" height="50">
                </a>
                  <a target="_blank" style="text-decoration:none;" href="https://twitter.com/SIGIReCom">
                    <img src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" width="50">
@@ -242,50 +321,84 @@
             </div>
         </div> <!-- end of overview -->
         <br>
+        <div id="challengeOverviewContainer">
+            <font size="5"><b>Challenge Overview</b></font>
+            <p>
+                This challenge addresses the growing need for reliable predictions within the boundaries of a shopping
+                session, as customer intentions can be different depending on the occasion. In the context of e-commerce
+                technology, the feedback loop determined by behavioural signals spans from hours to a few seconds and
+                machine learning models need to adapt as fast as possible to the continuously changing nature of the customer journey.
+            </p>
+            <p>
+                The need for efficient procedures for personalization is even clearer if we consider the e-commerce
+                landscape more broadly: outside of giant digital retailers, the constraints of the problem are stricter,
+                due to smaller user bases and the realization that most users are not frequently returning customers.
+            </p>
+            <p>
+                We release a new session-based dataset including fine-grained browsing events (detail, add, purchase),
+                enriched by linguistic behavior (queries made by shoppers, with items clicked and items not clicked
+                after the query) and catalog meta-data (image, text, pricing information). On this dataset, we ask
+                participants to showcase innovative solutions for two open problems:
+                <ol>
+                    <li>
+                        a recommendation task, where a model is shown k events at the start of a session,
+                        and it is asked to predict future product interactions in the same session;
+                    </li>
+                    <li>
+                        an intent prediction task, where a model is shown a session containing an add-to-cart event,
+                        and it is asked to predict whether the item will be bought before the end of the session.
+                    </li>
+                </ol>
+                Please refer to the public repository for details on rules, evaluations and everything related to the dataset.
+            </p>
+        </div> <!-- end of challenge overview section -->
+        <br>
         <div id="signupContainer">
             <font size="5"><b>Sign-up</b></font>
             <p>
-                To sign up for the challenge, you should fill the form below with your official e-mail, your organization
+
+                To sign up for the challenge, please fill the form below with your official e-mail, your organization
                 (university or company), first and last name of the team lead and a nickname for the leaderboard.
-                You will receive a confirmation e-mail from the system including your user id and AWS write-only credentials
-                to upload your json files to the challenge bucket - please use the information responsibly. After
-                submitting the form, you will be sent back to this page: please <b>wait some minutes and re-check your e-mail,
-                <em>including your spam folder</em></b> before re-submitting. We suggest adding <em>sigirdatachallenge2021@gmail.com</em>
-                to your list of trusted senders.
+                You will receive a confirmation e-mail including your user id and AWS write-only credentials to upload
+                your json files to the challenge bucket - please use the information responsibly.
+                After submitting the form, you will be sent back to this page: please <b><em>wait a few minutes and check
+                again your inbox, including the spam folder</em></b> before re-submitting. We suggest adding
+                <em>sigirdatachallenge2021@gmail.com</em> to your list of trusted senders.
             </p>
             <p>
-                This web-app is hosted on a devoted AWS account and all data will be destroyed at the end of the Data Challenge:
-                if you want to use the same serverless back-end to run a lightweight leaderboard website, please get in touch.
+                This web-app is hosted on a dedicated AWS account and all data will be destroyed at the end of the Data
+                Challenge: if you want to use the same serverless back-end to run a lightweight leaderboard website,
+                please get in touch.
             </p>
             <p>
                 For the submission format and the general rules of the contest,
                 please consult the relevant section in the
                 <a target="_blank" href="https://github.com/coveooss/SIGIR-ecom-data-challenge">README</a>;
                 if you want a ready-made script to upload your submission, check the one provided in the
-                <a target="_blank" href="https://github.com/coveooss/SIGIR-ecom-data-challenge">repository</a>.
+                <a target="_blank" href="https://github.com/coveooss/SIGIR-ecom-data-challenge/blob/main/submission/uploader.py">repository</a>.
             </p>
             <div align="center">
                 <form action="https://glsipr46be.execute-api.us-west-2.amazonaws.com/dev/signup" method="POST" onsubmit="return submitUserForm();">
                     <table>
                         <tr>
                             <td align="right"><label for="fname">First Name</label></td>
-                            <td align="left"><input type="text" id="fname" name="fname" placeholder="Tony"></td>
+                            <td align="left"><input type="text" id="fname" name="fname" placeholder="Tony" required></td>
                         </tr>
                         <tr>
                             <td align="right"> <label for="lname">Last Name</label></td>
-                            <td align="left"> <input type="text" id="lname" name="lname" placeholder="Stark"></td>
+                            <td align="left"> <input type="text" id="lname" name="lname" placeholder="Stark" required></td>
                         </tr>
                         <tr>
                             <td align="right"><label for="nickname">Nickname</label></td>
-                            <td align="left"><input type="text" id="nickname" name="nickname" placeholder="Ironman"></td>
+                            <td align="left"><input type="text" id="nickname" name="nickname" placeholder="Ironman" required ></td>
                         </tr>
                         <tr>
                             <td align="right"><label for="email">E-mail</label></td>
-                            <td align="left"><input type="text" id="email" name="email" placeholder="tony@starkindustries.com"></td>
+                            <td align="left"><input type="email" id="email" name="email" placeholder="tony@starkindustries.com" required></td>
                         </tr>
                         <tr>
                             <td align="right"><label for="organization">Organization</label></td>
-                            <td align="left"><input type="text" id="organization" name="organization" placeholder="Stark Industries"></td>
+                            <td align="left"><input type="text" id="organization" name="organization" placeholder="Stark Industries" required></td>
                         </tr>
                     </table>
                   <div class="g-recaptcha" data-sitekey="6LeFT5QaAAAAAH1HoAo-eRk_lmy6L3OjI1nsO3FT" data-callback="enableBtn"></div><br />
@@ -293,6 +406,20 @@
                 </form>
             </div>
         </div> <!-- end of sign up -->
+        <br>
+        <div id="orgCommitteeContainer">
+            <font size="5"><b>Organizing Committee</b></font>
+            <br>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/jacopotagliabue/">Jacopo Tagliabue</a> - Coveo AI Labs</li>
+                <li><a href="https://www.linkedin.com/in/cirogreco/">Ciro Greco</a> - Coveo AI Labs</li>
+                <li><a href="https://www.linkedin.com/in/jeanfrancisroy/">Jean-Francis Roy</a> - Coveo</li>
+                <li><a href="https://www.linkedin.com/in/federico-bianchi-3b7998121/">Federico Bianchi</a> - Postdoctoral Researcher at Università Bocconi</li>
+                <li><a href="https://giovannicassani.github.io/">Giovanni Cassani</a> - Tillburg University</li>
+                <li><a href ="https://www.linkedin.com/in/bingqing-christine-yu/">Bingqing Yu</a> - Coveo</li>
+                <li><a href="https://www.linkedin.com/in/patrick-john-chia-b0a34019b/">Patrick John Chia</a> - Coveo</li>
+            </ul>
+        </div> <!-- end of org committee section -->
         <br>
         <div id="systemDescContainer">
             <font size="5"><b>System Description Paper</b></font>
@@ -303,44 +430,73 @@
         </div> <!-- end of system desc section -->
         <br>
         <div id="timelineContainer">
-          <font size="5"><b>Timeline</b></font>
+          <font size="5"><b>Timeline</b></font>  <font size="4">&nbsp;(UTC)</font>
           <table class="table table-condensed" style="width:90%">
               <tr>
-                  <td>April 20</td>
-                  <td>Registration Opens, Evaluation Stage 1 Starts!</td>
+                  <td>April 21</td>
+                  <td>Data Challenge registration opens; Stage 1 opens</td>
+              </tr>
+              <tr>
+                  <td>June 1</td>
+                  <td>Data Challenge registration deadline</td>
+              </tr>
+              <tr>
+                  <td>June 8</td>
+                  <td>Stage 1 closes; Stage 2 opens; Paper submission opens </td>
+              </tr>
+              <tr>
+                  <td>June 15</td>
+                  <td>Stage 2 closes</td>
+              </tr>
+              <tr>
+                  <td>June 25</td>
+                  <td>Paper submission closes</td>
+              </tr>
+              <tr>
+                  <td>July 7</td>
+                  <td>Paper Accept/Reject</td>
+              </tr>
+              <tr>
+                  <td>July 10</td>
+                  <td>Camera ready paper submission deadline</td>
               </tr>
               <tr>
                   <td>July 15</td>
-                  <td>Leaderboard for Stage 1 Closes (Registration closes)</td>
-              </tr>
-              <tr>
-                  <td>July 15</td>
-                  <td>Evaluation Stage 2 Starts</td>
-              </tr>
-              <tr>
-                  <td>July 23</td>
-                  <td>Evaluation Stage 2 Closes (Final Leaderboard)</td>
-              </tr>
-              <tr>
-                  <td>July 30</td>
-                  <td>eCom Full Day Workshop</td>
+                  <td>Workshop</td>
               </tr>
           </table>
         </div> <!-- end of system desc section -->
         <br>
         <div id="leaderboardContainer">
+            <font size="5"><b>Leaderboards (Stage 1)</b></font>
+            <br><br>
             <div class="taskContainer">
-                <font size="5"><b>Next Item Prediction Leaderboard</b></font>
+                <font size="4"><b>Next Item Prediction</b></font>
                 <div class="boardContainer" id="recNextTable"></div>
                 <br>
-                <font size="5"><b>Subsequent Items Prediction Leaderboard</b></font>
+                <font size="4"><b>Subsequent Items Prediction</b></font>
                 <div class="boardContainer" id="recAllTable"></div>
                 <br>
-                <font size="5"><b>Purchase Intent Prediction Leaderboard</b></font>
+                <font size="4"><b>Purchase Intent Prediction</b></font>
                 <div class="boardContainer" id="cartTable"></div>
                 <br>
             </div> <!-- end of task container -->
-        </div> <!-- end of leaderboards -->
+        </div> <!-- end of stage 1leaderboards -->
+<!--        <div id="leaderboardContainer2">-->
+<!--            <font size="5"><b>Stage 2 Leaderboard</b></font>-->
+<!--            <br><br>-->
+<!--            <div class="taskContainer">-->
+<!--                <font size="4"><b>Next Item Prediction Leaderboard</b></font>-->
+<!--                <div class="boardContainer" id="recNextTable2"></div>-->
+<!--                <br>-->
+<!--                <font size="4"><b>Subsequent Items Prediction Leaderboard</b></font>-->
+<!--                <div class="boardContainer" id="recAllTable2"></div>-->
+<!--                <br>-->
+<!--                <font size="4"><b>Purchase Intent Prediction Leaderboard</b></font>-->
+<!--                <div class="boardContainer" id="cartTable2"></div>-->
+<!--                <br>-->
+<!--            </div> &lt;!&ndash; end of task container &ndash;&gt;-->
+<!--        </div> &lt;!&ndash; end of stage 2 leaderboards &ndash;&gt;-->
 
 
     </div>
