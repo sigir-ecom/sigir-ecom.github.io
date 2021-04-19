@@ -153,6 +153,14 @@
           box-sizing: border-box;
           border: 2px solid royalblue;
           border-radius: 5px;
+        }
+        input[type=email] {
+          width: 200px;
+          padding: 10px 10px;
+          margin: 5px 0;
+          box-sizing: border-box;
+          border: 2px solid royalblue;
+          border-radius: 5px;
 
         }
         .submitBtn {
@@ -371,23 +379,23 @@
                     <table>
                         <tr>
                             <td align="right"><label for="fname">First Name</label></td>
-                            <td align="left"><input type="text" id="fname" name="fname" placeholder="Tony"></td>
+                            <td align="left"><input type="text" id="fname" name="fname" placeholder="Tony" required></td>
                         </tr>
                         <tr>
                             <td align="right"> <label for="lname">Last Name</label></td>
-                            <td align="left"> <input type="text" id="lname" name="lname" placeholder="Stark"></td>
+                            <td align="left"> <input type="text" id="lname" name="lname" placeholder="Stark" required></td>
                         </tr>
                         <tr>
                             <td align="right"><label for="nickname">Nickname</label></td>
-                            <td align="left"><input type="text" id="nickname" name="nickname" placeholder="Ironman"></td>
+                            <td align="left"><input type="text" id="nickname" name="nickname" placeholder="Ironman" required ></td>
                         </tr>
                         <tr>
                             <td align="right"><label for="email">E-mail</label></td>
-                            <td align="left"><input type="text" id="email" name="email" placeholder="tony@starkindustries.com"></td>
+                            <td align="left"><input type="email" id="email" name="email" placeholder="tony@starkindustries.com" required></td>
                         </tr>
                         <tr>
                             <td align="right"><label for="organization">Organization</label></td>
-                            <td align="left"><input type="text" id="organization" name="organization" placeholder="Stark Industries"></td>
+                            <td align="left"><input type="text" id="organization" name="organization" placeholder="Stark Industries" required></td>
                         </tr>
                     </table>
                   <div class="g-recaptcha" data-sitekey="6LeFT5QaAAAAAH1HoAo-eRk_lmy6L3OjI1nsO3FT" data-callback="enableBtn"></div><br />
