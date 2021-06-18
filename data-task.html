@@ -34,7 +34,7 @@
 
     </head>
     <script>
-        var ENDPOINT_URL = 'https://glsipr46be.execute-api.us-west-2.amazonaws.com/dev/leaderboard';
+        var ENDPOINT_URL = '';
         var TABLE_INFO = [  {'task':'rec_all', 'stage':1, 'tableBodyId':'recAllTableBody', 'tableId':'recAllTable', 'metric_name':'F1'},
                             {'task':'rec_next', 'stage':1, 'tableBodyId':'recNextTableBody','tableId':'recNextTable', 'metric_name':'MRR'},
                             {'task':'cart', 'stage':1, 'tableBodyId':'cartTableBody', 'tableId':'cartTable', 'metric_name':'Weighted Micro-F1'},
@@ -113,23 +113,23 @@
         }
 
         // on page load, call the endpoint
-        $(document).ready(function() {
-            check_success(url_params)
-            // generate tables
-            TABLE_INFO.forEach(initLeaderboardTable)
-            // put info into tables
-            TABLE_INFO.forEach( tableInfo =>
-                $.get(ENDPOINT_URL, {limit: 10, task: tableInfo['task'], stage: tableInfo['stage']})
-                    // when done
-                    .done(function (data) {
-                        console.log("Data Loaded: " + JSON.stringify(data));
-                        buildLeaderboardTable(data,tableInfo['tableBodyId']);
-                    }) // when something happens
-                    .fail(function (data) {
-                        alert("ERROR WHEN CALLING THE LEADERBOARD ENDPOINT");
-                    })
-            );
-        });
+        // $(document).ready(function() {
+        //     check_success(url_params)
+        //     // generate tables
+        //     TABLE_INFO.forEach(initLeaderboardTable)
+        //     // put info into tables
+        //     TABLE_INFO.forEach( tableInfo =>
+        //         $.get(ENDPOINT_URL, {limit: 10, task: tableInfo['task'], stage: tableInfo['stage']})
+        //             // when done
+        //             .done(function (data) {
+        //                 console.log("Data Loaded: " + JSON.stringify(data));
+        //                 buildLeaderboardTable(data,tableInfo['tableBodyId']);
+        //             }) // when something happens
+        //             .fail(function (data) {
+        //                 alert("ERROR WHEN CALLING THE LEADERBOARD ENDPOINT");
+        //             })
+        //     );
+        // });
 
         // captcha
         function enableBtn(){
@@ -475,37 +475,92 @@
           </table>
         </div> <!-- end of system desc section -->
         <br>
+
         <div id="leaderboardContainer2">
             <font size="5"><b>Leaderboards (Stage 2)</b></font>
             <br><br>
             <div class="taskContainer">
                 <font size="4"><b>Next Item Prediction Leaderboard</b></font>
-                <div class="boardContainer" id="recNextTable2"></div>
+                <div class="boardContainer" id="recNextTable2">
+                    <table class="cardTable">
+                        <thead><tr>
+                            <th>  Position </th>
+                            <th> Nickname </th>
+                            <th> Score (MRR) </th>
+                            <th> Timestamp (UTC) </th>
+                        </tr></thead>
+                        <tbody id="recNextTableBody2"><tr><td>1</td><td>DeepBlueAI</td><td>0.277256856863352</td><td>2021-06-16 15:00:24.054893</td></tr><tr><td>2</td><td>NVIDIA Merlin</td><td>0.277150722994993</td><td>2021-06-17 23:47:39.824805</td></tr><tr><td>3</td><td>tsotfsk</td><td>0.26171723662781</td><td>2021-06-17 23:51:05.140458</td></tr><tr><td>4</td><td>scitator</td><td>0.228414620791257</td><td>2021-06-15 21:00:07.655583</td></tr><tr><td>5</td><td>louis</td><td>0.223834529799278</td><td>2021-06-16 17:04:01.073889</td></tr><tr><td>6</td><td>Yoshi</td><td>0.214855530913555</td><td>2021-06-17 23:32:29.575103</td></tr><tr><td>7</td><td>old</td><td>0.191871401529567</td><td>2021-06-16 15:56:11.615827</td></tr><tr><td>8</td><td>busdriver</td><td>0.18341056004716</td><td>2021-06-16 13:23:46.65911</td></tr><tr><td>9</td><td>DSWue</td><td>0.139330140115961</td><td>2021-06-16 21:26:42.031644</td></tr><tr><td>10</td><td>Beantown</td><td>0.116077675397221</td><td>2021-06-11 23:44:25.022806</td></tr><tr><td>11</td><td>eggie5</td><td>0.0311874109181821</td><td>2021-06-14 05:09:44.15369</td></tr></tbody>                    </table></div>
                 <br>
                 <font size="4"><b>Subsequent Items Prediction Leaderboard</b></font>
-                <div class="boardContainer" id="recAllTable2"></div>
+                <div class="boardContainer" id="recAllTable2">
+                    <table class="cardTable">
+                        <thead><tr>
+                            <th>  Position </th>
+                            <th> Nickname </th>
+                            <th> Score (F1) </th>
+                            <th> Timestamp (UTC) </th>
+                        </tr></thead>
+                        <tbody id="recAllTableBody2"><tr><td>1</td><td>NVIDIA Merlin</td><td>0.0744066480874766</td><td>2021-06-17 23:47:39.824805</td></tr><tr><td>2</td><td>Yoshi</td><td>0.071323143782563</td><td>2021-06-17 23:32:29.575103</td></tr><tr><td>3</td><td>DeepBlueAI</td><td>0.0712670036197682</td><td>2021-06-16 15:00:24.054893</td></tr><tr><td>4</td><td>louis</td><td>0.0691723442031248</td><td>2021-06-16 17:04:01.073889</td></tr><tr><td>5</td><td>tsotfsk</td><td>0.0676956513778051</td><td>2021-06-17 23:51:05.140458</td></tr><tr><td>6</td><td>scitator</td><td>0.0622307564654324</td><td>2021-06-15 21:00:07.655583</td></tr><tr><td>7</td><td>DSWue</td><td>0.0515263362020548</td><td>2021-06-17 21:28:58.418355</td></tr><tr><td>8</td><td>Beantown</td><td>0.0476388656948051</td><td>2021-06-11 23:44:25.022806</td></tr><tr><td>9</td><td>old</td><td>0.0475242159500783</td><td>2021-06-16 15:56:11.615827</td></tr><tr><td>10</td><td>busdriver</td><td>0.0458035709730356</td><td>2021-06-16 13:23:46.65911</td></tr><tr><td>11</td><td>eggie5</td><td>0.014190389913474</td><td>2021-06-14 05:09:44.15369</td></tr></tbody>
+                    </table></div>
                 <br>
                 <font size="4"><b>Purchase Intent Prediction Leaderboard</b></font>
-                <div class="boardContainer" id="cartTable2"></div>
+                <div class="boardContainer" id="cartTable2">
+                    <table class="cardTable">
+                        <thead><tr>
+                            <th>  Position </th>
+                            <th> Nickname </th>
+                            <th> Score (Weighted Micro-F1) </th>
+                            <th> Timestamp (UTC) </th>
+                        </tr></thead>
+                        <tbody id="cartTableBody2"><tr><td>1</td><td>DeepBlueAI</td><td>3.63439774529335</td><td>2021-06-13 09:06:15.335559</td></tr><tr><td>2</td><td>NVIDIA Merlin</td><td>3.6340530847665</td><td>2021-06-14 23:29:52.034462</td></tr><tr><td>3</td><td>hakubishin3</td><td>3.63031595108722</td><td>2021-06-14 04:18:15.102488</td></tr><tr><td>4</td><td>Shawn</td><td>3.63006620083747</td><td>2021-06-11 10:21:15.292887</td></tr><tr><td>5</td><td>Yoshi</td><td>3.5829108962637</td><td>2021-06-14 22:50:19.714592</td></tr><tr><td>6</td><td>busdriver</td><td>3.51563694420912</td><td>2021-06-12 00:13:41.575177</td></tr></tbody>
+                    </table></div>
                 <br>
             </div> <!-- end of task container -->
-        </div> <!-- end of stage 2 leaderboards -->
+        </div>
+        <!-- end of stage 2 leaderboards -->
 
-        <div id="leaderboardContainer">
+       <div id="leaderboardContainer">
             <font size="5"><b>Leaderboards (Stage 1)</b></font>
             <br><br>
             <div class="taskContainer">
                 <font size="4"><b>Next Item Prediction</b></font>
-                <div class="boardContainer" id="recNextTable"></div>
+                <div class="boardContainer" id="recNextTable"> <table class="cardTable">
+                    <thead><tr>
+                        <th>  Position </th>
+                        <th> Nickname </th>
+                        <th> Score (MRR) </th>
+                        <th> Timestamp (UTC) </th>
+                    </tr></thead>
+                    <tbody id="recNextTableBody"><tr><td>1</td><td>DeepBlueAI</td><td>0.259567372588436</td><td>2021-06-10 07:06:38.503671</td></tr><tr><td>2</td><td>NVIDIA Merlin</td><td>0.257838846924539</td><td>2021-06-10 14:21:19.516696</td></tr><tr><td>3</td><td>tsotfsk</td><td>0.254900668665202</td><td>2021-06-09 15:51:53.606362</td></tr><tr><td>4</td><td>gspmoreira</td><td>0.246658879747372</td><td>2021-06-02 04:43:46.826176</td></tr><tr><td>5</td><td>scitator</td><td>0.227762621529733</td><td>2021-06-09 17:15:01.304097</td></tr><tr><td>6</td><td>louis</td><td>0.219813275834822</td><td>2021-06-10 16:50:29.592666</td></tr><tr><td>7</td><td>hakubishin3</td><td>0.21850783896367</td><td>2021-06-07 13:55:34.853107</td></tr><tr><td>8</td><td>Yoshi</td><td>0.203271422177873</td><td>2021-06-10 02:55:04.23637</td></tr><tr><td>9</td><td>Wanna</td><td>0.174838662853926</td><td>2021-05-27 02:20:01.378616</td></tr><tr><td>10</td><td>eggie5</td><td>0.169853537423224</td><td>2021-04-28 01:33:58.986311</td></tr><tr><td>11</td><td>old</td><td>0.168984566055026</td><td>2021-06-10 12:54:39.244947</td></tr><tr><td>12</td><td>busdriver</td><td>0.164626909973333</td><td>2021-06-10 12:50:38.254958</td></tr><tr><td>13</td><td>ECNU_DM</td><td>0.12317866259579</td><td>2021-06-06 02:43:27.514704</td></tr><tr><td>14</td><td>Beantown</td><td>0.115919547270715</td><td>2021-06-10 23:58:17.605326</td></tr><tr><td>15</td><td>learner</td><td>0.113309491523042</td><td>2021-05-01 11:02:27.474228</td></tr><tr><td>16</td><td>ECNU_Rec</td><td>0.112677144884667</td><td>2021-05-13 11:40:32.372782</td></tr><tr><td>17</td><td>KonigsbergGuy</td><td>0.0892720412689585</td><td>2021-06-07 16:08:09.70735</td></tr><tr><td>18</td><td>Rick</td><td>0.0470746941901396</td><td>2021-05-04 18:31:44.117046</td></tr><tr><td>19</td><td>DSWue</td><td>0.001780158105201</td><td>2021-05-28 08:52:29.361252</td></tr><tr><td>20</td><td>Nastya</td><td>0</td><td>2021-05-19 12:45:44.220495</td></tr></tbody>
+                </table></div>
                 <br>
                 <font size="4"><b>Subsequent Items Prediction</b></font>
-                <div class="boardContainer" id="recAllTable"></div>
+                <div class="boardContainer" id="recAllTable">
+                    <table class="cardTable">
+                        <thead><tr>
+                            <th>  Position </th>
+                            <th> Nickname </th>
+                            <th> Score (F1) </th>
+                            <th> Timestamp (UTC) </th>
+                        </tr></thead>
+                        <tbody id="recAllTableBody"><tr><td>1</td><td>NVIDIA Merlin</td><td>0.0704473890923575</td><td>2021-06-10 14:21:19.516696</td></tr><tr><td>2</td><td>Yoshi</td><td>0.0683150961432571</td><td>2021-06-04 06:18:47.454721</td></tr><tr><td>3</td><td>louis</td><td>0.0675671489008072</td><td>2021-05-29 14:12:16.80038</td></tr><tr><td>4</td><td>gspmoreira</td><td>0.0671580029228143</td><td>2021-06-02 04:43:46.826176</td></tr><tr><td>5</td><td>tsotfsk</td><td>0.065942425395436</td><td>2021-06-10 11:14:27.903234</td></tr><tr><td>6</td><td>DeepBlueAI</td><td>0.0652533072711102</td><td>2021-06-10 07:06:38.503671</td></tr><tr><td>7</td><td>hakubishin3</td><td>0.0627382093680529</td><td>2021-06-07 13:55:34.853107</td></tr><tr><td>8</td><td>scitator</td><td>0.0605172072958347</td><td>2021-06-09 16:15:12.179543</td></tr><tr><td>9</td><td>Wanna</td><td>0.0534842389144261</td><td>2021-05-27 03:36:59.695761</td></tr><tr><td>10</td><td>ECNU_DM</td><td>0.051821044811731</td><td>2021-05-26 02:41:42.600018</td></tr><tr><td>11</td><td>eggie5</td><td>0.0513360414256127</td><td>2021-06-04 02:09:42.642162</td></tr><tr><td>12</td><td>old</td><td>0.0420626146480762</td><td>2021-06-10 12:54:39.244947</td></tr><tr><td>13</td><td>Beantown</td><td>0.0413345157161334</td><td>2021-06-04 23:54:19.308318</td></tr><tr><td>14</td><td>busdriver</td><td>0.0409778820267947</td><td>2021-06-10 12:50:38.254958</td></tr><tr><td>15</td><td>KonigsbergGuy</td><td>0.0243042924848845</td><td>2021-06-07 16:08:09.70735</td></tr><tr><td>16</td><td>learner</td><td>0.0126461115078898</td><td>2021-05-01 11:02:27.474228</td></tr><tr><td>17</td><td>ECNU_Rec</td><td>0.0125607859842969</td><td>2021-05-16 13:29:12.389733</td></tr><tr><td>18</td><td>Rick</td><td>0.00551070580065692</td><td>2021-05-04 18:31:44.117046</td></tr><tr><td>19</td><td>DSWue</td><td>0.000578046028940261</td><td>2021-05-28 08:52:29.361252</td></tr><tr><td>20</td><td>Nastya</td><td>0</td><td>2021-05-19 12:45:44.220495</td></tr></tbody>
+                    </table></div>
                 <br>
                 <font size="4"><b>Purchase Intent Prediction</b></font>
-                <div class="boardContainer" id="cartTable"></div>
+                <div class="boardContainer" id="cartTable">
+                    <table class="cardTable">
+                        <thead><tr>
+                            <th>  Position </th>
+                            <th> Nickname </th>
+                            <th> Score (Weighted Micro-F1) </th>
+                            <th> Timestamp (UTC) </th>
+                        </tr></thead>
+                        <tbody id="cartTableBody"><tr><td>1</td><td>NVIDIA Merlin</td><td>3.63142202394556</td><td>2021-06-10 22:19:39.439075</td></tr><tr><td>2</td><td>DeepBlueAI</td><td>3.62898581869512</td><td>2021-06-10 12:47:23.969359</td></tr><tr><td>3</td><td>ronai</td><td>3.62223442288064</td><td>2021-06-07 16:28:00.728037</td></tr><tr><td>4</td><td>hakubishin3</td><td>3.62147689588072</td><td>2021-06-10 12:14:35.016894</td></tr><tr><td>5</td><td>Shawn</td><td>3.62034182210093</td><td>2021-06-01 02:30:38.991516</td></tr><tr><td>6</td><td>SunnySideUp</td><td>3.61663879085421</td><td>2021-06-03 00:28:11.293968</td></tr><tr><td>7</td><td>Yoshi</td><td>3.61485959169783</td><td>2021-06-04 10:33:04.753004</td></tr><tr><td>8</td><td>busdriver</td><td>3.59379628246656</td><td>2021-06-09 05:05:34.153941</td></tr></tbody>
+                    </table></div>
                 <br>
             </div> <!-- end of task container -->
-        </div> <!-- end of stage 1leaderboards -->
+       </div>
+        <!-- end of stage 1 leaderboards -->
 
     </div>
 </div>
