@@ -79,12 +79,12 @@ header.masthead .masthead-content {
 }
 
 header.masthead .masthead-content .masthead-heading {
-  font-size: 2rem;
+  font-size: 3rem;
   background: rgba(255,255,255,0.45);
 }
 
 header.masthead .masthead-content .masthead-subheading {
-  font-size: 2rem;
+  font-size: 1rem;
   background: rgba(255,255,255,0.45);
   padding:1em 0 0.5em 0;
 }
