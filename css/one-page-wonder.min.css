@@ -18,6 +18,11 @@ h6 {
   font-weight: 400 !important;
 }
 
+.rounded-corners {     
+    border-radius: 100%;
+    overflow: hidden;
+}
+
 .btn-xl {
   padding: 1.5rem 3rem;
   font-size: 0.9rem;
@@ -61,10 +66,11 @@ header.masthead {
   padding-bottom: 7rem;
   /*background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);*/
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top;
   background-attachment: scroll;
   background-size: cover;
-  background-image: url('../img/montreal.jpeg');
+  background-image: linear-gradient(rgba(255,255,255, 0.1), rgba(255,255,255, 0.1)),url('../img/photo-collage.png');}
+
 }
 
 header.masthead .masthead-content {
@@ -74,12 +80,12 @@ header.masthead .masthead-content {
 
 header.masthead .masthead-content .masthead-heading {
   font-size: 2rem;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.45);
 }
 
 header.masthead .masthead-content .masthead-subheading {
   font-size: 2rem;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.45);
   padding:1em 0 0.5em 0;
 }
 
@@ -248,3 +254,80 @@ header.masthead .masthead-content .masthead-subheading {
                   color: #ee0979;
                 }
 
+  .icon-square-01 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 8em;
+  min-height: 8em;
+  min-width: 80px;
+  margin-bottom: 1em;
+  padding: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 1em;
+  background-color: #e2f8f8;
+  background-image: url("../img/guernica_picasso.jpeg");
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.icon-square-02 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 8em;
+  min-height: 8em;
+  min-width: 80px;
+  margin-bottom: 1em;
+  padding: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 1em;
+  background-color: #e2f8f8;
+  background-image: url("../img/madrid-bull.jpeg");
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.icon-square-03 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 8em;
+  min-height: 8em;
+  min-width: 80px;
+  margin-bottom: 1em;
+  padding: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 1em;
+  background-color: #e2f8f8;
+  background-image: url("../img/mural.jpeg");
+  background-position: 0px 0px;
+  background-size: cover;
+}

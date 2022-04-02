@@ -63,7 +63,7 @@ header.masthead {
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
-  background-image: url('../img/montreal.jpeg');
+  background-image: linear-gradient(rgba(38, 32, 96, 0.2), rgba(38, 32, 96, 0.4)),url('../img/collage.jpg');
 }
 
 header.masthead .masthead-content {
