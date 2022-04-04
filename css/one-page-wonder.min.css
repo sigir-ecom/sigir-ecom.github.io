@@ -312,7 +312,7 @@ header.masthead .masthead-content .masthead-subheading {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 8em;
+  height: 10em;
   min-height: 8em;
   min-width: 80px;
   margin-bottom: 1em;
@@ -327,7 +327,7 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/mural.jpeg");
+  background-image: url("../img/murall.jpeg");
   background-position: 0px 0px;
   background-size: cover;
 }
