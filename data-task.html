@@ -200,6 +200,11 @@
         .cardTable tbody tr:last-of-type {
             border-bottom: 2px solid royalblue;
         }
+     .challenge-text {
+        font-size: 18px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
     </style>
 
   <body>
@@ -207,7 +212,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="./index.html">SIGIR eCom'21</a>
+        <a class="navbar-brand" href="./index.html">SIGIR eCom'22</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -221,9 +226,9 @@
               <a class="nav-link" href="./program.html">Program</a>
             </li>-->
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="./accepted-papers.html">Accepted Papers</font></a>
-            </li>
+            </li> -->
 
 
             <li class="nav-item">
@@ -249,6 +254,9 @@
             <li class="nav-item">
               <a class="nav-link" href="./ecom2020/index.html" target="_blank"><font color=#ff3377>eCom'20</font></a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ecom2021/index.html" target="_blank"><font color=#3377ff>eCom'21</font></a>
+            </li>
 
             <li>
                       <a href="https://twitter.com/SIGIReCom" target="_blank">
@@ -258,273 +266,103 @@
         </div>
       </div>
     </nav>
-    <header class="masthead text-center text-white">
+    <header class="masthead text-center text-white" style="background-image: url('img/ffrecs-challenge-background.jpeg');">
       <div class="masthead-content">
         <div class="container">
-          <h2 class="masthead-heading mb-0"><font color=black>Coveo Data Challenge</font></h2>
+          <h2 class="masthead-heading mb-0" style="background:none"><font color=white>Fashion Outfits Challenge</font></h2>
           <br>
-          <h4 class="masthead-subheading mb-0"><font face="Zapfino" color=black><b> In-session prediction for purchase intent and recommendations </b></font></h4>
+          <h4 class="masthead-subheading mb-0" style="background:none"><font color=white><b> by FARFETCH for SIGIR eCom'22 </b></font></h4>
           <!--a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a-->
 
         </div>
       </div>
     </header>
-
-<section>
+<br>
+<section class="challenge-text">
 <div class="container">
     <div class="p-0">
         <div class="alert" color=de2910ff>
             <br>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<font size="3"><b><a href="https://arxiv.org/abs/2104.09423" target="_blank">Click here for the data challenge overview paper</a></b></font><p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<font size="3"><b><a href="#leaderboardContainer">Click here for the Leaderboards</a></b></font><p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<font size="3"><b>Join the data challenge slack channel: <a href="https://join.slack.com/t/ecom-ir/shared_invite/zt-qh4fjiv9-1zIvMcqOned_2icKrlh1fA" target="_blank">DC Slack</a></b></font></p>
+            <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;<font size="3"><b><a href="https://arxiv.org/abs/2104.09423" target="_blank">Click here for the data challenge overview paper</a></b></font><p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<font size="3"><b><a href="#leaderboardContainer">Click here for the Leaderboards</a></b></font><p> -->
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<font size="3"><b><a href="https://eval.ai/web/challenges/challenge-page/1721/overview" target="_blank">Join the data challenge</a></b></font></p>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="p-0">
-        <div id="overview">
-            <br>
-            <p>
-                The 2021 edition of the SIGIR eCom Data Challenge, hosted by Coveo, ran from April 21 to June 12.
-                Over 20 teams, coming from both industry and academia, participated in the Data Challenge and a total of 6
-                final design papers, where teams shared their insights and methods, were accepted. The final results of
-                the Data Challenge were <a href="https://drive.google.com/file/d/1O0BSAhgJFzx1ddeExxAEGnP_836AftNT/view">presented</a>
-                on July 15, 2021 during the SIGIR eCom'21 Workshop, and featured an invited talk from the
-                <a href="https://medium.com/nvidia-merlin/winning-the-sigir-ecommerce-challenge-on-session-based-recommendation-with-transformers-v2-793f6fac2994">NVIDIA team</a>
-                and a round table discussion with various participating teams.
-            </p>
-            <p>
-                Training data, evaluation scripts and rules can be found in the
-                <a target="_blank" href="https://github.com/coveooss/SIGIR-ecom-data-challenge">official challenge repository</a>;
-                relevant literature and background information about the challenge and relevant industry use cases can
-                be found in the <a target="_blank" href="https://arxiv.org/abs/2104.09423">challenge paper pre-print</a>.
-            </p>
-
-            <font size="5"><b>Contacts</b></font>
-            <p>
-                For questions regarding the dataset, please contact <a href="https://www.linkedin.com/in/jacopotagliabue">Jacopo Tagliabue</a>.
-            </p>
-
-            <div align="center">
-               <a target="_blank" style="text-decoration:none;" href="https://github.com/coveooss/SIGIR-ecom-data-challenge">
-                   <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50">
-               </a>
-                <a target="_blank" style="text-decoration:none;" href="https://blog.coveo.com/coveo-data-challenge-sigir-ecom/">
-                   <img src="https://yt3.ggpht.com/ytc/AAUvwnjihqbA7UO3v8XDdhQ_kIB5iAKGkVe4b0ZtwxKalQ=s900-c-k-c0x00ffffff-no-rj" width="50">
-               </a>
-                 <a target="_blank" style="text-decoration:none;" href="https://twitter.com/SIGIReCom">
-                   <img src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" width="50">
-               </a>
-
-            </div>
-        </div> <!-- end of overview -->
         <br>
         <div id="challengeOverviewContainer">
             <font size="5"><b>Challenge Overview</b></font>
-            <p>
-                This challenge addresses the growing need for reliable predictions within the boundaries of a shopping
-                session, as customer intentions can be different depending on the occasion. In the context of e-commerce
-                technology, the feedback loop determined by behavioural signals spans from hours to a few seconds and
-                machine learning models need to adapt as fast as possible to the continuously changing nature of the customer journey.
-            </p>
-            <p>
-                The need for efficient procedures for personalization is even clearer if we consider the e-commerce
-                landscape more broadly: outside of giant digital retailers, the constraints of the problem are stricter,
-                due to smaller user bases and the realization that most users are not frequently returning customers.
-            </p>
-            <p>
-                We release a new session-based dataset including fine-grained browsing events (detail, add, purchase),
-                enriched by linguistic behavior (queries made by shoppers, with items clicked and items not clicked
-                after the query) and catalog meta-data (image, text, pricing information). On this dataset, we ask
-                participants to showcase innovative solutions for two open problems:
-                <ol>
-                    <li>
-                        a recommendation task, where a model is shown k events at the start of a session,
-                        and it is asked to predict future product interactions in the same session;
-                    </li>
-                    <li>
-                        an intent prediction task, where a model is shown a session containing an add-to-cart event,
-                        and it is asked to predict whether the item will be bought before the end of the session.
-                    </li>
-                </ol>
-                Please refer to the public repository for details on rules, evaluations and everything related to the dataset.
-            </p>
+            <p>The main goal of this challenge is to develop a model that is able to generate outfits for each individual product. This is a particularly challenging task, as the patterns that make an outfit acceptable are really complex. Most of the properties that make products suitable to belong to the same outfit typically do not exist as product metadata: can a floral short dress be paired with white sandals and a yellow tote bag? The answer is: <i>I need to see the products first</i>. </p>
+
+            <p> In fashion, it is the intrinsic visual details and patterns of each product in an outfit that determines the outfit's quality. Being able to properly extract such features from different products and model which of them should be matched together is the demanding challenge we are proposing here. We will be focusing the challenge on the widely known task of <b>Fill in the Blank</b>, that consists of predicting what the missing item of a real outfit is, out of a list of candidate products. This task represents a good approximation of the original problem, as a model that is capable of understanding what should be the style characteristics of the missing product of an outfit can be easily adapted to the generation of full outfits.</p>
+            <p>For this challenge, the participants will have access to real outfits produced at FARFETCH by stylists and fashion experts. FARFETCH is the leading platform for online luxury fashion shopping, with the biggest catalogue of luxury items in the World with more than 3 million products and more than 10 thousand brands and high-end designers.</p>
+            <p><strong>Data</strong></p>
+            <p><span>The dataset provided for the challenge consists of a list of outfits described by the products that compose it, and the FARFETCH product images and metadata, and outfits composition. This dataset is generated by FARFETCH and provided to the participants in a ready to use manner. It is composed by three data sources:</span></p>
+            <ul>
+                <li>Product metadata: A table composed by 300,000 products with product attributes, such as family, category, brand.</li>
+                <li>Product images: Each product will have a single image with the item photographed with a frontal view in a white background. The images do not contain any people.</li>
+                <li> Fashion outfits: Table with 240,000 outfits.</li>
+            </ul>
+            <br>
+
         </div> <!-- end of challenge overview section -->
+        <div id="timelineContainer">
+          <font size="5"><b>Timeline</b></font>  <font size="4">&nbsp;(UTC)</font>
+          <table class="table table-condensed" style="width:90%">
+              <tr>
+                  <td>May 3</td>
+                  <td>Registration/stage 1 starts</td>
+              </tr>
+              <tr>
+                  <td>June 10</td>
+                  <td>Stage 1 closes</td>
+              </tr>
+              <tr>
+                  <td>June 11</td>
+                  <td>Stage 2 opens/paper submission opens</td>
+              </tr>
+              <tr>
+                  <td>June 17</td>
+                  <td>Stage 2 closes</td>
+              </tr>
+              <tr>
+                  <td>June 27</td>
+                  <td>Paper submission closes</td>
+              </tr>
+              <tr>
+                  <td>July 7</td>
+                  <td>Paper notifications</td>
+              </tr>
+              <tr>
+                  <td>July 10</td>
+                  <td>Camera ready submissions</td>
+              </tr>
+              <tr>
+                  <td>July 15</td>
+                  <td>Workshop</td>
+              </tr>
+          </table>
+        </div>
         <br>
         <div id="orgCommitteeContainer">
             <font size="5"><b>Organizing Committee</b></font>
             <br>
             <ul>
-                <li><a href="https://www.linkedin.com/in/jacopotagliabue/">Jacopo Tagliabue</a> - Coveo AI Labs</li>
-                <li><a href="https://www.linkedin.com/in/cirogreco/">Ciro Greco</a> - Coveo AI Labs</li>
-                <li><a href="https://www.linkedin.com/in/jeanfrancisroy/">Jean-Francis Roy</a> - Coveo</li>
-                <li><a href="https://www.linkedin.com/in/federico-bianchi-3b7998121/">Federico Bianchi</a> - Postdoctoral Researcher at Università Bocconi</li>
-                <li><a href="https://giovannicassani.github.io/">Giovanni Cassani</a> - Tillburg University</li>
-                <li><a href ="https://www.linkedin.com/in/bingqing-christine-yu/">Bingqing Yu</a> - Coveo</li>
-                <li><a href="https://www.linkedin.com/in/patrick-john-chia-b0a34019b/">Patrick John Chia</a> - Coveo</li>
+                <li>Ana Silvia Silva - FARFETCH</li>
+                <li>Diogo Gonçalves - FARFETCH</li>
+                <li>Eder Martins - FARFETCH</li>
+                <li>Felipe Viegas - FARFETCH</li>
+                <li>Luis Baia - FARFETCH</li>
+                <li>Tiago Otto - FARFETCH</li>
+                <li>Vanessa Marinho - FARFETCH</li>
             </ul>
-        </div> <!-- end of org committee section -->
-        <br>
-        <div id="ackContainer">
-            <font size="5"><b>Acknowledgements</b></font>
             <p>
-                The organizers wish to thank <a href="https://www.linkedin.com/in/bigluck/">Luca Bigon</a> for his outstanding support in data collection, and
-                <a href="https://www.linkedin.com/in/surya-kallumadi-a0778a13/">Surya Kallumadi</a>,
-                <a href="https://www.linkedin.com/in/massimoquadrana/">Massimo Quadrana</a>,
-                <a href="https://www.linkedin.com/in/dietmarjannach/">Dietmar Jannach</a>,
-                <a href="https://www.linkedin.com/in/kaleajinkya/">Ajinkya Kale</a>
-                for precious feedback on a previous
-                version of this paper. Finally, special thanks to Richard Tessier and Coveo's legal team for believing
-                in this data sharing initiative.
+            For more information, please contact us at <a href="mailto:info@ffrecschallenge.com"><span>info@ffrecschallenge.com</span></a>.
             </p>
         </div> <!-- end of org committee section -->
         <br>
-        <div id="systemDescContainer">
-            <font size="5"><b>System Description Paper</b></font>
-            <p>
-                The following system description papers were accepted:
-            </p>
-            <ul>
-                <strong style='color:rgb(141, 36, 36)'><font color=#194B7>1&nbsp;&nbsp;. Transformers with multi-modal features and post-fusion context for e-commerce session-based recommendation</font><font color='#8d2424'> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom21DCPapers/paper7.pdf" target="_blank">PDF</a>]</font></strong><font color='#ee0979'><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gabriel Moreira, Sara Rabhi, Ronay Ak, Md Yasin Kabir and Even Oldridge. </b></font><br>
-                <strong style='color:rgb(141, 36, 36)'><font color=#194B7>2&nbsp;&nbsp;. Comparison of Transformer-Based Sequential Product Recommendation Models for the Coveo Data Challenge</font><font color='#8d2424'> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom21DCPapers/paper2.pdf" target="_blank">PDF</a>]</font></strong><font color='#ee0979'><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Elisabeth Fischer, Daniel Zoller and Andreas Hotho. </b></font><br>
-                <strong style='color:rgb(141, 36, 36)'><font color=#194B7>3&nbsp;&nbsp;. Utilizing Graph Neural Network to Predict Next Items in Large-sized Session-based Recommendation Industry Data</font><font color='#8d2424'> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom21DCPapers/paper6.pdf" target="_blank">PDF</a>]</font></strong><font color='#ee0979'><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tianqi Wang, Zhongfen Deng, Houwei Chou, Lei Chen and Wei-Te Chen. </b></font><br>
-                <strong style='color:rgb(141, 36, 36)'><font color=#194B7>4&nbsp;&nbsp;. Session-based Recommender System Using an Ensemble of Multiple NN Models with LSTM and Matrix Factorization</font><font color='#8d2424'> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom21DCPapers/paper5.pdf" target="_blank">PDF</a>]</font></strong><font color='#ee0979'><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yoshihiro Sakatani. </b></font><br>
-                <strong style='color:rgb(141, 36, 36)'><font color=#194B7>5&nbsp;&nbsp;. Adversarial Validation to Select Validation Data for Evaluating Performance in E‑commerce Purchase Intent Prediction</font><font color='#8d2424'> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom21DCPapers/paper3.pdf" target="_blank">PDF</a>]</font></strong><font color='#ee0979'><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shotaro Ishihara, Shuhei Goda and Hidehisa Arai. </b></font><br>
-                <strong style='color:rgb(141, 36, 36)'><font color=#194B7>6&nbsp;&nbsp;. A Session-aware DeepWalk Model for Session-based Recommendation</font><font color='#8d2424'> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom21DCPapers/paper4.pdf" target="_blank">PDF</a>]</font></strong><font color='#ee0979'><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kaiyuan Li, Pengfei Wang and Long Xia.  </b></font><br>
-            </ul>
-
-
-        </div> <!-- end of system desc section -->
-        <br>
-        <div id="timelineContainer">
-          <font size="5"><b>Timeline</b></font>  <font size="4">&nbsp;(UTC)</font>
-          <table class="table table-condensed" style="width:90%">
-              <tr>
-                  <td>April 21</td>
-                  <td><s>Data Challenge registration opens; Stage 1 opens</s></td>
-              </tr>
-              <tr>
-                  <td>June 5</td>
-                  <td><s>Data Challenge registration deadline</s></td>
-              </tr>
-              <tr>
-                  <td>June 10</td>
-                  <td><s>Stage 1 closes</s> </td>
-              </tr>
-              <tr>
-                  <td> June 11</td>
-                  <td><s> Stage 2 opens; Paper submission opens </s></td>
-              </tr>
-              <tr>
-                  <td>June 17</td>
-                  <td><s>Stage 2 closes</s></td>
-              </tr>
-              <tr>
-                  <td>June 29</td>
-                  <td><s>Paper submission closes</s></td>
-              </tr>
-              <tr>
-                  <td>July 7</td>
-                  <td><s>Paper Accept/Reject</s></td>
-              </tr>
-              <tr>
-                  <td>July 10</td>
-                  <td><s>Camera ready paper submission deadline</s></td>
-              </tr>
-              <tr>
-                  <td>July 15</td>
-                  <td><s>Workshop</s></td>
-              </tr>
-          </table>
-        </div> <!-- end of system desc section -->
-        <br>
-
-        <div id="leaderboardContainer2">
-            <font size="5"><b>Leaderboards (Stage 2)</b></font>
-            <br><br>
-            <div class="taskContainer">
-                <font size="4"><b>Next Item Prediction Leaderboard</b></font>
-                <div class="boardContainer" id="recNextTable2">
-                    <table class="cardTable">
-                        <thead><tr>
-                            <th>  Position </th>
-                            <th> Nickname </th>
-                            <th> Score (MRR) </th>
-                            <th> Timestamp (UTC) </th>
-                        </tr></thead>
-                        <tbody id="recNextTableBody2"><tr><td>1</td><td>DeepBlueAI</td><td>0.277256856863352</td><td>2021-06-16 15:00:24.054893</td></tr><tr><td>2</td><td>NVIDIA Merlin</td><td>0.277150722994993</td><td>2021-06-17 23:47:39.824805</td></tr><tr><td>3</td><td>tsotfsk</td><td>0.26171723662781</td><td>2021-06-17 23:51:05.140458</td></tr><tr><td>4</td><td>scitator</td><td>0.228414620791257</td><td>2021-06-15 21:00:07.655583</td></tr><tr><td>5</td><td>louis</td><td>0.223834529799278</td><td>2021-06-16 17:04:01.073889</td></tr><tr><td>6</td><td>Yoshi</td><td>0.214855530913555</td><td>2021-06-17 23:32:29.575103</td></tr><tr><td>7</td><td>old</td><td>0.191871401529567</td><td>2021-06-16 15:56:11.615827</td></tr><tr><td>8</td><td>busdriver</td><td>0.18341056004716</td><td>2021-06-16 13:23:46.65911</td></tr><tr><td>9</td><td>DSWue</td><td>0.139330140115961</td><td>2021-06-16 21:26:42.031644</td></tr><tr><td>10</td><td>Beantown</td><td>0.116077675397221</td><td>2021-06-11 23:44:25.022806</td></tr><tr><td>11</td><td>eggie5</td><td>0.0311874109181821</td><td>2021-06-14 05:09:44.15369</td></tr></tbody>                    </table></div>
-                <br>
-                <font size="4"><b>Subsequent Items Prediction Leaderboard</b></font>
-                <div class="boardContainer" id="recAllTable2">
-                    <table class="cardTable">
-                        <thead><tr>
-                            <th>  Position </th>
-                            <th> Nickname </th>
-                            <th> Score (F1) </th>
-                            <th> Timestamp (UTC) </th>
-                        </tr></thead>
-                        <tbody id="recAllTableBody2"><tr><td>1</td><td>NVIDIA Merlin</td><td>0.0744066480874766</td><td>2021-06-17 23:47:39.824805</td></tr><tr><td>2</td><td>Yoshi</td><td>0.071323143782563</td><td>2021-06-17 23:32:29.575103</td></tr><tr><td>3</td><td>DeepBlueAI</td><td>0.0712670036197682</td><td>2021-06-16 15:00:24.054893</td></tr><tr><td>4</td><td>louis</td><td>0.0691723442031248</td><td>2021-06-16 17:04:01.073889</td></tr><tr><td>5</td><td>tsotfsk</td><td>0.0676956513778051</td><td>2021-06-17 23:51:05.140458</td></tr><tr><td>6</td><td>scitator</td><td>0.0622307564654324</td><td>2021-06-15 21:00:07.655583</td></tr><tr><td>7</td><td>DSWue</td><td>0.0515263362020548</td><td>2021-06-17 21:28:58.418355</td></tr><tr><td>8</td><td>Beantown</td><td>0.0476388656948051</td><td>2021-06-11 23:44:25.022806</td></tr><tr><td>9</td><td>old</td><td>0.0475242159500783</td><td>2021-06-16 15:56:11.615827</td></tr><tr><td>10</td><td>busdriver</td><td>0.0458035709730356</td><td>2021-06-16 13:23:46.65911</td></tr><tr><td>11</td><td>eggie5</td><td>0.014190389913474</td><td>2021-06-14 05:09:44.15369</td></tr></tbody>
-                    </table></div>
-                <br>
-                <font size="4"><b>Purchase Intent Prediction Leaderboard</b></font>
-                <div class="boardContainer" id="cartTable2">
-                    <table class="cardTable">
-                        <thead><tr>
-                            <th>  Position </th>
-                            <th> Nickname </th>
-                            <th> Score (Weighted Micro-F1) </th>
-                            <th> Timestamp (UTC) </th>
-                        </tr></thead>
-                        <tbody id="cartTableBody2"><tr><td>1</td><td>DeepBlueAI</td><td>3.63439774529335</td><td>2021-06-13 09:06:15.335559</td></tr><tr><td>2</td><td>NVIDIA Merlin</td><td>3.6340530847665</td><td>2021-06-14 23:29:52.034462</td></tr><tr><td>3</td><td>hakubishin3</td><td>3.63031595108722</td><td>2021-06-14 04:18:15.102488</td></tr><tr><td>4</td><td>Shawn</td><td>3.63006620083747</td><td>2021-06-11 10:21:15.292887</td></tr><tr><td>5</td><td>Yoshi</td><td>3.5829108962637</td><td>2021-06-14 22:50:19.714592</td></tr><tr><td>6</td><td>busdriver</td><td>3.51563694420912</td><td>2021-06-12 00:13:41.575177</td></tr></tbody>
-                    </table></div>
-                <br>
-            </div> <!-- end of task container -->
-        </div>
-        <!-- end of stage 2 leaderboards -->
-
-       <div id="leaderboardContainer">
-            <font size="5"><b>Leaderboards (Stage 1)</b></font>
-            <br><br>
-            <div class="taskContainer">
-                <font size="4"><b>Next Item Prediction</b></font>
-                <div class="boardContainer" id="recNextTable"> <table class="cardTable">
-                    <thead><tr>
-                        <th>  Position </th>
-                        <th> Nickname </th>
-                        <th> Score (MRR) </th>
-                        <th> Timestamp (UTC) </th>
-                    </tr></thead>
-                    <tbody id="recNextTableBody"><tr><td>1</td><td>DeepBlueAI</td><td>0.259567372588436</td><td>2021-06-10 07:06:38.503671</td></tr><tr><td>2</td><td>NVIDIA Merlin</td><td>0.257838846924539</td><td>2021-06-10 14:21:19.516696</td></tr><tr><td>3</td><td>tsotfsk</td><td>0.254900668665202</td><td>2021-06-09 15:51:53.606362</td></tr><tr><td>4</td><td>gspmoreira</td><td>0.246658879747372</td><td>2021-06-02 04:43:46.826176</td></tr><tr><td>5</td><td>scitator</td><td>0.227762621529733</td><td>2021-06-09 17:15:01.304097</td></tr><tr><td>6</td><td>louis</td><td>0.219813275834822</td><td>2021-06-10 16:50:29.592666</td></tr><tr><td>7</td><td>hakubishin3</td><td>0.21850783896367</td><td>2021-06-07 13:55:34.853107</td></tr><tr><td>8</td><td>Yoshi</td><td>0.203271422177873</td><td>2021-06-10 02:55:04.23637</td></tr><tr><td>9</td><td>Wanna</td><td>0.174838662853926</td><td>2021-05-27 02:20:01.378616</td></tr><tr><td>10</td><td>eggie5</td><td>0.169853537423224</td><td>2021-04-28 01:33:58.986311</td></tr><tr><td>11</td><td>old</td><td>0.168984566055026</td><td>2021-06-10 12:54:39.244947</td></tr><tr><td>12</td><td>busdriver</td><td>0.164626909973333</td><td>2021-06-10 12:50:38.254958</td></tr><tr><td>13</td><td>ECNU_DM</td><td>0.12317866259579</td><td>2021-06-06 02:43:27.514704</td></tr><tr><td>14</td><td>Beantown</td><td>0.115919547270715</td><td>2021-06-10 23:58:17.605326</td></tr><tr><td>15</td><td>learner</td><td>0.113309491523042</td><td>2021-05-01 11:02:27.474228</td></tr><tr><td>16</td><td>ECNU_Rec</td><td>0.112677144884667</td><td>2021-05-13 11:40:32.372782</td></tr><tr><td>17</td><td>KonigsbergGuy</td><td>0.0892720412689585</td><td>2021-06-07 16:08:09.70735</td></tr><tr><td>18</td><td>Rick</td><td>0.0470746941901396</td><td>2021-05-04 18:31:44.117046</td></tr><tr><td>19</td><td>DSWue</td><td>0.001780158105201</td><td>2021-05-28 08:52:29.361252</td></tr><tr><td>20</td><td>Nastya</td><td>0</td><td>2021-05-19 12:45:44.220495</td></tr></tbody>
-                </table></div>
-                <br>
-                <font size="4"><b>Subsequent Items Prediction</b></font>
-                <div class="boardContainer" id="recAllTable">
-                    <table class="cardTable">
-                        <thead><tr>
-                            <th>  Position </th>
-                            <th> Nickname </th>
-                            <th> Score (F1) </th>
-                            <th> Timestamp (UTC) </th>
-                        </tr></thead>
-                        <tbody id="recAllTableBody"><tr><td>1</td><td>NVIDIA Merlin</td><td>0.0704473890923575</td><td>2021-06-10 14:21:19.516696</td></tr><tr><td>2</td><td>Yoshi</td><td>0.0683150961432571</td><td>2021-06-04 06:18:47.454721</td></tr><tr><td>3</td><td>louis</td><td>0.0675671489008072</td><td>2021-05-29 14:12:16.80038</td></tr><tr><td>4</td><td>gspmoreira</td><td>0.0671580029228143</td><td>2021-06-02 04:43:46.826176</td></tr><tr><td>5</td><td>tsotfsk</td><td>0.065942425395436</td><td>2021-06-10 11:14:27.903234</td></tr><tr><td>6</td><td>DeepBlueAI</td><td>0.0652533072711102</td><td>2021-06-10 07:06:38.503671</td></tr><tr><td>7</td><td>hakubishin3</td><td>0.0627382093680529</td><td>2021-06-07 13:55:34.853107</td></tr><tr><td>8</td><td>scitator</td><td>0.0605172072958347</td><td>2021-06-09 16:15:12.179543</td></tr><tr><td>9</td><td>Wanna</td><td>0.0534842389144261</td><td>2021-05-27 03:36:59.695761</td></tr><tr><td>10</td><td>ECNU_DM</td><td>0.051821044811731</td><td>2021-05-26 02:41:42.600018</td></tr><tr><td>11</td><td>eggie5</td><td>0.0513360414256127</td><td>2021-06-04 02:09:42.642162</td></tr><tr><td>12</td><td>old</td><td>0.0420626146480762</td><td>2021-06-10 12:54:39.244947</td></tr><tr><td>13</td><td>Beantown</td><td>0.0413345157161334</td><td>2021-06-04 23:54:19.308318</td></tr><tr><td>14</td><td>busdriver</td><td>0.0409778820267947</td><td>2021-06-10 12:50:38.254958</td></tr><tr><td>15</td><td>KonigsbergGuy</td><td>0.0243042924848845</td><td>2021-06-07 16:08:09.70735</td></tr><tr><td>16</td><td>learner</td><td>0.0126461115078898</td><td>2021-05-01 11:02:27.474228</td></tr><tr><td>17</td><td>ECNU_Rec</td><td>0.0125607859842969</td><td>2021-05-16 13:29:12.389733</td></tr><tr><td>18</td><td>Rick</td><td>0.00551070580065692</td><td>2021-05-04 18:31:44.117046</td></tr><tr><td>19</td><td>DSWue</td><td>0.000578046028940261</td><td>2021-05-28 08:52:29.361252</td></tr><tr><td>20</td><td>Nastya</td><td>0</td><td>2021-05-19 12:45:44.220495</td></tr></tbody>
-                    </table></div>
-                <br>
-                <font size="4"><b>Purchase Intent Prediction</b></font>
-                <div class="boardContainer" id="cartTable">
-                    <table class="cardTable">
-                        <thead><tr>
-                            <th>  Position </th>
-                            <th> Nickname </th>
-                            <th> Score (Weighted Micro-F1) </th>
-                            <th> Timestamp (UTC) </th>
-                        </tr></thead>
-                        <tbody id="cartTableBody"><tr><td>1</td><td>NVIDIA Merlin</td><td>3.63142202394556</td><td>2021-06-10 22:19:39.439075</td></tr><tr><td>2</td><td>DeepBlueAI</td><td>3.62898581869512</td><td>2021-06-10 12:47:23.969359</td></tr><tr><td>3</td><td>ronai</td><td>3.62223442288064</td><td>2021-06-07 16:28:00.728037</td></tr><tr><td>4</td><td>hakubishin3</td><td>3.62147689588072</td><td>2021-06-10 12:14:35.016894</td></tr><tr><td>5</td><td>Shawn</td><td>3.62034182210093</td><td>2021-06-01 02:30:38.991516</td></tr><tr><td>6</td><td>SunnySideUp</td><td>3.61663879085421</td><td>2021-06-03 00:28:11.293968</td></tr><tr><td>7</td><td>Yoshi</td><td>3.61485959169783</td><td>2021-06-04 10:33:04.753004</td></tr><tr><td>8</td><td>busdriver</td><td>3.59379628246656</td><td>2021-06-09 05:05:34.153941</td></tr></tbody>
-                    </table></div>
-                <br>
-            </div> <!-- end of task container -->
-       </div>
-        <!-- end of stage 1 leaderboards -->
 
     </div>
 </div>
