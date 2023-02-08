@@ -69,7 +69,7 @@ header.masthead {
   background-position: center top;
   background-attachment: scroll;
   background-size: cover;
-  background-image: linear-gradient(rgba(255,255,255, 0.1), rgba(255,255,255, 0.1)),url('../img/photo-collage.png');}
+  background-image: linear-gradient(rgba(255,255,255, 0.1), rgba(255,255,255, 0.1)),url('../img/Collage-Taipei Street art.jpg');}
 
 }
 
@@ -80,12 +80,12 @@ header.masthead .masthead-content {
 
 header.masthead .masthead-content .masthead-heading {
   font-size: 3rem;
-  background: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.75);
 }
 
 header.masthead .masthead-content .masthead-subheading {
   font-size: 1rem;
-  background: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.75);
   padding:1em 0 0.5em 0;
 }
 
@@ -286,7 +286,7 @@ header.masthead .masthead-content .masthead-subheading {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 8em;
+  height: 12em;
   min-height: 8em;
   min-width: 80px;
   margin-bottom: 1em;
@@ -301,7 +301,7 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/madrid-bull.jpeg");
+  background-image: url("../img/Taipei - Mural2.jpeg");
   background-position: 0px 0px;
   background-size: cover;
 }
@@ -327,7 +327,7 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/murall.jpeg");
+  background-image: url("../img/Taipei - Mural3.jpeg");
   background-position: 0px 0px;
   background-size: cover;
 }
