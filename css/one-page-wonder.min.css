@@ -64,12 +64,11 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 65px);
   padding-bottom: 7rem;
-  /*background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);*/
+  background: linear-gradient(0deg, #FCB500 0%, #FCB500 100%);
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
   background-size: cover;
-  background-image: linear-gradient(rgba(255,255,255, 0.1), rgba(255,255,255, 0.1)),url('../img/Collage-Taipei Street art.jpg');}
 
 }
 
@@ -260,8 +259,8 @@ header.masthead .masthead-content .masthead-subheading {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 8em;
-  min-height: 8em;
+  height: 10em;
+  min-height: 10em;
   min-width: 80px;
   margin-bottom: 1em;
   padding: 10px;
@@ -275,8 +274,8 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/Taipei - Mural4.jpeg");
-  background-position: 0px 500px;
+  background-image: url("../img/dcmural4.jpeg");
+  background-position: 0px -200px;
   background-size: cover;
 }
 
@@ -301,8 +300,8 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/Taipei - Mural2.jpeg");
-  background-position: 0px 0px;
+  background-image: url("../img/dcmural1.jpeg");
+  background-position: 0px -100px;
   background-size: cover;
 }
 
@@ -312,7 +311,7 @@ header.masthead .masthead-content .masthead-subheading {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 10em;
+  height: 25em;
   min-height: 8em;
   min-width: 80px;
   margin-bottom: 1em;
@@ -320,14 +319,55 @@ header.masthead .masthead-content .masthead-subheading {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: top;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/Taipei - Mural3.jpeg");
-  background-position: 0px 0px;
+  background-image: url("../img/dcmural3.png");
+  background-position: 0px -40px;
   background-size: cover;
+}
+
+.star {
+  position: relative;
+  
+  display: inline-block;
+  width: 0;
+  height: 0;
+  
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid #7C1415;
+  border-left:   .3em solid transparent;
+
+  /* Controlls the size of the stars. */
+  font-size: 18px;
+  
+  &:before, &:after {
+    content: '';
+    
+    display: block;
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    top: .6em;
+    left: -1em;
+  
+    border-right:  1em solid transparent;
+    border-bottom: .7em  solid #7C1415;
+    border-left:   1em solid transparent;
+  
+    transform: rotate(-35deg);
+  }
+  
+  &:after {  
+    transform: rotate(35deg);
+  }
 }
