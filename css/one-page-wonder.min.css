@@ -1,14 +1,15 @@
 body {
   font-family: 'Lato';
-  font-size: 14px
+  font-size: 1em;
 }
 
 h1,
 h2,
-h3,
+h3
 {
   font-family: 'Catamaran';
   font-weight: 600 !important;
+  color: #419484;
 }
 
 h4, 
@@ -16,6 +17,7 @@ h5,
 h6 {
   font-family: 'Catamaran';
   font-weight: 400 !important;
+  color: #419484;
 }
 
 .rounded-corners {     
@@ -64,12 +66,12 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 65px);
   padding-bottom: 7rem;
-  background: linear-gradient(0deg, #FCB500 0%, #FCB500 100%);
+  /*background: linear-gradient(0deg, #FCB500 0%, #FCB500 100%);*/
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
   background-size: cover;
-
+  background-image: linear-gradient(rgba(255,255,255, 0.1), rgba(255,255,255, 0.1)),url('../img/padua-grafitti.jpg');
 }
 
 header.masthead .masthead-content {
@@ -137,7 +139,7 @@ header.masthead .masthead-content .masthead-subheading {
 }
 
 .alert {
-    padding: 0px;
+    padding: 1em;
     background-color: #ffbb33;
     color: black;
     opacity: 1;
@@ -207,7 +209,7 @@ header.masthead .masthead-content .masthead-subheading {
 
 
 .tg1 .tg1-odj0 {
-    font-size: 18px
+    font-size: 1.5em;
     font-weight: bold;
     background-color: #FFCB05;
     vertical-align: top;
@@ -274,8 +276,8 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/dcmural4.jpeg");
-  background-position: 0px -200px;
+  background-image: url("../img/padua-bubbles.gif");
+  background-position: 0px -260px;
   background-size: cover;
 }
 
@@ -300,8 +302,8 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/dcmural1.jpeg");
-  background-position: 0px -100px;
+  background-image: url("../img/padua-sax.webp");
+  background-position: 0px -250px;
   background-size: cover;
 }
 
