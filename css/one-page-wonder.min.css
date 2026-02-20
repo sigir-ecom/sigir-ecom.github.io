@@ -9,8 +9,11 @@ h3
 {
   font-family: 'Catamaran';
   font-weight: 600 !important;
-  color: #419484;
 }
+
+h1 { color: #194B7A; }
+h2 { color: #419484; }
+h3 { color: #ee0979; }
 
 h4, 
 h5,
@@ -71,7 +74,7 @@ header.masthead {
   background-position: center top;
   background-attachment: scroll;
   background-size: cover;
-  background-image: linear-gradient(rgba(255,255,255, 0.1), rgba(255,255,255, 0.1)),url('../img/padua-grafitti.jpg');
+  background-image: linear-gradient(rgba(255,255,255, 0.1), rgba(255,255,255, 0.1)),url('../img/2026/melbourne1.jpg');
 }
 
 header.masthead .masthead-content {
@@ -276,7 +279,7 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/padua-bubbles.gif");
+  background-image: url("../img/2026/melbourne2.jpg");
   background-position: 0px -260px;
   background-size: cover;
 }
@@ -302,7 +305,7 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/padua-sax.webp");
+  background-image: url("../img/2026/melbourne3.jpg");
   background-position: 0px -250px;
   background-size: cover;
 }
@@ -328,8 +331,34 @@ header.masthead .masthead-content .masthead-subheading {
   align-items: center;
   border-radius: 1em;
   background-color: #e2f8f8;
-  background-image: url("../img/padua-kiss.jpg");
+  background-image: url("../img/2026/melbourne4.jpg");
   background-position: 0px 0px;
+  background-size: cover;
+}
+
+.icon-square-04 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 12em;
+  min-height: 8em;
+  min-width: 80px;
+  margin-bottom: 1em;
+  padding: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 1em;
+  background-color: #e2f8f8;
+  background-image: url("../img/2026/melbourne3.jpg");
+  background-position: 0px -500px;
   background-size: cover;
 }
 
