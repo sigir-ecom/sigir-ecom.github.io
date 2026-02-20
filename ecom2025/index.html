@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+
+
+  <style type="text/css">
+    bungee {
+      font-family: 'Bungee Shade';
+      font-size: 32px;
+    }
+
+    kanit {
+      font-family: 'Kanit';
+      font-size: 52px;
+    }
+
+    .tg1 {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 520px;
+    }
+
+    .tg1 td {
+      font-family: Lato;
+      ,
+      sans-serif;
+      font-size: 1em;
+      padding: 12px 12px;
+      border-style: solid;
+      border-width: 0px;
+      overflow: hidden;
+      word-break: normal;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+    }
+
+    .tg1 th {
+      font-family: Lato;
+      ,
+      sans-serif;
+      font-size: 1.5em;
+      font-weight: normal;
+      padding: 12px 12px;
+      border-style: solid;
+      border-width: 0px;
+      overflow: hidden;
+      word-break: normal;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+    }
+
+    .tg1 .tg1-lqy6 {
+      text-align: right;
+      vertical-align: top;
+      width: 100px
+    }
+
+    .tg1 .tg1-odj0 {
+      font-weight: bold;
+      background-color: #ffcb2f;
+      vertical-align: top
+    }
+
+    .tg1 .tg1-yw4l {
+      vertical-align: top
+    }
+
+    .tg1 .tg1-l2oz {
+      font-weight: bold;
+      text-align: right;
+      vertical-align: top
+    }
+
+    .tg1 .tg1-9hbo {
+      font-weight: bold;
+      vertical-align: top
+    }
+
+    .tg1 .tg1-xr8r {
+      background-color: #ffffc7;
+      text-align: right;
+      vertical-align: top;
+      width: 100px
+    }
+
+    .tg1 .tg1-kjho {
+      background-color: #ffffc7;
+      vertical-align: top
+    }
+
+    .tg {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 520px
+    }
+
+    .tg td {
+      font-family: Lato, sans-serif;
+      font-size: 1em;
+      padding: 12px 12px;
+      border-style: solid;
+      border-width: 0px;
+      overflow: hidden;
+      word-break: normal;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+    }
+
+    .tg th {
+      font-family: Lato, sans-serif;
+      font-size: 1em;
+      font-weight: normal;
+      padding: 12px 12px;
+      border-style: solid;
+      border-width: 0px;
+      overflow: hidden;
+      word-break: normal;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+    }
+
+    .tg .tg-lqy6 {
+      text-align: right;
+      vertical-align: top;
+      width: 100px
+    }
+
+    .tg .tg-odj0 {
+      font-weight: bold;
+      background-color: #ffcb2f;
+      vertical-align: top
+    }
+
+    .tg .tg-yw4l {
+      vertical-align: top
+    }
+
+    .tg .tg-l2oz {
+      font-weight: bold;
+      text-align: right;
+      vertical-align: top
+    }
+
+    .tg .tg-9hbo {
+      font-weight: bold;
+      vertical-align: top
+    }
+
+    .tg .tg-xr8r {
+      background-color: #ffffc7;
+      text-align: right;
+      vertical-align: top;
+      width: 100px
+    }
+
+    .tg .tg-kjho {
+      background-color: #ffffc7;
+      vertical-align: top
+    }
+
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 400px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
+    }
+
+    u {
+      text-decoration: underline;
+    }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115771746-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115771746-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SIGIR eCom</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">SIGIR eCom'25</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive" data-target=".navbar-collapse" data-toggle="collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#Overview">
+              <font color=#FFCB05>Home</font>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="./accepted-papers.html">AcceptedPapers</font></a>
+          </li>
+          <!--
+            <li class="nav-item">
+              <a class="nav-link" href="./program.html">Program</a>
+            </li>
+            -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="./organizers.html">Organizers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://sigir-ecom.weebly.com/" target="_blank">
+              <font color=#ff3377>eCom'17</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ecom2018/index.html" target="_blank">
+              <font color=#3377ff>eCom'18</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ecom2019/index.html" target="_blank">
+              <font color=#FFCB05>eCom'19</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ecom2020/index.html" target="_blank">
+              <font color=#ff3377>eCom'20</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ecom2021/index.html" target="_blank">
+              <font color=#3377ff>eCom'21</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ecom2022/index.html" target="_blank">
+              <font color=#FFCB05>eCom'22</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ecom2023/index.html" target="_blank">
+              <font color=#ff3377>eCom'23</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ecom2024/index.html" target="_blank">
+              <font color=#3377ff>eCom'24</font>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/SIGIReCom" target="_blank">
+              <img src="./img/Twitter_Social_Icon_Circle_White.png" style="width:25px;height:25px;"> </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h2 class="masthead-heading mb-0">
+          <kanit><b>
+              <font color=#419484>2025 SIGIR Workshop on eCommerce</font>
+            </b></kanit>
+        </h2>
+        <br>
+        <h3 class="masthead-subheading mb-0">
+          <bungee>
+            <font color=#419484><b>Padua, Italy</b></font>
+          </bungee>
+        </h3>
+        <!--a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a-->
+
+      </div>
+    </div>
+  </header>
+
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="p-0">
+          <br>
+          <div class="alert" color=de2910ff>
+            <p><b>Previous editions:</b>
+              <a href="./ecom2024/index.html" target="_blank">
+                <font color=#3377ff><b>SIGIReCom'24</b></font>
+              </a> |
+              <a href="./ecom2023/index.html" target="_blank">
+                <font color=#ff3377><b>SIGIReCom'23</b></font>
+              </a> |
+              <a href="./ecom2022/index.html" target="_blank">
+                <font color='purple'><b>SIGIReCom'22</b></font>
+              </a> |
+              <a href="./ecom2021/index.html" target="_blank">
+                <font color=#3377ff><b>SIGIReCom'21</b></font>
+              </a> |
+              <a href="./ecom2020/index.html" target="_blank">
+                <font color=#ff3377><b>SIGIReCom'20</b></font>
+              </a> |
+              <a href="./ecom2019/index.html" target="_blank">
+                <font color='purple'><b>SIGIReCom'19</b></font>
+              </a> |
+              <a href="./ecom2018/index.html" target="_blank">
+                <font color=#3377ff><b>SIGIReCom'18</b></font>
+              </a> |
+              <a href="http://sigir-ecom.weebly.com/" target="_blank">
+                <font color=#ff3377><b>SIGIReCom'17</b></font>
+              </a>
+            </p>
+
+            <!--
+              <p><b>SIGIR eCom'23 <a href="https://ceur-ws.org/Vol-3589/" target="_blank">Workshop Proceedings</a> </b></p>
+              <p><b>SIGIR Forum Article - <a href="http://sigir.org/wp-content/uploads/2020/06/p04.pdf" target="_blank">Challenges and Research Opportunities in eCommerce Search and Recommendations</a> </b></p>
+              -->
+            The special theme of this year's workshop is <b><i>From Research to Product: Challenges, Lessons, and
+                Opportunities in eCommerce Search and
+                Recommendations</i></b>
+
+            <br>
+
+          </div>
+            <br>
+
+            <p><b><a href="https://ceur-ws.org/Vol-4123/">Archival version of the
+              proceedings is now published through CEUR!</a></b></p>
+          <h2>Overview</h2>
+
+          <p>The SIGIR Workshop on eCommerce will serve as a platform for publication and discussion of Information
+            Retrieval, NLP, and Computer Vision research relative to their applications in the domain of eCommerce. This
+            workshop will bring together practitioners and researchers from academia and industry to discuss the
+            challenges and approaches to product search and recommendation in eCommerce. </p>
+
+          <p>Recently, the rapid evolution of emerging technologies, including large language models (LLMs) and
+            generative AI, has introduced fresh opportunities and challenges for eCommerce search and recommendations.
+            As many organizations race to adopt new technology, the knowledge required to tackle the practical
+            challenges of productionization risks becoming siloed. Avoiding this requires continued dialogue between IR
+            academia and industry, and across various eCommerce organizations. The goal of our workshop is to bridge
+            these gaps and foster collaboration for this crucial exchange of information.</p>
+
+          <p>To support this goal, the special theme of ECOM25 is <b><i>From Research to Product: Challenges, Lessons,
+                and Opportunities in eCommerce Search and Recommendations</i></b>.
+
+          <p>SIGIR eCom is a full day workshop taking place on Thursday, <b>July 17, 2025</b> in conjunction with <a
+              href="https://sigir2025.dei.unipd.it/" target="_blank">
+              <font color=#ff3377><b>SIGIR 2025</b></font>
+            </a>.
+            SIGIR eCom'25 will be an in-person workshop and follows the main
+            conference <a href="https://sigir2025.dei.unipd.it/inpresence-policy.html" target="_blank">in-presence
+              policy</a>. If you have
+            extenuating circumstances that prevent travel, please
+            contact us (contact information at bottom of page).
+
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-mid-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">SIGIR eCom'25 Workshop Schedule</h2>
+
+        </div>
+      </div>
+
+
+
+      <div class="container">
+        <div class="col-lg-6 text-left">
+          <table class="tg1" width="100%" ;>
+            <tbody>
+              <tr bordercolor="black">
+                <th class="tg1-odj0"></th>
+                <th class="tg1-odj0">
+                  <font size=2>July 17, 2025 | Room: Carraresi</font>
+                  </font>
+                </th>
+              </tr bordercolor="black">
+
+              <tr>
+                <td class="tg1-l2oz">9:00 am</td>
+                <td class="tg1-9hbo">Workshop Opening</font> <br></td>
+              </tr>
+              <tr>
+                <td class="tg1-l2oz">9:15 am</td>
+
+                </td>
+                <td class="tg1-9hbo">Panel: From Research to Product</a><br>
+
+                  <font color=#ee0979>Moderator: Tracy Holloway King</font><br>
+                  <font color=#ee0979>Panelists: Neil Shah</font>,&nbsp;&nbsp;<font color=#ee0979>Andrew Trotman</font>
+                  ,&nbsp;&nbsp;<font color=#ee0979>Yubin Kim</font>,&nbsp;&nbsp;<font color=#ee0979>Pallavi Gudipati
+                  </font>
+
+                </td>
+
+              </tr>
+              <tr>
+                <td class="tg1-l2oz">10:00 am</td>
+                <td class="tg1-9hbo">Oral Presentations (part 1)</font> <br><br>
+
+                  <font color=#194B7><i>SEQ+MD: Learning Multi-Task as a SEQuence with Multi-Distribution Data</i>
+                  </font>
+                  <br>
+                  <font color=#ee0979>Siqi Wang, Audrey Chen, Austin Clapp, Sheng-Min Shih, Xiaoting Zhao</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Etsy, USA</i></font>
+                  <br><br>
+                  <font color=#194B7><i>Practical Secondary Stack Optimization on Search Pages: A Lightweight Contextual
+                      Bandit Approach</i></font>
+                  <br>
+                  <font color=#ee0979>Eva C. Song, Jun Zhao, Junchao Zheng, Vivek Agrawal</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Walmart, USA</i></font>
+                  <br><br>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td class="tg1-xr8r"><b>10:30 am</b></td>
+                <td class="tg1-kjho"><b>Coffee Break</b></td>
+              </tr>
+
+              <tr>
+                <td class="tg1-l2oz">11:00 am</td>
+                <td class="tg1-9hbo">Oral Presentations (part 2)</font> <br><br>
+
+                  <font color=#194B7><i>Selling Flow Enhancement by Early Product Categorization</i></font>
+                  <br>
+                  <font color=#ee0979>Gregory Goren, Ido Guy, Slava Novgorodov</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;eBay, Ben-Gurion University of the Negev, Tel
+                      Aviv University</i></font>
+                  <br><br>
+
+
+                  <font color=#194B7><i>A Method to Incorporate Temporal Seasonality into Search Ranking for Improved
+                      Relevance and User Engagement</i></font>
+                  <br>
+                  <font color=#ee0979>Shreya Mahapatra, Anandita Chopra, Liping Zhang, Shabhareesh Komirishetty, Tracy
+                    Holloway King</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Adobe USA & India</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>Intent-Aware Neural Query Reformulation for Behavior-Aligned Product Search</i>
+                  </font>
+                  <br>
+                  <font color=#ee0979>Jayanth Yetukuri, Ishita Kamal Khan</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;eBay, USA</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>A Chain-of-Thought Approach to Semantic Query Categorization in e-Commerce
+                      Taxonomies</i></font>
+                  <br>
+                  <font color=#ee0979>Jetlir Duraj, Ishita Khan, Kilian Merkelbach, Mehran Elyasi</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;eBay USA & eBay Germany</i></font>
+                </td>
+              </tr>
+
+            <tr>
+  <td class="tg1-l2oz">11:50 am</td>
+  <td class="tg1-9hbo">
+    Invited Talk: Building Reusable Datasets for Agentic IR in eCommerce - The TREC 2025 Product Search and Recommendations Track<br><br>
+    <font color="#194B7">
+    <p><em>Abstract:</em><br>
+    The 2025 TREC Product Search & Recommendations Track challenges the community to push the boundaries of e-commerce retrieval and recommendation. This year we introduce two tasks:</p>
+
+    <p>(1) A Search task focusing on intelligent query expansion<br>
+    (2) A Recommendations Task to support related-item recommendation.</p>
+
+    <p>In this talk, we will detail our motivation, discuss task design, and highlight open research questions. By creating reusable, high-quality datasets, we aim to make reproducible progress in both product search and recommender systems.</p>
+</font>
+    <font color="#ee0979">Chenxiang Zhai & Rikiya Takehi</font>
+  </td>
+</tr>
+
+
+              <tr>
+
+              <tr>
+                <td class="tg1-xr8r"><b>12:30 pm</b></td>
+                <td class="tg1-kjho"><b>Lunch Break (Informal table topics: 12:45–1:30)</b></td>
+              </tr>
+
+              <tr>
+                <td class="tg1-l2oz">1:30 pm</td>
+                <td class="tg1-9hbo">Poster Teasers (12 × 1 min)</font> <br><br>
+
+                  <font color=#194B7><i>Ad Ranking for Walmart Display Ads System</i></font>
+                  <br>
+                  <font color=#ee0979>Fan Yang, Weijie Yuan, Nahid Anwar, Braden Huffman, Fangping Huang, Lichun Chen,
+                    Konstantin Shmakov, Sunil Goda, James Jung, Niranjana Moleyar, Xiaobo Peng, Kuang-chih Lee, Musen
+                    Wen</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Walmart, USA</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>Towards Quality Ad Selection: A Model-based Approach to Performance
+                      Filtering</i></font>
+                  <br>
+                  <font color=#ee0979>Mandar S. Chaudhary, Javad Nejati, Mahmuda Rahman, Gajanan Adalinge, Abraham
+                    Bagherjeiran</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;eBay, USA</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>Shoppers Also Asked: Generating Related Questions for Search Result Pages of
+                      E-commerce Search Engines</i></font>
+                  <br>
+                  <font color=#ee0979>Saar Kuzi, Zhiyu Chen, Shervin Malmasi</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Amazon, USA</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>Improving Ad Matching via Cluster-Adaptive Keyword Expansion and Relevance
+                      Tuning</i></font>
+                  <br>
+                  <font color=#ee0979>Dipanwita Saha, Anis Zaman, Hua Zou, Ning Chen, Xinxin Shu, Nadia Vase, Abraham
+                    Bagherjeiran</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;eBay, USA</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>S2SRec2: Set‑to‑Set Recommendation for Basket Completion with Recipe</i></font>
+                  <br>
+                  <font color=#ee0979>Yanan Cao, Omid Memarrast, Shiqin Cai, Sinduja Subramaniam, Evren Korpeoglu,
+                    Kannan Achan</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Walmart, USA</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>Lookalike Audience Expansion: A Graph-Based Model with LLMs</i></font>
+                  <br>
+                  <font color=#ee0979>Rumana Ferdous Munne, Md Mostafizur Rahman, Yuji Matsumoto</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;RIKEN-AIP & Rakuten, Japan</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>Monotonic Fairness in Recommendation via Neural Additive Models with Contrastive
+                      Learning</i></font>
+                  <br>
+                  <font color=#ee0979>Yuchen Guo, Zhenqi Zhao, Menghan Wang</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;eBay & Coupang</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>LLM-Augmented Machine Translation for Scalable, Context-Aware Cross-Lingual
+                      E-Commerce Search</i></font>
+                  <br>
+                  <font color=#ee0979>Nicole McNabb, Dayron Rizo-Rodriguez, Jesus Perez-Martin, Yuanliang Qu, Clement
+                    Ruin, Alina Sotolongo, Pankaj Adsul, Leonardo Lezcano</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Walmart, USA</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>Lessons Learned from Applying Bayesian Optimization to Hyperparameter Tuning in
+                      Ad Selection</i></font>
+                  <br>
+                  <font color=#ee0979>Joobin Gharibshah, Mahmuda Rahman</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;eBay, USA</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>NEAR^2: A Nested Embedding Approach to Efficient Product Retrieval and
+                      Ranking</i></font>
+                  <br>
+                  <font color=#ee0979>Shenbin Qian, Diptesh Kanojia, Samarth Agrawal, Hadeel Saadany, Swapnil Bhosale,
+                    Constantin Orasan, Zhe Wu</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Univ. of Surrey, eBay USA, Birmingham City
+                      University</i>
+                  </font>
+                  <br><br>
+
+                  <font color=#194B7><i>AI Guided Accelerator for Search Experience</i></font>
+                  <br>
+                  <font color=#ee0979>Jayanth Yetukuri, Mehran Elyasi, Samarth Agrawal, Aritra Mandal, Shuang Zhou, Rui
+                    Kong, Harish Vempati, Ishita Khan</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;eBay, USA</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>Elevating Style with MLLM-Enhanced, Outfit Recommendation System</i></font>
+                  <br>
+                  <font color=#ee0979>Sangeet Jaiswal, Gaurav Parashar, Sreekanth Vempati, Vijay Kumar</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Myntra, India</i></font>
+                  <br><br>
+
+                  <font color=#194B7><i>Lessons from the Bleeding Edge: Large-Scale Production Inference of LLMs</i>
+                  </font>
+                  <br>
+                  <font color=#ee0979>Yubin Kim, Arthur Maciejewicz, Brandon Beveridge</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;Vody, USA</i></font>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="tg1-l2oz">1:45 pm</td>
+                <td class="tg1-9hbo">Poster Session</td>
+              </tr>
+
+              <tr>
+                <td class="tg1-l2oz">2:30 pm</td>
+                <td class="tg1-9hbo">Invited Talk: Benchmark Development for Evaluating Personalization in
+                  Conversational AI Assistants<br>
+                  <font color=#ee0979>Emine Yilmaz</font>
+                  <font color=#194B7><i>&nbsp;&nbsp;&nbsp;&nbsp;University College London</i></font>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="tg1-l2oz">3:15 pm</td>
+                <td class="tg1-9hbo">Breakout Group Challenge</td>
+              </tr>
+
+              <tr>
+                <td class="tg1-xr8r"><b>4:00 pm</b></td>
+                <td class="tg1-kjho"><b>Coffee Break</b></td>
+              </tr>
+
+              <tr>
+                <td class="tg1-l2oz">4:30 pm</td>
+                <td class="tg1-9hbo"><b>Breakout group challenge presentation</b></td>
+              </tr>
+
+              <tr>
+                <td class="tg1-l2oz">5:00 pm</td>
+                <td class="tg1-9hbo">Closing</td>
+              </tr>
+
+
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="col-lg-3 text-left">
+          &nbsp;
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+
+      <div class="row align-items-center">
+        <div>
+          <h3>Important Dates</h3>
+          <table class="table table-condensed">
+            <tbody>
+              <tr>
+                <td>Paper submission deadline</td>
+                <td><s> April 23, 2025</s> <b> April 30, 2025</b> (11: 59 P.M. <a
+                    href="http://www.worldtimeserver.com/time-zones/aoe/" target="_blank">AoE</a>)</td>
+              </tr>
+              <tr>
+                <td>Notification of acceptance</td>
+                <td>May 21, 2025</td>
+              </tr>
+              <!--
+                  <tr>
+                    <td>Camera Ready Version of Papers Due</td>
+                    <td></td>
+                  </tr>
+                  -->
+              <tr>
+                <td>SIGIR eCom Full day Workshop</td>
+                <td>July 17, 2025</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="icon-square-01"></div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div>
+          <h2>Call For Papers</h2>
+
+          <p>We invite quality research contributions, position and opinion
+            papers addressing relevant challenges in the domain of eCommerce.
+            We invite submission of papers and posters representing original
+            research, preliminary research results, proposals for new work,
+            position and opinion papers. All submitted papers and posters
+            will be single-blind and will be peer reviewed by an
+            international program committee of researchers of high repute.
+            Accepted submissions will be presented at the workshop.</p>
+
+          <p>Topics of interest include, but are not limited to:</p>
+          <ul>
+            <li>
+              From Research to Product: Challenges, Lessons, and Opportunities in eCommerce Search and Recommendations.
+              (2025 special theme)
+              <ul>
+                <li>Solutions to practical challenges encountered while translating research into scalable products</li>
+                <li>Lessons from tackling irreproducibility while implementing well-known research papers into
+                  industrial eCommerce search and recommendation systems</li>
+                <li>Emerging trends in eCommerce IR, such as multimodality, customer lifetime value considerations, and
+                  online and offline usage of LLMs</li>
+                <li>Evaluating production effectiveness, measuring business impact, monitoring the quality of production
+                  models</li>
+              </ul>
+            </li>
+
+
+            <li>Ranking and Whole Page Relevance (WPR)</li>
+            <ul>
+              <li>Optimization for IR and business metrics</li>
+              <li>Diversity in product search and recommendations</li>
+              <li>Relevance models for multi-faceted entities</li>
+              <li>Relevance vs. revenue</li>
+              <li>Deterministic sorts (e.g. price low to high)</li>
+              <li>Temporal dynamics and seasonality</li>
+            </ul>
+            <li>Query and Document Understanding</li>
+            <ul>
+              <li>Query intent, query suggestions, and auto-completion</li>
+              <li>Strategies for resolving low or zero recall queries</li>
+              <li>Cross-modal search (e.g., text, structured data, images)</li>
+              <li>Categorization and facets</li>
+              <li>Reviews and sentiment analysis</li>
+            </ul>
+            <li>Recommendation and Personalization</li>
+            <ul>
+              <li>Personalization & contextualization</li>
+              <li>Privacy, bias and ethics in eCommerce IR</li>
+              <li>Blending recommendations, sponsored products and search results</li>
+              <li>Representations and Data</li>
+              <li>Semantic representation of products, queries, and customers</li>
+              <li>Construction and use of knowledge graphs for eCommerce</li>
+            </ul>
+            <li>IR Fundamentals for eCommerce</li>
+            <ul>
+              <li>Unified and universal search and recommendations</li>
+              <li>Cross-lingual search and machine translation</li>
+              <li>Indexing and search in rapidly changing environments (e.g., auction sites)</li>
+              <li>Experimentation techniques including AB testing and multi-armed bandits</li>
+            </ul>
+            <li>Other challenges</li>
+            <ul>
+              <li>Trust, transparency, and fairness in eCommerce</li>
+              <li>UX for eCommerce</li>
+              <li>Question answering and chatbots for eCommerce</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="p-0">
+          <h2>Submission Instructions</h2>
+          <p>
+            All papers will be peer reviewed (single-blind) by the program committee and judged by their relevance to
+            the workshop, especially to the main themes identified above, and their potential to generate discussion.
+
+            All submissions must be in PDF formatted according to the <b>latest CEUR single column format</b> available
+            at <a
+              href='https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw'
+              target="_blank">https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw</a>.
+            The short (8-page) and long (15-page) limits are extended to account for this. <br><br>
+
+            For instructions and LaTeX/Overleaf/docx templates, see: <a
+              href="https://ceur-ws.org/HOWTOSUBMIT.html#CEURART">https://ceur-ws.org/HOWTOSUBMIT.html#CEURART</a>
+          <ul>
+            <li>Read up to and including the "License footnote in paper PDFs" section.
+            <li>Please Use Emphasizing Capitalized Style for Paper Titles.
+            <li>Double check \copyrightyear{2025} for the correct year
+            <li>Use the following conference name styling: \conference{ECOM'25: SIGIR Workshop on eCommerce, Jul 17,
+              2025, Padua, Italy}
+          </ul>
+          Submissions must describe work that is not previously published, not accepted for publication elsewhere, and
+          not currently under review elsewhere. All submissions must be in English. <b>The workshop follows a
+            single-blind reviewing process. We do not accept anonymized submissions. </b>Please note that at least one
+          of the authors of each accepted paper must register for the workshop and present the paper.<!--in-person-->
+          <br>
+          <br>
+          Long paper limit: 15 pages. References are not counted in the page limit.
+          <br>
+          Short paper limit: 8 pages. References are not counted in the page limit.
+          <br>
+          <br>
+          Submissions to SIGIR eCom should be made through OpenReview at: <a
+            href="https://openreview.net/group?id=ACM.org/SIGIR/2025/Workshop/eCom"
+            target="_blank">https://openreview.net/group?id=ACM.org/SIGIR/2025/Workshop/eCom</a>
+
+          <p>Make sure to <b>sign up for an OpenReview account ahead of time!</b>
+          <ul>
+            <li>New profiles created without an institutional email will go through a moderation process that can
+              <b>take up to two weeks.</b>
+            </li>
+            <li> New profiles created with an institutional email will be activated automatically.</li>
+          </ul>
+          </p>
+        </div>
+        <div class="icon-square-02"></div>
+      </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center small"><a href="https://twitter.com/SIGIReCom" target="_blank"
+          class="btn btn-primary btn-sl rounded-pill">
+          <font color=#00274C>Follow us: @SIGIReCom<font>
+        </a></p>
+      <p class="m-0 text-center small">
+        <font color=#FFCB05>Please direct all your queries to yubink.cs at gmail for help.</font>
+      </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

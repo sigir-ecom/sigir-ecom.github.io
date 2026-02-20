@@ -1,0 +1,95 @@
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>&nbsp;&nbsp;&nbsp;1.  Leverage Implicit Feedback for Context-aware Product Search
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper15.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keping Bi, Choon Hui Teo, Yesh Dattatreya, Vijai Mohan and W. Bruce Croft</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>&nbsp;&nbsp;&nbsp;2.  Learning Embeddings for Product Size Recommendations
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper13.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kallirroi Dogani, Matteo Tomassetti, Saúl Vargas, Ben Chamberlain and Sofie de Cnudde</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>&nbsp;&nbsp;&nbsp;3.  Multi-objective Relevance Ranking
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper30.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michinari Momma, Alireza Bagheri Garakani and Yi Sun</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>&nbsp;&nbsp;&nbsp;4.  Fashion Outfit Generation for E-commerce
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper14.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Elaine Bettaney, Stephen Hardwick, Benjamin Paul Chamberlain and Odysseas Zisimopoulos</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>&nbsp;&nbsp;&nbsp;5.  Personalized Query Auto-Completion Through a Lightweight Representation of the User Context
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper7.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manojkumar Rangasamy Kannadasan and Grigor Aslanyan</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>&nbsp;&nbsp;&nbsp;6.  Learning to Diversify for E-commerce Search with Multi-Armed Bandit
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper18.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anjan Goswami, Chengxiang Zhai and Prasant Mohapatra</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>&nbsp;&nbsp;&nbsp;7.  System Design of Extreme Multi-label Query Classification using a Hybrid Model
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper19.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xianjing Liu, Hejia Zhang, Mingkuan Liu and Alan Lu</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>&nbsp;&nbsp;&nbsp;8.  Multi-Candidate Ranking Algorithm Based Spell Correction
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper9.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chao Wang and Rongkai Zhao</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>&nbsp;&nbsp;&nbsp;9.  Ranking sentences from product description & bullets for better search
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper16.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prateek Verma, Aliasgar Kutiyanawala and Ke Shen</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>10.  E-commerce Query Classification Using Product Taxonomy Mapping: A Transfer Learning Approach
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper37.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael Skinner and Surya Kallumadi</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>11. Improving Semantic Matching via Multi-Task Learning in E-Commerce
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper2.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hongchun Zhang, Tianyi Wang, Xiaonan Meng and Yi Hu</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>12.  Query Rewriting using Automatic Synonym Extraction for E-commerce Search
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper20.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aritra Mandal, Ishita Khan and Prathyusha Senthil Kumar</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>13.  PSAC: Context-based Purchase Prediction Framework via User's Sequential Actions
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper32.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wei-Cheng Chen, Chih-Yu Wang, Su-Chen Lin, Alex Ou and Tzu-Chiang Liou</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>14.  Spelling Correction as a Foreign Language
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper28.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yingbo Zhou, Utkarsh Porwal and Roberto Konow</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>15.  Production Ranking Systems: A Review
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper22.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Murium Iqbal, Nishan Subedi and Kamelia Aryafar</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>16.  Unsupervised Construction of a Product Knowledge Graph
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper23.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omar Alonso, Vasileios Kandylas and Rukmini Iyer</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>17.  Closing the Gap Between Query and Database through Query Feature Transformation in C2C e-Commerce Visual Search
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper3.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Takuma Yamaguchi, Kosuke Arase, Riku Togashi and Shunya Ueta</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>18.  Unsupervised Product Entity Resolution using Graph Representation Learning
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper26.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mozhdeh Gheini and Mayank Kejriwal</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>19.  Text Summarization of Product Titles
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper36.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joan Xiao and Robert Munro</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>20.  Neural factorization for Offer Recommendation using Knowledge Graph Embeddings
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper38.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gourab Chowdhury, Madiraju Srilakshmi, Mainak Chain and Sudeshna Sarkar</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>21.  Image Aesthetics and its Effects on Product Clicks in E-Commerce Search
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper25.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fabiano Belém, Alexandre Maros, Sergio Canuto, Rodrigo Silva, Jussara Almeida and Marcos Goncalves</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>22.  Comprehensive Audience Expansion based on End-to-End Neural Prediction
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper12.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jinling Jiang, Xiaoming Lin, Junjie Yao and Hua Lu</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>23.  Organic Ponies and Sponsored Batteries: A Category-Based CTR Optimization Model
+</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper8.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or Levi</b>
+</b></font>
+<li><strong style="color:rgb(141, 36, 36)"><font color=#194B7>24.  An Empirical Comparison of FAISS and FENSHSES for Nearest Neighbor Search in Hamming Space</font><font color="#8d2424"> &nbsp;</font><font color="#2a2a2a">[<a href="./ecom19Papers/paper35.pdf"" target="_blank">PDF</a>]</font></strong></li><font color="#ee0979">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cun Mu and Binwei Yang</b>
+</b></font>
